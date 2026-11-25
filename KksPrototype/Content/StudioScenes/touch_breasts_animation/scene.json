@@ -1,0 +1,61 @@
+{
+    "version": 1,
+    "source": "touch_breasts_animation.png",
+    "sha256": "805C0A987372ED70A3983467F54E00C6593BCECE520ADF6B820D7467C576351C",
+    "duration": 5.0,
+    "timeScale": 1.0,
+    "frames": 301,
+    "timelineTracks": 10,
+    "sourceTimelineTracks": 10,
+    "timelineKeys": 54,
+    "map": -1,
+    "constraints": 5,
+    "plugins": [
+        "com.bepis.sideloader.universalautoresolver",
+        "com.deathweasel.bepinex.materialeditor",
+        "com.deathweasel.bepinex.studiocustommasking",
+        "com.deathweasel.bepinex.studioimageembed",
+        "com.deathweasel.bepinex.studioscenesettings",
+        "com.jim60105.kk.studiocharalightlinkedtocamera",
+        "kkpe",
+        "nodesConstraints",
+        "timeline"
+    ],
+    "unboundTracks": [],
+    "cameraPosition": {
+        "x": 0.09800352156162262,
+        "y": 2.3117871284484865,
+        "z": -0.6125162243843079
+    },
+    "cameraRotation": {
+        "x": 0.04647868871688843,
+        "y": -0.8594369888305664,
+        "z": -0.5051542520523071,
+        "w": -0.06345931440591812
+    },
+    "cameraFov": 23.0,
+    "colorGrade": "color-grade.ksl",
+    "playback": "timeline",
+    "objects": [
+        "0:OCICharFemale:萩原 沙優",
+        "205:OCICharMale:DQN 影無し",
+        "335:OCIItem:スフィア(通常）",
+        "336:OCIItem:スフィア(通常） 1",
+        "337:OCIItem:スフィア(通常） 2",
+        "338:OCIItem:スフィア(通常） 3",
+        "339:OCIItem:スフィア(通常） 4",
+        "340:OCIItem:スフィア(通常） 5",
+        "341:OCIFolder:フォルダー"
+    ],
+    "cameraTrack": [],
+    "cameraBackground": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 1.0
+    },
+  "actors": [
+{"key":0,"sex":1,"ik":true,"fk":true,"animeGroup":0,"animeCategory":1,"animeNumber":0,"animeSpeed":2.0,"animeNormalizedTime":1735.822509765625,"clips":["Idle_00_00"],"model":"actor-0.kcs","motion":"actor-0.kst","visuals":"actor-0.ksv"},
+{"key":205,"sex":0,"ik":true,"fk":true,"animeGroup":0,"animeCategory":0,"animeNumber":0,"animeSpeed":1.0,"animeNormalizedTime":38390.86328125,"clips":["tpose"],"model":"actor-1.kcs","motion":"actor-1.kst","visuals":"actor-1.ksv"}
+  ]
+}

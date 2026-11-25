@@ -1,0 +1,37 @@
+[
+  {
+    "id": "QA_Male_Normal",
+    "card": "QA/ill_male_02.kcs",
+    "description": "KKS default male 02"
+  },
+  {
+    "id": "QA_Male_Tall",
+    "card": "QA/Kashiwagi Sousuke.kcs",
+    "description": "Kashiwagi Sousuke · 112% source stature",
+    "scale": 1.12
+  },
+  {
+    "id": "QA_Male_Short",
+    "card": "QA/ill_male_03.kcs",
+    "description": "KKS default male 03 · 90% source stature",
+    "scale": 0.90
+  },
+  {
+    "id": "QA_Female_Normal",
+    "card": "Koikatsu/UserData/female/[BetterRepack]/EC BR Chan/BR-Kaasan.png",
+    "description": "BR-Kaasan",
+    "hide": ["o_watch01", "on_heart_necklace_ribonpen"]
+  },
+  {
+    "id": "QA_Female_Tall",
+    "card": "Koikatsu/UserData/female/[Community]/Anon11/Jhora.png",
+    "description": "Jhora · source stature",
+    "hide": ["claws", "o_furry_r", "o_furry_l", "nails"]
+  },
+  {
+    "id": "QA_Female_Short",
+    "card": "Koikatsu/UserData/female/[Community]/Anon11/Ulani.png",
+    "description": "Ulani · source stature",
+    "hide": ["o_mermaid_r", "o_mermaid_l"]
+  }
+]

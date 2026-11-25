@@ -1,0 +1,31 @@
+{
+  "background": "#bad9f4",
+  "scenery": "Playground.glb",
+  "contacts": [
+    {
+      "receiver": 0,
+      "mover": 1,
+      "anchor": "cf_j_spine01",
+      "tip": "cf_j_hips",
+      "near": 0.25,
+      "far": 0.35,
+      "shift": 0.025,
+      "move_root": true
+    }
+  ],
+  "shots": [
+    {
+      "label": "Клип CharaStudio",
+      "actors": [2, 3],
+      "source_view": true,
+      "camera_near": 0.42,
+      "local_motion": ["cf_j_siri_L"]
+    },
+    {
+      "label": "Статичная постановка",
+      "actors": [0, 1],
+      "source_camera": false,
+      "pose": true
+    }
+  ]
+}

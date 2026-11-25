@@ -1,0 +1,269 @@
+{
+  "greeting": "Hi. What would you like to do?",
+  "npcs": [
+    {
+      "name": "BR-Chan",
+      "primary": true
+    },
+    {
+      "name": "Friendly",
+      "card": "Cards/Friendly-portable.png",
+      "position": [
+        -2.4,
+        0.1,
+        -2.8
+      ]
+    },
+    {
+      "name": "BR-Kun",
+      "card": "Cards/BR-Kun-portable.png",
+      "position": [
+        2.5,
+        0.1,
+        -4.5
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": "Compliment",
+      "reply": "Thanks. That's nice to hear!",
+      "groups": [
+        "happy"
+      ]
+    },
+    {
+      "label": "Insult",
+      "reply": "That was hurtful.",
+      "groups": [
+        "angry",
+        "sad",
+        "crying"
+      ]
+    },
+    {
+      "label": "Jump",
+      "reply": "Watch this!",
+      "groups": [
+        "jump"
+      ]
+    },
+    {
+      "label": "Hug Me",
+      "reply": "Come here.",
+      "type": "hug"
+    },
+    {
+      "label": "Dance",
+      "reply": "Sure!",
+      "groups": [
+        "dance"
+      ]
+    },
+    {
+      "label": "Bow",
+      "reply": "Okay.",
+      "groups": [
+        "bow"
+      ]
+    },
+    {
+      "label": "Kneel",
+      "reply": "Okay.",
+      "type": "kneel",
+      "groups": [
+        "kneel"
+      ]
+    },
+    {
+      "label": "Open Your Mouth",
+      "type": "mouth"
+    },
+    {
+      "label": "Turn Around",
+      "type": "turn"
+    },
+    {
+      "label": "Slap",
+      "reply": "Ow! What was that for?",
+      "type": "slap"
+    },
+    {
+      "label": "Spank",
+      "reply": "Ow!",
+      "type": "spank"
+    },
+    {
+      "label": "Strike Thigh",
+      "reply": "Ow!",
+      "type": "thigh"
+    },
+    {
+      "label": "Strike Chest",
+      "reply": "That hurt!",
+      "type": "chest"
+    },
+    {
+      "label": "Punch Face",
+      "reply": "Ow!",
+      "type": "face_punch"
+    },
+    {
+      "label": "Punch Stomach",
+      "reply": "Oof!",
+      "type": "stomach_punch"
+    },
+    {
+      "label": "Lift Skirt",
+      "type": "skirt"
+    },
+    {
+      "label": "On All Fours",
+      "reply": "Okay.",
+      "groups": [
+        "fours"
+      ]
+    },
+    {
+      "label": "Kneel and Offer Hand",
+      "reply": "Here's my hand.",
+      "groups": [
+        "kneel_hand"
+      ]
+    },
+    {
+      "label": "Prostrate",
+      "reply": "As you wish.",
+      "groups": [
+        "reverence"
+      ]
+    },
+    {
+      "label": "Lie on Your Back",
+      "reply": "Okay.",
+      "groups": [
+        "lie_back"
+      ]
+    },
+    {
+      "label": "Lie Face Down",
+      "reply": "Okay.",
+      "groups": [
+        "lie_stomach"
+      ]
+    },
+    {
+      "label": "Hold Hands",
+      "reply": "Here.",
+      "type": "hand_hold"
+    },
+    {
+      "label": "Hold Face",
+      "reply": "Hmm?",
+      "type": "face_grab"
+    },
+    {
+      "label": "Lift Chin",
+      "reply": "Like this?",
+      "type": "chin_lift"
+    },
+    {
+      "label": "Offer a Finger",
+      "reply": "Hmm.",
+      "type": "finger_suck"
+    },
+    {
+      "label": "Pat Head",
+      "reply": "Hmm.",
+      "type": "head_pat"
+    },
+    {
+      "label": "Pull Hair",
+      "reply": "Ow! Careful.",
+      "type": "hair_grab"
+    },
+    {
+      "label": "Kiss Forehead",
+      "reply": "That's sweet.",
+      "type": "kiss_forehead"
+    },
+    {
+      "label": "Pinch Cheek",
+      "reply": "Hey!",
+      "type": "cheek_pinch"
+    },
+    {
+      "label": "Follow Me",
+      "when_following": "Stay Here",
+      "type": "follow"
+    }
+  ],
+  "areas": {
+    "room": {
+      "exit_position": [
+        -1.1,
+        0.14,
+        2.55
+      ],
+      "player_spawn": [
+        0.0,
+        0.19,
+        1.9
+      ],
+      "npc_spawn": [
+        0.0,
+        0.05,
+        -1.0
+      ],
+      "exit_label": "Go to the Park"
+    },
+    "park": {
+      "exit_position": [
+        0.0,
+        0.06,
+        2.1
+      ],
+      "player_spawn": [
+        0.0,
+        0.15,
+        0.4
+      ],
+      "npc_spawn": [
+        0.0,
+        0.07,
+        -2.1
+      ],
+      "exit_label": "Return to the Room"
+    }
+  },
+  "postures": [
+    {
+      "label": "Kneel",
+      "type": "kneel"
+    },
+    {
+      "label": "Lift Skirt",
+      "type": "skirt"
+    },
+    {
+      "label": "On All Fours",
+      "type": "fours"
+    },
+    {
+      "label": "Turn Around",
+      "type": "turn"
+    },
+    {
+      "label": "Lie Face Down",
+      "type": "lie_stomach"
+    },
+    {
+      "label": "Lie on Back",
+      "type": "lie_back"
+    },
+    {
+      "label": "Return to Standing",
+      "type": "standing"
+    }
+  ]
+}

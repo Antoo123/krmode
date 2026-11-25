@@ -1,0 +1,17 @@
+{
+  "reference_landmarks": true,
+  "contacts": [
+    {
+      "receiver": 0,
+      "mover": 1,
+      "anchor": "cf_j_waist02",
+      "tip": "cf_j_hand_R",
+      "upper": "cf_j_arm00_R",
+      "bend": "cf_j_forearm01_R",
+      "near": 0.25,
+      "far": 0.52,
+      "shift": 0.045,
+      "body_extent": true
+    }
+  ]
+}

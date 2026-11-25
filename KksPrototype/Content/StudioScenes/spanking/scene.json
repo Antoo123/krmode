@@ -1,0 +1,52 @@
+{
+    "version": 1,
+    "source": "spanking.png",
+    "sha256": "E0D0FE8ADF8F456983BCD004D041CE2EDA84F8ADE2C92BE3DABF7D4920408600",
+    "duration": 1.0,
+    "timeScale": 1.0,
+    "frames": 61,
+    "timelineTracks": 32,
+    "sourceTimelineTracks": 33,
+    "timelineKeys": 186,
+    "map": 100013168,
+    "constraints": 0,
+    "plugins": [
+        "com.bepis.sideloader.universalautoresolver",
+        "com.deathweasel.bepinex.materialeditor",
+        "com.deathweasel.bepinex.studiocustommasking",
+        "com.deathweasel.bepinex.studioimageembed",
+        "com.deathweasel.bepinex.studioscenesettings",
+        "com.jim60105.kk.studiocharalightlinkedtocamera",
+        "com.rikkibalboa.bepinex.savecameraobjectfov",
+        "KK_AnimationController",
+        "kkpe",
+        "KKVMDPlayExtSave",
+        "nodesConstraints",
+        "orange.spork.moarcamzplugin",
+        "org.njaecha.plugins.treenodenaming",
+        "org.njaecha.plugins.VideoPlate",
+        "rendererEditor",
+        "timeline",
+        "TwoLutPlugin"
+    ],
+    "unboundTracks": [
+        "RendererEditor:Vector4_Clock"
+    ],
+    "cameraPosition": {
+        "x": -12.312674522399903,
+        "y": 1.720747947692871,
+        "z": -14.45237922668457
+    },
+    "cameraRotation": {
+        "x": 0.20192281901836396,
+        "y": 0.7814553380012512,
+        "z": 0.3169330358505249,
+        "w": -0.4981045722961426
+    },
+    "cameraFov": 75.0,
+    "colorGrade": "color-grade.ksl",
+  "actors": [
+{"key":2,"sex":1,"ik":true,"fk":true,"animeGroup":0,"animeCategory":12,"animeNumber":8,"animeSpeed":0.0,"animeNormalizedTime":0.0,"clips":["f_soine_00_01_S","f_soine_00_01_M"],"model":"actor-0.kcs","motion":"actor-0.kst","visuals":"actor-0.ksv"},
+{"key":291,"sex":1,"ik":true,"fk":true,"animeGroup":0,"animeCategory":6,"animeNumber":0,"animeSpeed":0.0,"animeNormalizedTime":1.92970609664917,"clips":["f_suwari_00_14_S","f_suwari_00_14_M"],"model":"actor-1.kcs","motion":"actor-1.kst","visuals":"actor-1.ksv"}
+  ]
+}

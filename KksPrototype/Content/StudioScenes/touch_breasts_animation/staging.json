@@ -1,0 +1,55 @@
+{
+  "first_person": true,
+  "first_person_actor": 1,
+  "background": "#000000",
+  "contacts": [
+    {
+      "receiver": 0,
+      "mover": 1,
+      "anchor": "cf_j_bust03_L",
+      "tip": "cf_j_hand_R",
+      "probe": "cf_j_index03_R",
+      "upper": "cf_j_arm00_R",
+      "bend": "cf_j_forearm01_R",
+      "near": 0.08,
+      "far": 0.19,
+      "shift": 0.022
+    },
+    {
+      "receiver": 0,
+      "mover": 1,
+      "anchor": "cf_j_bust03_R",
+      "tip": "cf_j_hand_L",
+      "probe": "cf_j_index03_L",
+      "upper": "cf_j_arm00_L",
+      "bend": "cf_j_forearm01_L",
+      "near": 0.09,
+      "far": 0.20,
+      "shift": 0.022
+    },
+    {
+      "receiver": 1,
+      "mover": 0,
+      "anchor": "cf_j_hand_R",
+      "tip": "cf_j_hand_L",
+      "upper": "cf_j_arm00_L",
+      "bend": "cf_j_forearm01_L",
+      "near": 0.13,
+      "far": 0.22,
+      "shift": 0.0,
+      "weight": 0.7
+    },
+    {
+      "receiver": 1,
+      "mover": 0,
+      "anchor": "cf_j_hand_L",
+      "tip": "cf_j_hand_R",
+      "upper": "cf_j_arm00_R",
+      "bend": "cf_j_forearm01_R",
+      "near": 0.14,
+      "far": 0.23,
+      "shift": 0.0,
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,738 @@
+{
+  "groups": {
+    "crying": [
+      {
+        "id": "d24a2a5b02a842b4416dbae7",
+        "name": "Crying",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "variant": "Тихий плач",
+        "speed": 0.86
+      },
+      {
+        "id": "d24a2a5b02a842b4416dbae7",
+        "name": "Crying",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "variant": "Сильный плач",
+        "speed": 1.12
+      }
+    ],
+    "sad": [
+      {
+        "id": "aceb9a7790e76291495fb92d",
+        "name": "Disappointed",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "4f5b80c07340c94c126d7e78",
+        "name": "Sad Idle 1",
+        "bundle": "abdata/studio/anime/mixamo_communication_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "c4cd85ca402872d4739a8c68",
+        "name": "Sad Idle 2",
+        "bundle": "abdata/studio/anime/mixamo_communication_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "c04fc4ca5fdb62e257acfa7e",
+        "name": "Sad Idle 3",
+        "bundle": "abdata/studio/anime/mixamo_communication_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "942f8cafed5740874064672a",
+        "name": "Sad Walk",
+        "bundle": "abdata/studio/anime/mixamo_walknrun_part4.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "dialogue": false
+      },
+      {
+        "id": "ff974cc8ca2f2fd8acf0e86e",
+        "name": "Sad Walk In Place",
+        "bundle": "abdata/studio/anime/mixamo_walknrun_part4.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "dialogue": false
+      },
+      {
+        "id": "6a87fab1fd42a056c28f4930",
+        "name": "Stand_Sad_00",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "23816a70beda00fe0aca07f1",
+        "name": "Stand_Sad_00",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "b54095e8cba9fb341fc24966",
+        "name": "Stand_Sad_01",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "0bc1f66d12f8ba4aa5335ebf",
+        "name": "Stand_Sad_01",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "fedf249db14a70b415056b1c",
+        "name": "Stand_Sad_02",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "e58a446f4003bce12d1c133d",
+        "name": "Stand_Sad_02",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "b95c9d39b1ca85dc3262d2df",
+        "name": "Stand_Sad_03",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "6d6c2ca104b80446cb364961",
+        "name": "Stand_Sad_03",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "559ef10f2f595c00e2a4f4ed",
+        "name": "Stand_Sad_04",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "9af44ceb7c5d33047482f201",
+        "name": "Stand_Sad_04",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "7c238067a532b9ee5621132e",
+        "name": "Stand_Sad_05",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "01b90c5f60425413f0b4b576",
+        "name": "Stand_Sad_05",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "32d84661fe1646c30f2d7381",
+        "name": "Stand_Sad_06",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "eb1115594f331f903e0ac24b",
+        "name": "Stand_Sad_06",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "9f945eb1311b44291f415bd6",
+        "name": "Stand_Sad_07",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "63b19225d8d552b2ebeb8d39",
+        "name": "Stand_Sad_07",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "06c0192bec005d603b872ba3",
+        "name": "Stand_Sad_08",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "3cf0922d1b945e513569f7af",
+        "name": "Stand_Sad_08",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "db044c63336e97bdd348f938",
+        "name": "Stand_Sad_09",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "e56f0c78527d4a0077e483fa",
+        "name": "Stand_Sad_09",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      }
+    ],
+    "happy": [
+      {
+        "id": "8c5507d0c8c92b1ad66071e5",
+        "name": "Happy",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "5b9e8016afc436e71f551ba9",
+        "name": "Happy Idle 1",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "aa49794d15fa13bec0493de7",
+        "name": "Happy Idle 2",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "cf1cbd1ae187a74e0f9955b0",
+        "name": "Happy Walk",
+        "bundle": "abdata/studio/anime/mixamo_walknrun_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "dialogue": false
+      },
+      {
+        "id": "2016d3f6cab7b1e7c0e70da3",
+        "name": "Happy Walk Backward",
+        "bundle": "abdata/studio/anime/mixamo_walknrun_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "dialogue": false
+      },
+      {
+        "id": "62951312308cda4f20ca2762",
+        "name": "Happy Walk Backward In Place",
+        "bundle": "abdata/studio/anime/mixamo_walknrun_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "dialogue": false
+      },
+      {
+        "id": "9aa0d964d63dac44ef0272c7",
+        "name": "Happy Walk Forward Arc Left",
+        "bundle": "abdata/studio/anime/mixamo_walknrun_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "dialogue": false
+      },
+      {
+        "id": "11fad00052945cf66f39bdc4",
+        "name": "Happy Walk In Place",
+        "bundle": "abdata/studio/anime/mixamo_walknrun_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "dialogue": false
+      },
+      {
+        "id": "720645735a3c47494c52ad51",
+        "name": "Joyful Jump 1",
+        "bundle": "abdata/studio/anime/mixamo_jump_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "f3bda37b09fd657a61e86a63",
+        "name": "Joyful Jump 2",
+        "bundle": "abdata/studio/anime/mixamo_jump_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "c8dd663ebcf78241450412cb",
+        "name": "Stand_Joy_00",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "4b8ecb2c188fe15c4ccdecc7",
+        "name": "Stand_Joy_00",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "38446a78bbbc86bdc7581a04",
+        "name": "Stand_Joy_01",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "2fa0b1d56879e8e72f8127d0",
+        "name": "Stand_Joy_01",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "06916befe73972bc65e981a6",
+        "name": "Stand_Joy_02",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "ddd97f78a064b4d556479b13",
+        "name": "Stand_Joy_02",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "2e271911c1782fd84b0b308c",
+        "name": "Stand_Joy_03",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "02b7857002a429cf2f979226",
+        "name": "Stand_Joy_03",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "336f72803923fa75a9878aab",
+        "name": "Stand_Joy_04",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "c92da7f446d4165428a176d0",
+        "name": "Stand_Joy_04",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "00921bd7fed812973c972efd",
+        "name": "Stand_Joy_05",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "b93c54ce47c50ec12b617f5e",
+        "name": "Stand_Joy_05",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "0c871a8e80db89583f4e7f7e",
+        "name": "Stand_Joy_06",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "29c4314e8c39edce29556bea",
+        "name": "Stand_Joy_06",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "79842b3ad450316aa9def86e",
+        "name": "Stand_Joy_07",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "c20bddfd2d0045abd91d5f80",
+        "name": "Stand_Joy_07",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "c4c7d5be7c1ce8d745ba6ab0",
+        "name": "Stand_Joy_08",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "407feeac3a3900a044772304",
+        "name": "Stand_Joy_08",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "21d091d294741db01b962152",
+        "name": "Stand_Joy_09",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "18a77b360417a8e00073a6ef",
+        "name": "Stand_Joy_09",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      }
+    ],
+    "angry": [
+      {
+        "id": "23db349146df4ef04492d9e4",
+        "name": "Angry",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "efe1f6ea3cc706ace1e9751d",
+        "name": "Angry Gesture 1",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "1ac5afca233b43db54aca065",
+        "name": "Angry Gesture 2",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "b25fceba235d4015ed9b6852",
+        "name": "Angry Gesture 3",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "737fc023c1179caced83766b",
+        "name": "Sitting Angry",
+        "bundle": "abdata/studio/anime/mixamo_communication_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "dialogue": false
+      },
+      {
+        "id": "ce6615957837a7fac16e459a",
+        "name": "Stand_Ang_00",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "1bd9826d5db2f7871588da63",
+        "name": "Stand_Ang_00",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "8c2a3430efe59b98778c6ef3",
+        "name": "Stand_Ang_01",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "a8e8055cd0af1b0e4e6bd39f",
+        "name": "Stand_Ang_01",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "d252959cc4a547bc2bcb2f44",
+        "name": "Stand_Ang_02",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "5a5a4975616ceaf331ae9a5b",
+        "name": "Stand_Ang_02",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "38b736f9da93db862e37d2b2",
+        "name": "Stand_Ang_03",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "e1776bc76ec807e9935aff8f",
+        "name": "Stand_Ang_03",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "09374298ffa5d4f6d3e17541",
+        "name": "Stand_Ang_04",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "1a3b0c0bfe8bacc0f32c8c0d",
+        "name": "Stand_Ang_04",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "d565b50e970bc26f6aeacdcf",
+        "name": "Stand_Ang_05",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "a542e934030d242cb53027a0",
+        "name": "Stand_Ang_05",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "83b5ee680652f263452508e3",
+        "name": "Stand_Ang_06",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "d5874a14d5e351fc5eec0c87",
+        "name": "Stand_Ang_06",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "e255c26827bddc8007c91a6f",
+        "name": "Stand_Ang_07",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "4695709a7c26ca6ce3085f15",
+        "name": "Stand_Ang_07",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "6fca501dd0e0bf464a73506f",
+        "name": "Stand_Ang_08",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "f25ed23a955c9e96cad9a6a3",
+        "name": "Stand_Ang_08",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "41e6c2b2482e1b18fdc47d58",
+        "name": "Stand_Ang_09",
+        "bundle": "abdata/adv/motion/controller/adv/00.unity3d",
+        "archive": null
+      },
+      {
+        "id": "937f899147ede3d23541f586",
+        "name": "Stand_Ang_09",
+        "bundle": "abdata/studio/anime/00.unity3d",
+        "archive": null
+      }
+    ],
+    "jump": [
+      {
+        "id": "4140e798153de105e92d07dc",
+        "name": "Standing Jump 1",
+        "bundle": "abdata/studio/anime/mixamo_jump_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "dc77857284e735e727a2abc9",
+        "name": "Standing Jump 2",
+        "bundle": "abdata/studio/anime/mixamo_jump_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      }
+    ],
+    "dance": [
+      {
+        "id": "c2504dfb989fb63949dc4223",
+        "name": "Arms Hip Hop",
+        "bundle": "abdata/studio/anime/mixamo_dance_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "41dcfc70cc055bfd012db5f3",
+        "name": "Wave Hip Hop 1",
+        "bundle": "abdata/studio/anime/mixamo_dance_part3.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      }
+    ],
+    "bow": [
+      {
+        "id": "6999fd9438a61a21b2a71a9a",
+        "name": "Quick Formal Bow",
+        "bundle": "abdata/studio/anime/mixamo_communication_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "5f56ab0ce5e4377415417dd9",
+        "name": "Quick Informal Bow",
+        "bundle": "abdata/studio/anime/mixamo_communication_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      }
+    ],
+    "kneel": [
+      {
+        "id": "0451fbe76d42820212f2da97",
+        "name": "Praying 4",
+        "end_at": 2.2,
+        "bundle": "abdata/studio/anime/mixamo_communication_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "variant": "Опускание на оба колена"
+      },
+      {
+        "id": "7a6e8f67395367e4b9b956bf",
+        "name": "Praying 3",
+        "end_at": 1.8,
+        "bundle": "abdata/studio/anime/mixamo_communication_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "variant": "Опускание на оба колена"
+      }
+    ],
+    "hug": [
+      {
+        "id": "7e53fc6132948b271944288a",
+        "name": "Reaching Out",
+        "bundle": "abdata/studio/anime/mixamo_action_part4.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "variant": "Движение рук для приближения"
+      }
+    ],
+    "idle": [
+      {
+        "id": "79d98bf7d35365397f016f81",
+        "name": "Standing Idle",
+        "bundle": "abdata/studio/anime/mixamo_idle_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      }
+    ],
+    "fours": [
+      {
+        "id": "1f6ae0f4075dd87beb6c5a1e",
+        "name": "Low Crawl In Place",
+        "bundle": "abdata/studio/anime/mixamo_walknrun_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "end_at": 4.5
+      },
+      {
+        "id": "0e3dccf3093ae98fe9960761",
+        "name": "Crawl Forward",
+        "pose_at": 2.3667,
+        "bundle": "abdata/studio/anime/mixamo_gun_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "end_at": 2.4
+      }
+    ],
+    "kneel_hand": [
+      {
+        "id": "85f849255586d96d2be6bb86",
+        "name": "Kneeling Pointing",
+        "bundle": "abdata/studio/anime/mixamo_communication_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "end_at": 3.2
+      }
+    ],
+    "lie_back": [
+      {
+        "id": "5e7e5e09aa2e5ad317b0df4f",
+        "name": "Female Laying Pose 1",
+        "bundle": "abdata/studio/anime/mixamo_pose_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "end_at": 2.0
+      },
+      {
+        "id": "72d0c1572fcb0a2382dc01dc",
+        "name": "Laying Idle 1",
+        "bundle": "abdata/studio/anime/mixamo_idle_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "end_at": 2.6,
+        "pose_at": 2.6
+      },
+      {
+        "id": "15bdacae3dc21c4946b65ebb",
+        "name": "Sleeping Idle 1",
+        "bundle": "abdata/studio/anime/mixamo_idle_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "end_at": 2.6
+      },
+      {
+        "id": "5dcfd34c5636ef7d1a2e02fa",
+        "name": "Female Laying Pose 2",
+        "bundle": "abdata/studio/anime/mixamo_pose_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "end_at": 2.0
+      }
+    ],
+    "lie_stomach": [
+      {
+        "id": "497b7a9c1454762e5de98582",
+        "name": "Prone Forward In Place",
+        "bundle": "abdata/studio/anime/mixamo_gun_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "end_at": 3.0,
+        "pose_at": 0.0
+      }
+    ],
+    "reverence": [
+      {
+        "id": "23816a70beda00fe0aca07f1",
+        "name": "Stand_Sad_00",
+        "bundle": "abdata/studio/anime/00.unity3d"
+      },
+      {
+        "id": "fedf249db14a70b415056b1c",
+        "name": "Stand_Sad_02",
+        "bundle": "abdata/studio/anime/00.unity3d"
+      },
+      {
+        "id": "9af44ceb7c5d33047482f201",
+        "name": "Stand_Sad_04",
+        "bundle": "abdata/studio/anime/00.unity3d"
+      },
+      {
+        "id": "eb1115594f331f903e0ac24b",
+        "name": "Stand_Sad_06",
+        "bundle": "abdata/studio/anime/00.unity3d"
+      }
+    ],
+    "impact": [
+      {
+        "id": "52e2807983c3e440fbfc0915",
+        "name": "Right Hook",
+        "impact_at": 0.3333,
+        "hand": "R",
+        "bundle": "abdata/studio/anime/mixamo_fight_part3.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "93c2601cfeb5d6d880534ca6",
+        "name": "Hook Punch",
+        "impact_at": 1.1,
+        "hand": "R",
+        "bundle": "abdata/studio/anime/mixamo_fight_part1.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod"
+      },
+      {
+        "id": "7061c6d9fafe91524863f3e7",
+        "name": "Lead Jab 2",
+        "bundle": "abdata/studio/anime/mixamo_fight_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "impact_at": 0.4667,
+        "hand": "L"
+      }
+    ],
+    "staged_kick": [
+      {
+        "id": "d3bf35bba2894464d8832d4d",
+        "name": "Side Kick",
+        "bundle": "abdata/studio/anime/mixamo_fight_part3.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "impact_at": 0.79
+      }
+    ],
+    "fall_back": [
+      {
+        "id": "5e16e061bf33fdf904e72ed8",
+        "name": "Falling Back Death 1",
+        "bundle": "abdata/studio/anime/mixamo_action_part2.unity3d",
+        "archive": "mods/Sideloader Modpack - Animations/AgiShark/[AgiShark] Mixamo animations for CharaStudio v3.1.2.zipmod",
+        "pose_at": 1.79
+      }
+    ]
+  },
+  "procedural": {
+    "hug": "Подход, встречное движение рук обоих персонажей и плавное отпускание",
+    "mouth": "Кости нижней губы и ротовой полости",
+    "turn": "Поворот модели на 180 градусов",
+    "skirt": "Руки следуют за костями подола во время захвата, подъема и опускания"
+  }
+}
