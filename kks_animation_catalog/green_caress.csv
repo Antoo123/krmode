@@ -1,0 +1,12 @@
+﻿source_bundle,group,id,name_ja,name_ru_green,is_paired,has_second_character,male_base_asset,male_base_name,male_controller_asset,male_controller_name,female_base_asset,female_base_name,female_controller_asset,female_controller_name,second_controller_asset,second_controller_name,categories,movement_presets,posture,kindHoushi,numCtrl,aibu_enable_motion,camera
+71,0,0,立ち愛撫,Ласки стоя,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_00,,,"0,1,8,9",8:move_khs_tachi_base,0,0,0,aibuaction_kha_base,cam_kha_00
+71,0,1,仰向け愛撫,Ласки лёжа на спине,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_01,,,"0,1",,0,0,0,aibuaction_kha_base,cam_kha_01
+71,0,2,四つん這い愛撫,Ласки на четвереньках,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_02,,,"0,1",,0,0,0,aibuaction_kha_base,cam_kha_02
+71,0,3,椅子座り愛撫,Ласки сидя на стуле,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_03,,,"2,4",,0,0,0,aibuaction_kha_isu,cam_kha_03
+71,0,4,椅子バック愛撫,Ласки у стула сзади,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_04,,,"2,3,4,5",,0,0,0,aibuaction_kha_base,cam_kha_04
+71,0,5,机バック愛撫,Ласки у стола сзади,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_05,,,"6,7",,0,0,0,aibuaction_kha_base,cam_kha_05
+71,0,6,壁バック愛撫,Ласки у стены сзади,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_06,,,8,,0,0,0,aibuaction_kha_base,cam_kha_06
+71,0,7,座り愛撫,Ласки сидя,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_07,,,"0,1",,0,0,0,aibuaction_kha_isu,cam_kha_07
+71,0,8,机しゃがみ愛撫,Ласки на корточках у стола,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_08,,,1305,,0,0,0,aibuaction_kha_base,cam_kha_08
+71,0,9,本棚愛撫,Ласки у книжного шкафа,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_09,,,1002,,0,0,0,aibuaction_kha_base,cam_kha_09
+71,0,10,いたずら愛撫,Озорные ласки,0,0,,,,,h/anim/female/00_71_00.unity3d,kha_f_base,h/anim/female/00_01_00.unity3d,kha_f_10,,,1003,,0,0,0,aibuaction_kha_10,cam_kha_10

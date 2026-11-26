@@ -1,0 +1,27 @@
+﻿source_bundle,layer_table,area_en,area_ru,id,icon_id,use_kind,parent_bones,object_ids,object_assets,icon_sprite,plays,click_action,drag_action,variation_0_front_item,variation_0_front_body,variation_0_back_item,variation_0_back_body,variation_0_dynamic_area,variation_0_enable_dynamic,variation_1_front_item,variation_1_front_body,variation_1_back_item,variation_1_back_body,variation_1_dynamic_area,variation_1_enable_dynamic,variation_2_front_item,variation_2_front_body,variation_2_back_item,variation_2_back_body,variation_2_dynamic_area,variation_2_enable_dynamic
+01,aibulayer_00,left_breast,Левая грудь,0,1,1,k_f_mune03L_02,"1,-1",p_handR,sp_h_34_01,"2,2,2",0,3,1,2,1,2,0,0,2,4,2,4,0,0,3,6,3,6,0,0
+01,aibulayer_00,left_breast,Левая грудь,1,2,1,k_f_mune03L_02,"3,-1",p_fingerR,sp_h_34_07,"0,2,2",0,3,1,20,1,20,0,0,2,22,2,22,0,0,3,24,3,24,0,0
+01,aibulayer_00,left_breast,Левая грудь,2,3,2,k_f_mune03L_02,"4,-1",p_tang,sp_h_34_11,"2,2,2",0,3,1,31,1,31,0,0,2,33,2,33,0,0,3,35,3,35,0,0
+01,aibulayer_00,left_breast,Левая грудь,3,4,1,k_f_mune03L_02,"6,-1",p_item_denma_R,sp_h_34_17,"2,2,2",0,3,1,53,1,53,0,0,2,55,2,55,0,0,3,57,3,57,0,0
+71,aibulayer_00,left_breast,Левая грудь,4,26,1,k_f_mune03L_02,"12,-1",p_item_rotor_R,sp_h_34_23,"2,2,2",0,3,1,104,1,104,0,0,2,106,2,106,0,0,3,108,3,108,0,0
+01,aibulayer_01,right_breast,Правая грудь,0,5,0,k_f_mune03R_02,"0,-1",p_handL,sp_h_34_02,"2,2,2",0,3,1,1,1,1,1,0,2,3,2,3,1,0,3,5,3,5,1,0
+01,aibulayer_01,right_breast,Правая грудь,1,6,0,k_f_mune03R_02,"2,-1",p_fingerL,sp_h_34_08,"0,2,2",0,3,1,19,1,19,1,0,2,21,2,21,1,0,3,23,3,23,1,0
+01,aibulayer_01,right_breast,Правая грудь,2,7,2,k_f_mune03R_02,"4,-1",p_tang,sp_h_34_12,"2,2,2",0,3,4,32,4,32,1,0,5,34,5,34,1,0,6,36,6,36,1,0
+01,aibulayer_01,right_breast,Правая грудь,3,8,0,k_f_mune03R_02,"5,-1",p_item_denma_L,sp_h_34_18,"2,2,2",0,3,1,52,1,52,1,0,2,54,2,54,1,0,3,56,3,56,1,0
+71,aibulayer_01,right_breast,Правая грудь,4,27,0,k_f_mune03R_02,"11,-1",p_item_rotor_L,sp_h_34_24,"2,2,2",0,3,1,103,1,103,1,0,2,105,2,105,1,0,3,107,3,107,1,0
+01,aibulayer_02,groin,Пах / гениталии,0,9,3,"k_f_kosi02_02,k_f_kosi02_03","0,1","p_handL,p_handR",sp_h_34_03,"2,2,2",0,3,4,7,4,7,-1,0,5,8,5,8,-1,0,6,9,6,9,-1,0
+01,aibulayer_02,groin,Пах / гениталии,1,10,3,"k_f_kosi02_02,k_f_kosi02_03","2,3","p_fingerL,p_fingerR",sp_h_34_09,"-1,-1,2",0,3,4,25,4,25,-1,0,5,26,5,26,-1,0,6,27,6,27,-1,0
+01,aibulayer_02,groin,Пах / гениталии,2,11,2,k_f_kosi02_02,"4,-1",p_tang,sp_h_34_13,"2,2,2",0,3,7,37,10,38,-1,0,8,39,11,40,-1,0,9,41,12,42,-1,0
+01,aibulayer_02,groin,Пах / гениталии,3,12,3,"k_f_kosi02_02,k_f_kosi02_03","5,6","p_item_denma_L,p_item_denma_R",sp_h_34_19,"2,2,2",0,3,4,58,5,59,-1,0,6,60,7,61,-1,0,8,62,9,63,-1,0
+01,aibulayer_02,groin,Пах / гениталии,4,25,3,"k_f_kosi02_02,k_f_kosi02_03","7,8","p_item_vibe,p_item_vibe",sp_h_34_22,"-1,-1,2",0,1,1,70,1,70,-1,0,2,71,2,71,-1,0,3,72,3,72,-1,0
+71,aibulayer_02,groin,Пах / гениталии,5,29,3,"k_f_kosi02_02,k_f_kosi02_03","9,10","p_item_dildo,p_item_dildo",sp_h_34_26,"-1,-1,2",0,1,1,100,1,100,-1,0,2,101,2,101,-1,0,3,102,3,102,-1,0
+71,aibulayer_02,groin,Пах / гениталии,6,28,3,"k_f_kosi02_02,k_f_kosi02_03","11,12","p_item_rotor_L,p_item_rotor_R",sp_h_34_25,"-1,-1,2",0,3,4,109,5,110,-1,0,6,111,7,112,-1,0,8,113,9,114,-1,0
+01,aibulayer_03,anal_area,Анальная область,0,13,3,"k_f_kosi02_02,k_f_kosi02_03","0,1","p_handL,p_handR",sp_h_34_04,"-1,-1,2",0,3,7,10,7,10,-1,0,8,11,8,11,-1,0,9,12,9,12,-1,0
+01,aibulayer_03,anal_area,Анальная область,1,14,3,"k_f_kosi02_02,k_f_kosi02_03","2,3","p_fingerL,p_fingerR",sp_h_34_10,"-1,-1,2",0,3,7,28,7,28,-1,0,8,29,8,29,-1,0,9,30,9,30,-1,0
+01,aibulayer_03,anal_area,Анальная область,2,15,2,k_f_kosi02_02,"4,-1",p_tang,sp_h_34_14,"-1,-1,2",0,1,13,43,13,43,-1,0,14,44,14,44,-1,0,15,45,15,45,-1,0
+01,aibulayer_04,left_buttock,Левая ягодица,0,17,0,k_f_siriL_02,"0,-1",p_handL,sp_h_34_05,"2,2,2",0,3,10,13,10,13,2,0,11,15,11,15,2,0,12,17,12,17,2,0
+01,aibulayer_04,left_buttock,Левая ягодица,1,19,2,k_f_kosi02_02,"4,-1",p_tang,sp_h_34_15,"2,2,2",0,3,16,46,16,46,2,0,17,48,17,48,2,0,18,50,18,50,2,0
+01,aibulayer_04,left_buttock,Левая ягодица,2,20,0,k_f_siriL_02,"5,-1",p_item_denma_L,sp_h_34_20,"2,2,2",0,3,10,64,10,64,2,0,11,66,11,66,2,0,12,68,12,68,2,0
+01,aibulayer_05,right_buttock,Правая ягодица,0,21,1,k_f_siriR_02,"1,-1",p_handR,sp_h_34_06,"2,2,2",0,3,10,14,10,14,3,0,11,16,11,16,3,0,12,18,12,18,3,0
+01,aibulayer_05,right_buttock,Правая ягодица,1,23,2,k_f_kosi02_02,"4,-1",p_tang,sp_h_34_16,"2,2,2",0,3,19,47,19,47,3,0,20,49,20,49,3,0,21,51,21,51,3,0
+01,aibulayer_05,right_buttock,Правая ягодица,2,24,1,k_f_siriR_02,"6,-1",p_item_denma_R,sp_h_34_21,"2,2,2",0,3,10,65,10,65,3,0,11,67,11,67,3,0,12,69,12,69,3,0

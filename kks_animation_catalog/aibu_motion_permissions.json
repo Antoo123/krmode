@@ -1,0 +1,3512 @@
+[
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Stop_Idle",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "IN_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "IN_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Oral_Idle_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Oral_Idle",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Drink_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Drink",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Drink_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Vomit_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Vomit",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizurifera",
+    "raw": {
+      "AnimationName": "Vomit_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "Insert",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "InsertIdle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "M_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "M_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "WF_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "WF_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "WS_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "WS_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "WS_IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "SF_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "SF_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "SS_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "SS_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "SS_IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "Pull",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_base",
+    "raw": {
+      "AnimationName": "Drop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "M_Touch",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "M_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "A_Touch",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "A_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "S_Touch",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "S_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "K_Touch",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "K_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "Front_Dislikes",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "Back_Dislikes",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "Orgasm_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "Orgasm_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_base",
+    "raw": {
+      "AnimationName": "Orgasm_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri",
+    "raw": {
+      "AnimationName": "Stop_Idle",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_base",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_base",
+    "raw": {
+      "AnimationName": "Stop_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_base",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_base",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_base",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_base",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_base",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_base",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "Insert",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "InsertIdle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "M_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "M_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "WF_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "WF_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "WS_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "WS_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "WS_IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "SF_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "SF_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "SS_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "SS_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "SS_IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "Pull",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "Drop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_Insert",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_InsertIdle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_WLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_SLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_OLoop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_M_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_M_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_WF_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_WF_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_WS_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_WS_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_WS_IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_SF_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_SF_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_SS_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_SS_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_SS_IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_IN_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_M_OUT_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_M_OUT_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_OUT_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_Pull",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_anal",
+    "raw": {
+      "AnimationName": "A_Drop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri2",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri2",
+    "raw": {
+      "AnimationName": "Stop_Idle",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri2",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri2",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri2",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri2",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri2",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_paizuri2",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Stop_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "IN_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "IN_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Oral_Idle_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Oral_Idle",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Drink_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Drink",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Drink_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Vomit_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Vomit",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera",
+    "raw": {
+      "AnimationName": "Vomit_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "Insert",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "InsertIdle",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "M_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "M_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "WF_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "WF_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "WS_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "WS_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "WS_IN_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "SF_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "SF_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "SS_IN_Start",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "SS_IN_Loop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "SS_IN_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "IN_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 1,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "Pull",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khs_kabe",
+    "raw": {
+      "AnimationName": "Drop",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "M_Touch",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "M_Idle",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "A_Touch",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "A_Idle",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "S_Touch",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "S_Idle",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "K_Touch",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "K_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "Front_Dislikes",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "Back_Dislikes",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "Orgasm_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "Orgasm_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_10",
+    "raw": {
+      "AnimationName": "Orgasm_A",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Stop_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "IN_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "IN_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Oral_Idle_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Oral_Idle",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Drink_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Drink",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Drink_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Vomit_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Vomit",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_50",
+    "raw": {
+      "AnimationName": "Vomit_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "M_Touch",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "M_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "A_Touch",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "A_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "S_Touch",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "S_Idle",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "K_Touch",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "K_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "Front_Dislikes",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "Back_Dislikes",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "Orgasm_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "Orgasm_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_kha_isu",
+    "raw": {
+      "AnimationName": "Orgasm_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 1,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Idle",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Stop_Idle",
+      "Mouth": 1,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "WLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "SLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "OLoop",
+      "Mouth": 0,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 1,
+      "Hip_L": 1,
+      "Hip_R": 1,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "M_OUT_Start",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "M_OUT_Loop",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "OUT_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "IN_Start",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "IN_Loop",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Oral_Idle_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Oral_Idle",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Drink_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Drink",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Drink_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Vomit_IN",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Vomit",
+      "Mouth": 0,
+      "Bust_L": 0,
+      "Bust_R": 0,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibuaction_khh_fera_51",
+    "raw": {
+      "AnimationName": "Vomit_A",
+      "Mouth": 1,
+      "Bust_L": 1,
+      "Bust_R": 1,
+      "Kokan": 0,
+      "Anal": 0,
+      "Hip_L": 0,
+      "Hip_R": 0,
+      "MotionState": 0
+    }
+  }
+]

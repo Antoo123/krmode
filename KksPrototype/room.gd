@@ -12,6 +12,7 @@ const Edit := preload("res://character_edit.gd")
 const NpcGameplay := preload("res://npc_gameplay.gd")
 const PairPreview := preload("res://pair_preview.gd")
 const StudioScenePreview := preload("res://studio_scene_preview.gd")
+const AnimationLab := preload("res://animation_lab.gd")
 const IDLE_ID := "8f3364877591ae77d0df5a7e"
 const WALK_ID := "e717c63c91fc4031f3ce5866"
 const DANCE_ID := "c2504dfb989fb63949dc4223"
@@ -46,6 +47,7 @@ var room_lit := false
 var npc_gameplay: Node3D
 var pair_preview: CanvasLayer
 var studio_preview: CanvasLayer
+var animation_lab: CanvasLayer
 var character_key: DirectionalLight3D
 var room_environment: Environment
 
@@ -90,6 +92,8 @@ func _ready() -> void:
 	add_child(pair_preview)
 	studio_preview = StudioScenePreview.new()
 	add_child(studio_preview)
+	if "--smoke-f7" in OS.get_cmdline_user_args():
+		_check_animation_lab.call_deferred()
 	if "--smoke-test" in OS.get_cmdline_user_args():
 		smoke_tick = 0
 		smoke_start = player.position
@@ -104,7 +108,99 @@ func _ready() -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
+func _check_animation_lab() -> void:
+	var key := InputEventKey.new()
+	key.keycode = KEY_F7
+	key.pressed = true
+	get_viewport().push_input(key)
+	if not animation_lab or not animation_lab.is_open() or animation_lab.results.item_count != 150:
+		push_error("F7 did not open the packaged catalogue.")
+		get_tree().quit(1)
+		return
+	for index in range(animation_lab.results.item_count):
+		var row: Dictionary = animation_lab.results.get_item_metadata(index)
+		if int(row.group) != 1 or int(row.id) != 33:
+			continue
+		animation_lab.results.select(index)
+		animation_lab.results.item_selected.emit(index)
+		animation_lab.scrub.value = 0.37
+		if animation_lab.stage.duration <= 0.0 or not animation_lab.stage.base_animations[0] or not animation_lab.stage.base_animations[1]:
+			break
+		if DisplayServer.get_name() != "headless":
+			await RenderingServer.frame_post_draw
+		print("F7 Windows smoke: 150 entries, AnimationInfo_01/33 loaded two tracks at phase ", animation_lab.phase)
+		get_tree().quit(0 if _check_packaged_green_hands() else 1)
+		return
+	push_error("F7 could not play the packaged AnimationInfo_01/33 pair.")
+	get_tree().quit(1)
+
+
+func _check_packaged_green_hands() -> bool:
+	for index in range(animation_lab.results.item_count):
+		var row: Dictionary = animation_lab.results.get_item_metadata(index)
+		if int(row.group) != 0 or int(row.id) != 0:
+			continue
+		animation_lab.results.select(index)
+		animation_lab.results.item_selected.emit(index)
+		animation_lab.pov_hands.set_pressed_no_signal(true)
+		animation_lab._toggle_hands(true)
+		animation_lab.zone.select(0)
+		animation_lab._fill_actions()
+		animation_lab._start_hand()
+		var hands: Node3D = animation_lab.stage.green_hands
+		var reaction: RefCounted = animation_lab.stage.green_reaction
+		var peak := 0.0
+		var played_touch := false
+		for tick in range(480):
+			animation_lab._process(1.0 / 60.0)
+			peak = maxf(peak, reaction.hit_offset)
+			played_touch = played_touch or animation_lab.contact_state == "M_Touch"
+			if animation_lab.contact_state == "M_Idle":
+				break
+		if hands.running and hands.authored and not hands.resolved_bone.is_empty() and animation_lab.hand_overlay and peak > 0.001 and reaction.face.applied.get("surfaces", 0) >= 3 and played_touch and animation_lab.contact_state == "M_Idle":
+			print("F7 Windows smoke: original POV hand reached ", hands.resolved_bone,
+				", M_Touch -> M_Idle, HitReaction offset ", peak, " m, facial preset ", reaction.face_id,
+				" on ", reaction.face.applied.surfaces, " meshes")
+			for position in animation_lab.caress_positions.item_count:
+				if animation_lab.caress_positions.get_item_id(position) == 7:
+					animation_lab._choose_caress_position(position)
+					break
+			if int(animation_lab.row.id) == 7 and animation_lab.states.item_count == 14 and animation_lab.tracks[1].begins_with("res://Content/F7/States/"):
+				print("F7 Windows smoke: Sitting loaded the packaged Studio KMA and all 14 state entries")
+				return true
+		break
+	push_error("F7 could not play the packaged AnimationInfo_00/00 POV hand contact.")
+	return false
+
+
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F7:
+		if animation_lab and animation_lab.is_open():
+			animation_lab.close()
+		elif npc_gameplay and not npc_gameplay.staging.smooth_approach():
+			if pair_preview.is_open():
+				pair_preview.toggle()
+			if studio_preview.is_open():
+				studio_preview.toggle()
+			if editor.is_open():
+				editor.toggle()
+			if menu.is_open():
+				menu.toggle()
+			npc_gameplay.close_dialogue()
+			npc_gameplay.contact.end()
+			if not animation_lab:
+				animation_lab = AnimationLab.new()
+				add_child(animation_lab)
+			animation_lab.open()
+		get_viewport().set_input_as_handled()
+		return
+	if animation_lab and animation_lab.is_open():
+		if event is InputEventKey and event.pressed and not event.echo and event.keycode in [KEY_F5, KEY_F6]:
+			animation_lab.close()
+		else:
+			animation_lab.handle_input(event)
+			get_viewport().set_input_as_handled()
+			return
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F6:
 		if studio_preview and not npc_gameplay.staging.smooth_approach():
 			if pair_preview.is_open():
@@ -181,6 +277,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if animation_lab and animation_lab.is_open():
+		return
 	if studio_preview and studio_preview.is_open():
 		return
 	if pair_preview and pair_preview.is_open():
@@ -767,7 +865,7 @@ func build_hud() -> void:
 	panel.add_child(hints)
 	var label := Label.new()
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	label.text = "WASD  Move     Mouse  Look     F1  Animations     F2  Character     F5  Pair Preview     F6  Studio Scenes"
+	label.text = "WASD  Move     Mouse  Look     F1  Animations     F2  Character     F5  Pair Preview     F6  Studio Scenes     F7  Animation Lab"
 	label.add_theme_font_size_override("font_size", 17)
 	label.add_theme_color_override("font_color", Color("#fff3e1"))
 	hints.add_child(label)

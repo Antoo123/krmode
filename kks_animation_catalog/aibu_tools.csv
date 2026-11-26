@@ -1,0 +1,14 @@
+﻿source_bundle,id,manifest,bundle,asset,nomalObj,objKind,setKind,saveID,isVirgin
+01,0,add01,h/common/01.unity3d,p_handL,o_hand_L,0,0,-1,0
+01,1,add01,h/common/01.unity3d,p_handR,o_hand_R,0,1,-1,0
+01,2,add01,h/common/01.unity3d,p_fingerL,o_hand_L,1,0,-1,0
+01,3,add01,h/common/01.unity3d,p_fingerR,o_hand_R,1,1,-1,0
+01,4,add01,h/common/01.unity3d,p_tang,o_tang,2,2,-1,0
+01,5,add01,h/common/01.unity3d,p_item_denma_L,O_massajiki_L_00_00,3,0,1000,0
+01,6,add01,h/common/01.unity3d,p_item_denma_R,O_massajiki_R_00_00,3,1,1000,0
+01,7,add01,h/common/01.unity3d,p_item_vibe,mo_hs_ha_bai_00,4,0,1001,1
+01,8,add01,h/common/01.unity3d,p_item_vibe,mo_hs_ha_bai_00,4,1,1001,1
+71,9,add71,h/common/71.unity3d,p_item_dildo,O_dildo_00,5,0,1011,1
+71,10,add71,h/common/71.unity3d,p_item_dildo,O_dildo_00,5,1,1011,1
+71,11,add71,h/common/71.unity3d,p_item_rotor_L,o_item_rotor_L,6,0,1010,0
+71,12,add71,h/common/71.unity3d,p_item_rotor_R,o_item_rotor_R,6,1,1010,0

@@ -1,0 +1,249 @@
+[
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 0,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_handL",
+      "nomalObj": "o_hand_L",
+      "isSilhouetteChange": 1,
+      "isMaterialGet": 1,
+      "objSilhouette": "o_hand_L_silhouette",
+      "objKind": 0,
+      "setKind": 0,
+      "bundleSE": "",
+      "nameSE": "",
+      "saveID": -1,
+      "isVirgin": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 1,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_handR",
+      "nomalObj": "o_hand_R",
+      "isSilhouetteChange": 1,
+      "isMaterialGet": 1,
+      "objSilhouette": "o_hand_R_silhouette",
+      "objKind": 0,
+      "setKind": 1,
+      "bundleSE": "",
+      "nameSE": "",
+      "saveID": -1,
+      "isVirgin": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 2,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_fingerL",
+      "nomalObj": "o_hand_L",
+      "isSilhouetteChange": 1,
+      "isMaterialGet": 1,
+      "objSilhouette": "o_hand_L_silhouette",
+      "objKind": 1,
+      "setKind": 0,
+      "bundleSE": "",
+      "nameSE": "",
+      "saveID": -1,
+      "isVirgin": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 3,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_fingerR",
+      "nomalObj": "o_hand_R",
+      "isSilhouetteChange": 1,
+      "isMaterialGet": 1,
+      "objSilhouette": "o_hand_R_silhouette",
+      "objKind": 1,
+      "setKind": 1,
+      "bundleSE": "",
+      "nameSE": "",
+      "saveID": -1,
+      "isVirgin": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 4,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_tang",
+      "nomalObj": "o_tang",
+      "isSilhouetteChange": 1,
+      "isMaterialGet": 0,
+      "objSilhouette": "o_tang_silhouette",
+      "objKind": 2,
+      "setKind": 2,
+      "bundleSE": "",
+      "nameSE": "",
+      "saveID": -1,
+      "isVirgin": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 5,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_item_denma_L",
+      "nomalObj": "O_massajiki_L_00_00",
+      "isSilhouetteChange": 0,
+      "isMaterialGet": 0,
+      "objSilhouette": "",
+      "objKind": 3,
+      "setKind": 0,
+      "bundleSE": "sound/data/se/h/01.unity3d",
+      "nameSE": "hse_ks_denma",
+      "saveID": 1000,
+      "isVirgin": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 6,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_item_denma_R",
+      "nomalObj": "O_massajiki_R_00_00",
+      "isSilhouetteChange": 0,
+      "isMaterialGet": 0,
+      "objSilhouette": "",
+      "objKind": 3,
+      "setKind": 1,
+      "bundleSE": "sound/data/se/h/01.unity3d",
+      "nameSE": "hse_ks_denma",
+      "saveID": 1000,
+      "isVirgin": 0
+    }
+  },
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 7,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_item_vibe",
+      "nomalObj": "mo_hs_ha_bai_00",
+      "isSilhouetteChange": 0,
+      "isMaterialGet": 0,
+      "objSilhouette": "",
+      "objKind": 4,
+      "setKind": 0,
+      "bundleSE": "sound/data/se/h/01.unity3d",
+      "nameSE": "hse_ks_baibu",
+      "saveID": 1001,
+      "isVirgin": 1
+    }
+  },
+  {
+    "bundle": "01",
+    "raw": {
+      "id": 8,
+      "manifest": "add01",
+      "bundle": "h/common/01.unity3d",
+      "asset": "p_item_vibe",
+      "nomalObj": "mo_hs_ha_bai_00",
+      "isSilhouetteChange": 0,
+      "isMaterialGet": 0,
+      "objSilhouette": "",
+      "objKind": 4,
+      "setKind": 1,
+      "bundleSE": "sound/data/se/h/01.unity3d",
+      "nameSE": "hse_ks_baibu",
+      "saveID": 1001,
+      "isVirgin": 1
+    }
+  },
+  {
+    "bundle": "71",
+    "raw": {
+      "id": 9,
+      "manifest": "add71",
+      "bundle": "h/common/71.unity3d",
+      "asset": "p_item_dildo",
+      "nomalObj": "O_dildo_00",
+      "isSilhouetteChange": 0,
+      "isMaterialGet": 0,
+      "objSilhouette": "",
+      "objKind": 5,
+      "setKind": 0,
+      "bundleSE": "",
+      "nameSE": "",
+      "saveID": 1011,
+      "isVirgin": 1
+    }
+  },
+  {
+    "bundle": "71",
+    "raw": {
+      "id": 10,
+      "manifest": "add71",
+      "bundle": "h/common/71.unity3d",
+      "asset": "p_item_dildo",
+      "nomalObj": "O_dildo_00",
+      "isSilhouetteChange": 0,
+      "isMaterialGet": 0,
+      "objSilhouette": "",
+      "objKind": 5,
+      "setKind": 1,
+      "bundleSE": "",
+      "nameSE": "",
+      "saveID": 1011,
+      "isVirgin": 1
+    }
+  },
+  {
+    "bundle": "71",
+    "raw": {
+      "id": 11,
+      "manifest": "add71",
+      "bundle": "h/common/71.unity3d",
+      "asset": "p_item_rotor_L",
+      "nomalObj": "o_item_rotor_L",
+      "isSilhouetteChange": 0,
+      "isMaterialGet": 0,
+      "objSilhouette": "",
+      "objKind": 6,
+      "setKind": 0,
+      "bundleSE": "sound/data/se/h/71.unity3d",
+      "nameSE": "hse_ks_rotor",
+      "saveID": 1010,
+      "isVirgin": 0
+    }
+  },
+  {
+    "bundle": "71",
+    "raw": {
+      "id": 12,
+      "manifest": "add71",
+      "bundle": "h/common/71.unity3d",
+      "asset": "p_item_rotor_R",
+      "nomalObj": "o_item_rotor_R",
+      "isSilhouetteChange": 0,
+      "isMaterialGet": 0,
+      "objSilhouette": "",
+      "objKind": 6,
+      "setKind": 1,
+      "bundleSE": "sound/data/se/h/71.unity3d",
+      "nameSE": "hse_ks_rotor",
+      "saveID": 1010,
+      "isVirgin": 0
+    }
+  }
+]

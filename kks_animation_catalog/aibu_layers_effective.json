@@ -1,0 +1,1830 @@
+[
+  {
+    "bundle": "01",
+    "table": "aibulayer_00",
+    "raw": {
+      "id": 0,
+      "iconId": 1,
+      "useKind": 1,
+      "idVisible": -1,
+      "idObjects": [
+        1,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03L_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 2
+          },
+          "back": {
+            "item": 1,
+            "body": 2
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 4
+          },
+          "back": {
+            "item": 2,
+            "body": 4
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 6
+          },
+          "back": {
+            "item": 3,
+            "body": 6
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_00",
+    "raw": {
+      "id": 1,
+      "iconId": 2,
+      "useKind": 1,
+      "idVisible": -1,
+      "idObjects": [
+        3,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03L_02"
+      ],
+      "plays": [
+        0,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 20
+          },
+          "back": {
+            "item": 1,
+            "body": 20
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 22
+          },
+          "back": {
+            "item": 2,
+            "body": 22
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 24
+          },
+          "back": {
+            "item": 3,
+            "body": 24
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_00",
+    "raw": {
+      "id": 2,
+      "iconId": 3,
+      "useKind": 2,
+      "idVisible": -1,
+      "idObjects": [
+        4,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03L_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 31
+          },
+          "back": {
+            "item": 1,
+            "body": 31
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 33
+          },
+          "back": {
+            "item": 2,
+            "body": 33
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 35
+          },
+          "back": {
+            "item": 3,
+            "body": 35
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_00",
+    "raw": {
+      "id": 3,
+      "iconId": 4,
+      "useKind": 1,
+      "idVisible": -1,
+      "idObjects": [
+        6,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03L_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 53
+          },
+          "back": {
+            "item": 1,
+            "body": 53
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 55
+          },
+          "back": {
+            "item": 2,
+            "body": 55
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 57
+          },
+          "back": {
+            "item": 3,
+            "body": 57
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "71",
+    "table": "aibulayer_00",
+    "raw": {
+      "id": 4,
+      "iconId": 26,
+      "useKind": 1,
+      "idVisible": -1,
+      "idObjects": [
+        12,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03L_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 104
+          },
+          "back": {
+            "item": 1,
+            "body": 104
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 106
+          },
+          "back": {
+            "item": 2,
+            "body": 106
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 108
+          },
+          "back": {
+            "item": 3,
+            "body": 108
+          },
+          "dynamicArea": 0,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_01",
+    "raw": {
+      "id": 0,
+      "iconId": 5,
+      "useKind": 0,
+      "idVisible": -1,
+      "idObjects": [
+        0,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03R_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 1
+          },
+          "back": {
+            "item": 1,
+            "body": 1
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 3
+          },
+          "back": {
+            "item": 2,
+            "body": 3
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 5
+          },
+          "back": {
+            "item": 3,
+            "body": 5
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_01",
+    "raw": {
+      "id": 1,
+      "iconId": 6,
+      "useKind": 0,
+      "idVisible": -1,
+      "idObjects": [
+        2,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03R_02"
+      ],
+      "plays": [
+        0,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 19
+          },
+          "back": {
+            "item": 1,
+            "body": 19
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 21
+          },
+          "back": {
+            "item": 2,
+            "body": 21
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 23
+          },
+          "back": {
+            "item": 3,
+            "body": 23
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_01",
+    "raw": {
+      "id": 2,
+      "iconId": 7,
+      "useKind": 2,
+      "idVisible": -1,
+      "idObjects": [
+        4,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03R_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 4,
+            "body": 32
+          },
+          "back": {
+            "item": 4,
+            "body": 32
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 5,
+            "body": 34
+          },
+          "back": {
+            "item": 5,
+            "body": 34
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 6,
+            "body": 36
+          },
+          "back": {
+            "item": 6,
+            "body": 36
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_01",
+    "raw": {
+      "id": 3,
+      "iconId": 8,
+      "useKind": 0,
+      "idVisible": -1,
+      "idObjects": [
+        5,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03R_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 52
+          },
+          "back": {
+            "item": 1,
+            "body": 52
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 54
+          },
+          "back": {
+            "item": 2,
+            "body": 54
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 56
+          },
+          "back": {
+            "item": 3,
+            "body": 56
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "71",
+    "table": "aibulayer_01",
+    "raw": {
+      "id": 4,
+      "iconId": 27,
+      "useKind": 0,
+      "idVisible": -1,
+      "idObjects": [
+        11,
+        -1
+      ],
+      "nameParents": [
+        "k_f_mune03R_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 103
+          },
+          "back": {
+            "item": 1,
+            "body": 103
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 105
+          },
+          "back": {
+            "item": 2,
+            "body": 105
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 107
+          },
+          "back": {
+            "item": 3,
+            "body": 107
+          },
+          "dynamicArea": 1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_02",
+    "raw": {
+      "id": 0,
+      "iconId": 9,
+      "useKind": 3,
+      "idVisible": -1,
+      "idObjects": [
+        0,
+        1
+      ],
+      "nameParents": [
+        "k_f_kosi02_02",
+        "k_f_kosi02_03"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 4,
+            "body": 7
+          },
+          "back": {
+            "item": 4,
+            "body": 7
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 5,
+            "body": 8
+          },
+          "back": {
+            "item": 5,
+            "body": 8
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 6,
+            "body": 9
+          },
+          "back": {
+            "item": 6,
+            "body": 9
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_02",
+    "raw": {
+      "id": 1,
+      "iconId": 10,
+      "useKind": 3,
+      "idVisible": -1,
+      "idObjects": [
+        2,
+        3
+      ],
+      "nameParents": [
+        "k_f_kosi02_02",
+        "k_f_kosi02_03"
+      ],
+      "plays": [
+        -1,
+        -1,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 4,
+            "body": 25
+          },
+          "back": {
+            "item": 4,
+            "body": 25
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 5,
+            "body": 26
+          },
+          "back": {
+            "item": 5,
+            "body": 26
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 6,
+            "body": 27
+          },
+          "back": {
+            "item": 6,
+            "body": 27
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_02",
+    "raw": {
+      "id": 2,
+      "iconId": 11,
+      "useKind": 2,
+      "idVisible": -1,
+      "idObjects": [
+        4,
+        -1
+      ],
+      "nameParents": [
+        "k_f_kosi02_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 7,
+            "body": 37
+          },
+          "back": {
+            "item": 10,
+            "body": 38
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 8,
+            "body": 39
+          },
+          "back": {
+            "item": 11,
+            "body": 40
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 9,
+            "body": 41
+          },
+          "back": {
+            "item": 12,
+            "body": 42
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_02",
+    "raw": {
+      "id": 3,
+      "iconId": 12,
+      "useKind": 3,
+      "idVisible": -1,
+      "idObjects": [
+        5,
+        6
+      ],
+      "nameParents": [
+        "k_f_kosi02_02",
+        "k_f_kosi02_03"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 4,
+            "body": 58
+          },
+          "back": {
+            "item": 5,
+            "body": 59
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 6,
+            "body": 60
+          },
+          "back": {
+            "item": 7,
+            "body": 61
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 8,
+            "body": 62
+          },
+          "back": {
+            "item": 9,
+            "body": 63
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_02",
+    "raw": {
+      "id": 4,
+      "iconId": 25,
+      "useKind": 3,
+      "idVisible": -1,
+      "idObjects": [
+        7,
+        8
+      ],
+      "nameParents": [
+        "k_f_kosi02_02",
+        "k_f_kosi02_03"
+      ],
+      "plays": [
+        -1,
+        -1,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 1,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 70
+          },
+          "back": {
+            "item": 1,
+            "body": 70
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 71
+          },
+          "back": {
+            "item": 2,
+            "body": 71
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 72
+          },
+          "back": {
+            "item": 3,
+            "body": 72
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "71",
+    "table": "aibulayer_02",
+    "raw": {
+      "id": 5,
+      "iconId": 29,
+      "useKind": 3,
+      "idVisible": -1,
+      "idObjects": [
+        9,
+        10
+      ],
+      "nameParents": [
+        "k_f_kosi02_02",
+        "k_f_kosi02_03"
+      ],
+      "plays": [
+        -1,
+        -1,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 1,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 1,
+            "body": 100
+          },
+          "back": {
+            "item": 1,
+            "body": 100
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 2,
+            "body": 101
+          },
+          "back": {
+            "item": 2,
+            "body": 101
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 3,
+            "body": 102
+          },
+          "back": {
+            "item": 3,
+            "body": 102
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "71",
+    "table": "aibulayer_02",
+    "raw": {
+      "id": 6,
+      "iconId": 28,
+      "useKind": 3,
+      "idVisible": -1,
+      "idObjects": [
+        11,
+        12
+      ],
+      "nameParents": [
+        "k_f_kosi02_02",
+        "k_f_kosi02_03"
+      ],
+      "plays": [
+        -1,
+        -1,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 4,
+            "body": 109
+          },
+          "back": {
+            "item": 5,
+            "body": 110
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 6,
+            "body": 111
+          },
+          "back": {
+            "item": 7,
+            "body": 112
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 8,
+            "body": 113
+          },
+          "back": {
+            "item": 9,
+            "body": 114
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_03",
+    "raw": {
+      "id": 0,
+      "iconId": 13,
+      "useKind": 3,
+      "idVisible": -1,
+      "idObjects": [
+        0,
+        1
+      ],
+      "nameParents": [
+        "k_f_kosi02_02",
+        "k_f_kosi02_03"
+      ],
+      "plays": [
+        -1,
+        -1,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 7,
+            "body": 10
+          },
+          "back": {
+            "item": 7,
+            "body": 10
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 8,
+            "body": 11
+          },
+          "back": {
+            "item": 8,
+            "body": 11
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 9,
+            "body": 12
+          },
+          "back": {
+            "item": 9,
+            "body": 12
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_03",
+    "raw": {
+      "id": 1,
+      "iconId": 14,
+      "useKind": 3,
+      "idVisible": -1,
+      "idObjects": [
+        2,
+        3
+      ],
+      "nameParents": [
+        "k_f_kosi02_02",
+        "k_f_kosi02_03"
+      ],
+      "plays": [
+        -1,
+        -1,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 7,
+            "body": 28
+          },
+          "back": {
+            "item": 7,
+            "body": 28
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 8,
+            "body": 29
+          },
+          "back": {
+            "item": 8,
+            "body": 29
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 9,
+            "body": 30
+          },
+          "back": {
+            "item": 9,
+            "body": 30
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_03",
+    "raw": {
+      "id": 2,
+      "iconId": 15,
+      "useKind": 2,
+      "idVisible": -1,
+      "idObjects": [
+        4,
+        -1
+      ],
+      "nameParents": [
+        "k_f_kosi02_02"
+      ],
+      "plays": [
+        -1,
+        -1,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_01"
+      },
+      "actionDrag": 1,
+      "DragSE": {
+        "asset": "sound/data/se/h/01.unity3d",
+        "file": "hse_ks_02"
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 13,
+            "body": 43
+          },
+          "back": {
+            "item": 13,
+            "body": 43
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 14,
+            "body": 44
+          },
+          "back": {
+            "item": 14,
+            "body": 44
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 15,
+            "body": 45
+          },
+          "back": {
+            "item": 15,
+            "body": 45
+          },
+          "dynamicArea": -1,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_04",
+    "raw": {
+      "id": 0,
+      "iconId": 17,
+      "useKind": 0,
+      "idVisible": -1,
+      "idObjects": [
+        0,
+        -1
+      ],
+      "nameParents": [
+        "k_f_siriL_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 10,
+            "body": 13
+          },
+          "back": {
+            "item": 10,
+            "body": 13
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 11,
+            "body": 15
+          },
+          "back": {
+            "item": 11,
+            "body": 15
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 12,
+            "body": 17
+          },
+          "back": {
+            "item": 12,
+            "body": 17
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_04",
+    "raw": {
+      "id": 1,
+      "iconId": 19,
+      "useKind": 2,
+      "idVisible": -1,
+      "idObjects": [
+        4,
+        -1
+      ],
+      "nameParents": [
+        "k_f_kosi02_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 16,
+            "body": 46
+          },
+          "back": {
+            "item": 16,
+            "body": 46
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 17,
+            "body": 48
+          },
+          "back": {
+            "item": 17,
+            "body": 48
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 18,
+            "body": 50
+          },
+          "back": {
+            "item": 18,
+            "body": 50
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_04",
+    "raw": {
+      "id": 2,
+      "iconId": 20,
+      "useKind": 0,
+      "idVisible": -1,
+      "idObjects": [
+        5,
+        -1
+      ],
+      "nameParents": [
+        "k_f_siriL_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 10,
+            "body": 64
+          },
+          "back": {
+            "item": 10,
+            "body": 64
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 11,
+            "body": 66
+          },
+          "back": {
+            "item": 11,
+            "body": 66
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 12,
+            "body": 68
+          },
+          "back": {
+            "item": 12,
+            "body": 68
+          },
+          "dynamicArea": 2,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_05",
+    "raw": {
+      "id": 0,
+      "iconId": 21,
+      "useKind": 1,
+      "idVisible": -1,
+      "idObjects": [
+        1,
+        -1
+      ],
+      "nameParents": [
+        "k_f_siriR_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 10,
+            "body": 14
+          },
+          "back": {
+            "item": 10,
+            "body": 14
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 11,
+            "body": 16
+          },
+          "back": {
+            "item": 11,
+            "body": 16
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 12,
+            "body": 18
+          },
+          "back": {
+            "item": 12,
+            "body": 18
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_05",
+    "raw": {
+      "id": 1,
+      "iconId": 23,
+      "useKind": 2,
+      "idVisible": -1,
+      "idObjects": [
+        4,
+        -1
+      ],
+      "nameParents": [
+        "k_f_kosi02_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 19,
+            "body": 47
+          },
+          "back": {
+            "item": 19,
+            "body": 47
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 20,
+            "body": 49
+          },
+          "back": {
+            "item": 20,
+            "body": 49
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 21,
+            "body": 51
+          },
+          "back": {
+            "item": 21,
+            "body": 51
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  },
+  {
+    "bundle": "01",
+    "table": "aibulayer_05",
+    "raw": {
+      "id": 2,
+      "iconId": 24,
+      "useKind": 1,
+      "idVisible": -1,
+      "idObjects": [
+        6,
+        -1
+      ],
+      "nameParents": [
+        "k_f_siriR_02"
+      ],
+      "plays": [
+        2,
+        2,
+        2
+      ],
+      "actionClick": 0,
+      "ClickSE": {
+        "asset": "",
+        "file": ""
+      },
+      "actionDrag": 3,
+      "DragSE": {
+        "asset": "",
+        "file": ""
+      },
+      "layerActions": [
+        {
+          "front": {
+            "item": 10,
+            "body": 65
+          },
+          "back": {
+            "item": 10,
+            "body": 65
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 11,
+            "body": 67
+          },
+          "back": {
+            "item": 11,
+            "body": 67
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        },
+        {
+          "front": {
+            "item": 12,
+            "body": 69
+          },
+          "back": {
+            "item": 12,
+            "body": 69
+          },
+          "dynamicArea": 3,
+          "enableDynamic": 0
+        }
+      ]
+    }
+  }
+]

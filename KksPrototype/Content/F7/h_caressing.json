@@ -1,0 +1,4880 @@
+{
+  "studio_info": "abdata/studio/info/00.unity3d",
+  "reference_parameters": {
+    "height": 0.5,
+    "motion": 0
+  },
+  "positions": {
+    "0": {
+      "position": "Standing",
+      "japanese": "立ち",
+      "id": 0,
+      "menu": "HAnime_00_01_100",
+      "menu_path_id": "5484359315201608082",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "6820157665702881179",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_00",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3887236509762666602",
+            "kma": "4e75b145ebf395fd9701b2ed",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3887236509762666602",
+            "kma": "4e75b145ebf395fd9701b2ed",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8066746064545641382",
+            "kma": "d97dc0a7a122f00b6b4fb010",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8066746064545641382",
+            "kma": "d97dc0a7a122f00b6b4fb010",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7247043716645061815",
+            "kma": "b8b31c49a2d3a5c95e521092",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7247043716645061815",
+            "kma": "b8b31c49a2d3a5c95e521092",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2092414336472209156",
+            "kma": "362740d5d9989765f8ccc986",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2116346291894588951",
+            "kma": "05fc06e56bde6aa2ac446ec8",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2116346291894588951",
+            "kma": "05fc06e56bde6aa2ac446ec8",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7428149432457514473",
+            "kma": "328e27775c5f66c574559c94",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7428149432457514473",
+            "kma": "328e27775c5f66c574559c94",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2567349710901751165",
+            "kma": "a20ccadb945560eb4a413f4e",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5076965884687264253",
+            "kma": "f7e260ee695905eac611d566",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5076965884687264253",
+            "kma": "f7e260ee695905eac611d566",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3186357293624499503",
+            "kma": "15761c86ed45a7f434fe08b7",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3186357293624499503",
+            "kma": "15761c86ed45a7f434fe08b7",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2074117881008976645",
+            "kma": "cedcf3a599929ef414f73675",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4764066932153333255",
+            "kma": "6d69592c0d2b6e7ff352a7aa",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4764066932153333255",
+            "kma": "6d69592c0d2b6e7ff352a7aa",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5050329180877391543",
+            "kma": "9a9a0f7d4e97e68cabdc7dd7",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5050329180877391543",
+            "kma": "9a9a0f7d4e97e68cabdc7dd7",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7662818595862029927",
+            "kma": "0aaf15879adf8b3038be1f99",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7662818595862029927",
+            "kma": "0aaf15879adf8b3038be1f99",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1202937753847032024",
+            "kma": "29b370baaf67cc771cacd578",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1202937753847032024",
+            "kma": "29b370baaf67cc771cacd578",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 11,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4798025057222745266",
+            "kma": "647a3310c390433b9b489255",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4798025057222745266",
+            "kma": "647a3310c390433b9b489255",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 12,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3172747525158310070",
+            "kma": "652139910e0940e885cf7892",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3172747525158310070",
+            "kma": "652139910e0940e885cf7892",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 13,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1731208986397757091",
+            "kma": "0d429b558b5372a06b979ffc",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1731208986397757091",
+            "kma": "0d429b558b5372a06b979ffc",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "1": {
+      "position": "Looking Upward",
+      "japanese": "仰向け",
+      "id": 1,
+      "menu": "HAnime_00_01_101",
+      "menu_path_id": "-6659734462249321423",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "-7313761697981541884",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_01",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4785145324960110351",
+            "kma": "8102a02ead7b3ccb6ebacd58",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4785145324960110351",
+            "kma": "8102a02ead7b3ccb6ebacd58",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2395641083631219003",
+            "kma": "d59d30139a0f78172c16a67e",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2395641083631219003",
+            "kma": "d59d30139a0f78172c16a67e",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1852941994850124254",
+            "kma": "acfdec1fa1d5215c91cf15cf",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1852941994850124254",
+            "kma": "acfdec1fa1d5215c91cf15cf",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6091248628366496578",
+            "kma": "4c8f4b64c149a4bc9deffae0",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7428881034634704034",
+            "kma": "ef10af5695092e5aa1bafabb",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7428881034634704034",
+            "kma": "ef10af5695092e5aa1bafabb",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6658500837645372893",
+            "kma": "d138bc168a7a21a6a7224cc1",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6658500837645372893",
+            "kma": "d138bc168a7a21a6a7224cc1",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2781200889785547674",
+            "kma": "e52307e00cbcecb52d25a9e8",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6755907785423425824",
+            "kma": "5e979e94fee5274a5c9de230",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6755907785423425824",
+            "kma": "5e979e94fee5274a5c9de230",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1004424235125997034",
+            "kma": "929ec2bb59ace84a9ecda779",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1004424235125997034",
+            "kma": "929ec2bb59ace84a9ecda779",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5044250208226932189",
+            "kma": "a53b8f76013abacd2918a037",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6932194668282673817",
+            "kma": "e3ff18ef9c856a15987cf161",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6932194668282673817",
+            "kma": "e3ff18ef9c856a15987cf161",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3298248300803932342",
+            "kma": "500bec5db779c01fc485a5c7",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3298248300803932342",
+            "kma": "500bec5db779c01fc485a5c7",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8712426881321670619",
+            "kma": "b2ebd555a5e38fa12ca9fabb",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8712426881321670619",
+            "kma": "b2ebd555a5e38fa12ca9fabb",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4558493971610583325",
+            "kma": "b81dbdbed462e6bea55514f1",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4558493971610583325",
+            "kma": "b81dbdbed462e6bea55514f1",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 11,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5783017572197369798",
+            "kma": "4a935f50f54c8114898c5ff3",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5783017572197369798",
+            "kma": "4a935f50f54c8114898c5ff3",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 12,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8885171469637699653",
+            "kma": "93680cbb33c55c0b82fbecf7",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8885171469637699653",
+            "kma": "93680cbb33c55c0b82fbecf7",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 13,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3827512416551957152",
+            "kma": "b13744707aab2b64dd6dba98",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3827512416551957152",
+            "kma": "b13744707aab2b64dd6dba98",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "2": {
+      "position": "Hands & Knees",
+      "japanese": "四つん這い",
+      "id": 2,
+      "menu": "HAnime_00_01_102",
+      "menu_path_id": "5481351446625783628",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "1044887857695316670",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_02",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9091603618219087713",
+            "kma": "4bfbb0249348ceb223e92ac7",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9091603618219087713",
+            "kma": "4bfbb0249348ceb223e92ac7",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8149261251667689520",
+            "kma": "428ff42fb769d17a64f0986b",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8149261251667689520",
+            "kma": "428ff42fb769d17a64f0986b",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5215949513778357039",
+            "kma": "c540ca61ba34c41ff209c4ad",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5215949513778357039",
+            "kma": "c540ca61ba34c41ff209c4ad",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8978210957896387613",
+            "kma": "a45a0c07ca4eeb5877a8b109",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "713046563450101846",
+            "kma": "a340eec59e4001d4baa32eab",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "713046563450101846",
+            "kma": "a340eec59e4001d4baa32eab",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6213544824162341649",
+            "kma": "0cbce5f9f7a1113da6722c4b",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6213544824162341649",
+            "kma": "0cbce5f9f7a1113da6722c4b",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4399051711390513910",
+            "kma": "95990c041469f5d5de43d47d",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6678732317232552161",
+            "kma": "c9ca84a1c630963a40d1eba1",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6678732317232552161",
+            "kma": "c9ca84a1c630963a40d1eba1",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8851181659596707599",
+            "kma": "7ab44a63af354f81a01e07bf",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8851181659596707599",
+            "kma": "7ab44a63af354f81a01e07bf",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2011698442399585557",
+            "kma": "f4fdeec5ce622d615d676357",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8995132079757261670",
+            "kma": "113791b43701395feae1363a",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8995132079757261670",
+            "kma": "113791b43701395feae1363a",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-947103139541518165",
+            "kma": "6bc0abedf144c67981bd4cff",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-947103139541518165",
+            "kma": "6bc0abedf144c67981bd4cff",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6185548847196572562",
+            "kma": "91add2ef24e3c8c7a0cd7ef3",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6185548847196572562",
+            "kma": "91add2ef24e3c8c7a0cd7ef3",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8640071407622807203",
+            "kma": "3bb90bcfd6cac693070a2f7b",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8640071407622807203",
+            "kma": "3bb90bcfd6cac693070a2f7b",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 11,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3853479161760843849",
+            "kma": "94e34bf56e92486a5c9cbbba",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3853479161760843849",
+            "kma": "94e34bf56e92486a5c9cbbba",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 12,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8742939011414020231",
+            "kma": "729bb781d770456b4162efb4",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8742939011414020231",
+            "kma": "729bb781d770456b4162efb4",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 13,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-9057438074453537128",
+            "kma": "3df37cc332ee111ff9117df1",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-9057438074453537128",
+            "kma": "3df37cc332ee111ff9117df1",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "3": {
+      "position": "Sitting In Chair",
+      "japanese": "椅子座り",
+      "id": 3,
+      "menu": "HAnime_00_01_103",
+      "menu_path_id": "-433233689037166724",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "-6348776760226294551",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_03",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5358823357197830250",
+            "kma": "17c29ceac47a6ed3eb6568fd",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5358823357197830250",
+            "kma": "17c29ceac47a6ed3eb6568fd",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9025129838356123175",
+            "kma": "585a8ecdcef985d1209026f6",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9025129838356123175",
+            "kma": "585a8ecdcef985d1209026f6",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "584357179712759981",
+            "kma": "85e9839f939d6e7a64dd2cc1",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "584357179712759981",
+            "kma": "85e9839f939d6e7a64dd2cc1",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5740107646378132262",
+            "kma": "1a585e31ea613f522d0c6b3b",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7123563718771790831",
+            "kma": "42e57010f235781d4b602ac3",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7123563718771790831",
+            "kma": "42e57010f235781d4b602ac3",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3661839905522720437",
+            "kma": "a88db95ba8f62c5adc6fb826",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3661839905522720437",
+            "kma": "a88db95ba8f62c5adc6fb826",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9104172922937533182",
+            "kma": "6dacaaa12821c7420a0c538f",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3468765423147150462",
+            "kma": "13ad6729164dc79dc30a97ba",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8304614797374090644",
+            "kma": "3dea5fb1fa9c0cb9c663e13b",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1470783501119677617",
+            "kma": "72e7dd59fbbbde1f0958c236",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "458925105074172097",
+            "kma": "3ce0147546ce1d63ce0ceb2f",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "458925105074172097",
+            "kma": "3ce0147546ce1d63ce0ceb2f",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5979038960212499427",
+            "kma": "2a3917c3eb9ba9762953313a",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5979038960212499427",
+            "kma": "2a3917c3eb9ba9762953313a",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7829217819111931262",
+            "kma": "85692bf68c1e6792eb772eda",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7829217819111931262",
+            "kma": "85692bf68c1e6792eb772eda",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1789730236765404529",
+            "kma": "5652690ab2294b5e05c768ab",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4323052758213167688",
+            "kma": "27a8510120ed6e427c72c420",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4323052758213167688",
+            "kma": "27a8510120ed6e427c72c420",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7736603016860216610",
+            "kma": "0e3b05896b9d98171edf2dde",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7736603016860216610",
+            "kma": "0e3b05896b9d98171edf2dde",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6971656699922838392",
+            "kma": "a7569b41f848abc2a11b5be9",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6971656699922838392",
+            "kma": "a7569b41f848abc2a11b5be9",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "4": {
+      "position": "Doggystyle Against Chair",
+      "japanese": "椅子バック",
+      "id": 4,
+      "menu": "HAnime_00_01_104",
+      "menu_path_id": "-6776883737802863168",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "9223105971660090791",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_04",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "289805469239855227",
+            "kma": "d7eec4f1ce496181409282cd",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "289805469239855227",
+            "kma": "d7eec4f1ce496181409282cd",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2355529759064563477",
+            "kma": "e25b288da73559d294ed2cb9",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2355529759064563477",
+            "kma": "e25b288da73559d294ed2cb9",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8868475281563071122",
+            "kma": "46702843a7cb7ae49ef777df",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8868475281563071122",
+            "kma": "46702843a7cb7ae49ef777df",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4394954373199702139",
+            "kma": "e499c5bf2884389a88ecd5dc",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1131850911462727733",
+            "kma": "2ce24cd6f86e7421786e292a",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1131850911462727733",
+            "kma": "2ce24cd6f86e7421786e292a",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5652849180697690031",
+            "kma": "d5edc9ea5ff7c47c700cc380",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5652849180697690031",
+            "kma": "d5edc9ea5ff7c47c700cc380",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1145440933218404266",
+            "kma": "9966f886ff221e6884ebcc7a",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-26746426986458599",
+            "kma": "8092bb843808e5ce0e05c0c4",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-26746426986458599",
+            "kma": "8092bb843808e5ce0e05c0c4",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1673216275621684297",
+            "kma": "f119084b39556d87889dc2d5",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1673216275621684297",
+            "kma": "f119084b39556d87889dc2d5",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2971752163349659939",
+            "kma": "ff05ab55582c17a33badb8a7",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9197209117069039258",
+            "kma": "7add030d5bdd783b8e6a4b34",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9197209117069039258",
+            "kma": "7add030d5bdd783b8e6a4b34",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1514940943639698063",
+            "kma": "2a7174def600d85f3581412e",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1514940943639698063",
+            "kma": "2a7174def600d85f3581412e",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1023200516737590275",
+            "kma": "35756a5024e404542efc259d",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1023200516737590275",
+            "kma": "35756a5024e404542efc259d",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3455619276617204448",
+            "kma": "57fa331f576743826eb2c390",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3455619276617204448",
+            "kma": "57fa331f576743826eb2c390",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 11,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7171301269376354663",
+            "kma": "112dcb4d60abbd9356a0c2c6",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7171301269376354663",
+            "kma": "112dcb4d60abbd9356a0c2c6",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 12,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-9044114054144450425",
+            "kma": "04bf1e1dfaf19c6b582a8280",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-9044114054144450425",
+            "kma": "04bf1e1dfaf19c6b582a8280",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 13,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8315726160716438620",
+            "kma": "9fc8497e54c253f98f8cfd2a",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8315726160716438620",
+            "kma": "9fc8497e54c253f98f8cfd2a",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "5": {
+      "position": "Doggystyle Against Desk",
+      "japanese": "机バック",
+      "id": 5,
+      "menu": "HAnime_00_01_105",
+      "menu_path_id": "4056356418068474226",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "-6296040152850855239",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_05",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7255818944884377732",
+            "kma": "253a6a5914b5b6e586dd686d",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7255818944884377732",
+            "kma": "253a6a5914b5b6e586dd686d",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3449163734870178304",
+            "kma": "1947dfeff6564cb7bdf466fd",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3449163734870178304",
+            "kma": "1947dfeff6564cb7bdf466fd",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8900927527760941160",
+            "kma": "eaaa15a1faa178f28d7b8b27",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8900927527760941160",
+            "kma": "eaaa15a1faa178f28d7b8b27",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4714983944290462283",
+            "kma": "86a2d5719c9d9bbe1b6fb167",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4624791993479587551",
+            "kma": "c5852afac99c4bc284753beb",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4624791993479587551",
+            "kma": "c5852afac99c4bc284753beb",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3971009254520200834",
+            "kma": "4051cf638709a12fae638349",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3971009254520200834",
+            "kma": "4051cf638709a12fae638349",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4880814095050882697",
+            "kma": "54a92ad62f5c0f9b18559a49",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6801200131874387989",
+            "kma": "53652382f777e97890db9d1c",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6801200131874387989",
+            "kma": "53652382f777e97890db9d1c",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6592364637646250481",
+            "kma": "3223ed88ae10d5b5312ce0b3",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6592364637646250481",
+            "kma": "3223ed88ae10d5b5312ce0b3",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6782666095373022083",
+            "kma": "624c71399d217ebcb634af26",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "545667898964990896",
+            "kma": "13c80b4822ee566e18dab962",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "545667898964990896",
+            "kma": "13c80b4822ee566e18dab962",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6450472595468902412",
+            "kma": "5fe455935eb60054025eec34",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6450472595468902412",
+            "kma": "5fe455935eb60054025eec34",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3649807376625624222",
+            "kma": "de411fc8963feb8909262b02",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3649807376625624222",
+            "kma": "de411fc8963feb8909262b02",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2915125668656295912",
+            "kma": "3e5388abba1894b565362bc9",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2915125668656295912",
+            "kma": "3e5388abba1894b565362bc9",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 11,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "971082352231528131",
+            "kma": "8e848d2f13a27fe1d7cc9cbe",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "971082352231528131",
+            "kma": "8e848d2f13a27fe1d7cc9cbe",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 12,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4107567026710180342",
+            "kma": "fc3e038cb975704b7d9d3279",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4107567026710180342",
+            "kma": "fc3e038cb975704b7d9d3279",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 13,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1460948803390568248",
+            "kma": "bef8fb8395e8fa0af08a4d71",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1460948803390568248",
+            "kma": "bef8fb8395e8fa0af08a4d71",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "6": {
+      "position": "Doggystyle Against Wall",
+      "japanese": "壁バック",
+      "id": 6,
+      "menu": "HAnime_00_01_106",
+      "menu_path_id": "-5368361106845578160",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "-759179584383254460",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_06",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5342610902530499586",
+            "kma": "721275c74db8abfc33e0f7ce",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5342610902530499586",
+            "kma": "721275c74db8abfc33e0f7ce",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8660713527850785787",
+            "kma": "5b2a555164484d2b871dc2f3",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8660713527850785787",
+            "kma": "5b2a555164484d2b871dc2f3",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-186731512648488314",
+            "kma": "b853aff5d3cfb71d5e2425ef",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-186731512648488314",
+            "kma": "b853aff5d3cfb71d5e2425ef",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7450401802688777983",
+            "kma": "9ea492d154df528838a390f1",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7457532544308465821",
+            "kma": "78584336c897bd94638d5e83",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7457532544308465821",
+            "kma": "78584336c897bd94638d5e83",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1484627027884836753",
+            "kma": "e08523d7a271cc874ae1485e",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1484627027884836753",
+            "kma": "e08523d7a271cc874ae1485e",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-489272290620485418",
+            "kma": "c42c4cd95276288eb5461cdd",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4034102879816586414",
+            "kma": "cc08f5955ebde1f8efab539a",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4034102879816586414",
+            "kma": "cc08f5955ebde1f8efab539a",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6141971595444712945",
+            "kma": "f05d6d1709220e3ecb3cc553",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6141971595444712945",
+            "kma": "f05d6d1709220e3ecb3cc553",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1251389558065941381",
+            "kma": "e68011f0b1c642f4a8bbe907",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4227361340787023167",
+            "kma": "e7e67731295b41bf2da1e1be",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4227361340787023167",
+            "kma": "e7e67731295b41bf2da1e1be",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6099090366764876904",
+            "kma": "6a486ef66e90cb0c6e62640c",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6099090366764876904",
+            "kma": "6a486ef66e90cb0c6e62640c",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6281981787330176430",
+            "kma": "2f75a87d73460aab1188429f",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6281981787330176430",
+            "kma": "2f75a87d73460aab1188429f",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1498633519286608678",
+            "kma": "8c29cf64683d8abfb81cd1ac",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1498633519286608678",
+            "kma": "8c29cf64683d8abfb81cd1ac",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 11,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2827769462736524455",
+            "kma": "1a401ecc1d5c7808245eeb6a",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2827769462736524455",
+            "kma": "1a401ecc1d5c7808245eeb6a",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 12,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5375855199728122285",
+            "kma": "31a8eb7ee47566cf863de516",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5375855199728122285",
+            "kma": "31a8eb7ee47566cf863de516",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 13,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3568702700505947562",
+            "kma": "da1ad86e309723d31fd57ffd",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3568702700505947562",
+            "kma": "da1ad86e309723d31fd57ffd",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "7": {
+      "position": "Sitting Om Desk",
+      "japanese": "机座り",
+      "id": 7,
+      "menu": "HAnime_00_01_107",
+      "menu_path_id": "-2033331130508938303",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/studio/anime/00.unity3d",
+      "studio_controller_path_id": "8010158417648947845",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_07",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "8661504614636466018",
+            "kma": "h_caress_8661504614636466018",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8090813534171819479",
+            "kma": "8ba1ddb7eb0b077de5163a0e",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "8532895704390289299",
+            "kma": "h_caress_8532895704390289299",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7848292868519890079",
+            "kma": "bf4554c6dd0b223b3d3e276b",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "5556240495788906271",
+            "kma": "h_caress_5556240495788906271",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "749888142824762417",
+            "kma": "c68e24a2fcd7361ca1a7fd08",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "526503857210720551",
+            "kma": "d3770c7927351930efc34823",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-7818959772606792859",
+            "kma": "h_caress_-7818959772606792859",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3369199976180183238",
+            "kma": "4caed5064d94b141ae87d036",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-9029527699437944670",
+            "kma": "h_caress_-9029527699437944670",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8356234422821671291",
+            "kma": "0bea9aa214a51c2d1a75bf7d",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7323370617890389911",
+            "kma": "5fb22f9059a3633923bbd7aa",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6028232855798653750",
+            "kma": "2bf5379c109f721382ac05d4",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4187789693542789221",
+            "kma": "6fd80b4cf859c1245bec9013",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8159314034351461223",
+            "kma": "7292375b49409db259ed90d7",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-9117034890720818910",
+            "kma": "h_caress_-9117034890720818910",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-4295780195118871696",
+            "kma": "128f434168f502716c06216b",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "944042347956433852",
+            "kma": "h_caress_944042347956433852",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-9180500108438056228",
+            "kma": "6f08d64522f65de719e8c691",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-5483711664053400950",
+            "kma": "h_caress_-5483711664053400950",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6091934026573194264",
+            "kma": "486d0614c20057256ec5d15d",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3668712447047500477",
+            "kma": "05655959851dcad86047793d",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "7574358566112711384",
+            "kma": "h_caress_7574358566112711384",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8447056832856867506",
+            "kma": "63c1164a4bc664da56453030",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-2265628491885659519",
+            "kma": "h_caress_-2265628491885659519",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3175523056328372685",
+            "kma": "a1ac901a0ad12f78861b115b",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-1905884809876599626",
+            "kma": "h_caress_-1905884809876599626",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9186241091754503092",
+            "kma": "16f5179e3919d8731c52e1f5",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "8": {
+      "position": "Squatting On Desk",
+      "japanese": "机しゃがみ",
+      "id": 8,
+      "menu": "HAnime_00_01_108",
+      "menu_path_id": "4767000186103000965",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "-5976488752974508363",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_08",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5025968802855274007",
+            "kma": "dbf59f8ad709917051fd0235",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5025968802855274007",
+            "kma": "dbf59f8ad709917051fd0235",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6152163953696086649",
+            "kma": "971744d257f2fc39dc4c7f91",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6152163953696086649",
+            "kma": "971744d257f2fc39dc4c7f91",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8048011641478888772",
+            "kma": "8663212fd51ae2b0fcad38d0",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8048011641478888772",
+            "kma": "8663212fd51ae2b0fcad38d0",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8031320939617518399",
+            "kma": "1d9a048854e8888a21536db0",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9158164137455562123",
+            "kma": "bb9f2b88ef4e54d4ab4254ea",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "9158164137455562123",
+            "kma": "bb9f2b88ef4e54d4ab4254ea",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2353505757067305580",
+            "kma": "6b98d1445b102e76e3f7addb",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2353505757067305580",
+            "kma": "6b98d1445b102e76e3f7addb",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-206841228658864902",
+            "kma": "389ec46af89173ac8f00eac5",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8262582030580554591",
+            "kma": "e807d564cac8afcf283087e9",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8262582030580554591",
+            "kma": "e807d564cac8afcf283087e9",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "400449202684780095",
+            "kma": "bdaba4764ce331abe7b47b01",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "400449202684780095",
+            "kma": "bdaba4764ce331abe7b47b01",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8826870318051695324",
+            "kma": "44696193acfea790d7e35a8e",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7556753363014926433",
+            "kma": "7b51e2ba8a02297fff938b10",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7556753363014926433",
+            "kma": "7b51e2ba8a02297fff938b10",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6309519387074276362",
+            "kma": "9a56fdb2491d49961877714b",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "6309519387074276362",
+            "kma": "9a56fdb2491d49961877714b",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-399842569636414050",
+            "kma": "f9b97c6cdcc9de85a1c8c342",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-399842569636414050",
+            "kma": "f9b97c6cdcc9de85a1c8c342",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4964211818935984779",
+            "kma": "7e0c1215bdafda1d7e924fc8",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4964211818935984779",
+            "kma": "7e0c1215bdafda1d7e924fc8",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 11,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1912485464874638282",
+            "kma": "79f920745e01bd3ee267d30c",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "1912485464874638282",
+            "kma": "79f920745e01bd3ee267d30c",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 12,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "372864318365830900",
+            "kma": "0223022be7a46534dfb3192f",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "372864318365830900",
+            "kma": "0223022be7a46534dfb3192f",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 13,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8860877607144350462",
+            "kma": "929e7daf9ab63fe300a7a671",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8860877607144350462",
+            "kma": "929e7daf9ab63fe300a7a671",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "9": {
+      "position": "At Bookshelves",
+      "japanese": "本棚",
+      "id": 9,
+      "menu": "HAnime_00_01_109",
+      "menu_path_id": "-2184615153636198058",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/studio/anime/00.unity3d",
+      "studio_controller_path_id": "6371592559855187839",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_09",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-7194221171684331147",
+            "kma": "h_caress_-7194221171684331147",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7448628949117077197",
+            "kma": "5af418c6d26fcf9d3a5d8fde",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "2364519981418338441",
+            "kma": "h_caress_2364519981418338441",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8096202557225736717",
+            "kma": "67719a90cb4fc547f83e2fb9",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "6641527554594500242",
+            "kma": "h_caress_6641527554594500242",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-9186360773352107133",
+            "kma": "1a77ccda891a151cd8e2d1b3",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6286925871800763294",
+            "kma": "0beb8f07b79e7657d798dd72",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "1083115472959487799",
+            "kma": "h_caress_1083115472959487799",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "4886064615371398150",
+            "kma": "c717a66bbf2ea8df168c3f7c",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-8396690056508746365",
+            "kma": "h_caress_-8396690056508746365",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1965018217037881096",
+            "kma": "6251992bfc41e3f2f7e57f98",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8836478905141943765",
+            "kma": "4da466667b9f5226da8d5aa8",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "3870931480569437053",
+            "kma": "h_caress_3870931480569437053",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5663061565913796795",
+            "kma": "e2dd31da33f15c29884036ad",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-3760234188709801",
+            "kma": "h_caress_-3760234188709801",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8569416092205775173",
+            "kma": "3c055e73de9eafd99c840a81",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2243860050470839239",
+            "kma": "cde322c83f098684ed65ec3c",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "-6061054775214061613",
+            "kma": "h_caress_-6061054775214061613",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-492493163062494763",
+            "kma": "e385a45c77dcedcaefdf80f9",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "5023761608519396314",
+            "kma": "h_caress_5023761608519396314",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6303215609458423986",
+            "kma": "62ff1cd6ef5e7ce7456f72c5",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "7308518461625141076",
+            "kma": "h_caress_7308518461625141076",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-8165075179155451716",
+            "kma": "48e4a35c2af856d2379e58d5",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "9160206471434990046",
+            "kma": "h_caress_9160206471434990046",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2169943299661455458",
+            "kma": "25f9df6d35e6304cb6cd968d",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 11,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "3147195641113013985",
+            "kma": "h_caress_3147195641113013985",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6281443052324573568",
+            "kma": "d1b561f5bfc3dc257dc565c3",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 12,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "3416354722493421740",
+            "kma": "h_caress_3416354722493421740",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5038244518705134126",
+            "kma": "c0fe4fa7d14feed4cdd3c099",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 13,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/studio/anime/00.unity3d",
+            "path_id": "8384248270030636611",
+            "kma": "h_caress_8384248270030636611",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5204510258339484498",
+            "kma": "e15aaea6544178fc1a45aac2",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    },
+    "10": {
+      "position": "Molesting",
+      "japanese": "いたずら",
+      "id": 10,
+      "menu": "HAnime_00_01_110",
+      "menu_path_id": "8199235562672828261",
+      "studio_base": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "studio_controller_path_id": "6446363811211516007",
+      "game_base": "abdata/h/anim/female/00_71_00.unity3d",
+      "game_override": "abdata/h/anim/female/00_01_00.unity3d",
+      "controller": "kha_f_10",
+      "states": [
+        {
+          "state": "Idle",
+          "japanese": "待機",
+          "label": "Idle",
+          "studio_number": 0,
+          "studio": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5091988480991735984",
+            "kma": "bd93ca630fd0fd51bd8bc8d9",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5091988480991735984",
+            "kma": "bd93ca630fd0fd51bd8bc8d9",
+            "status": "available",
+            "slot": "M_Idle",
+            "speed": 0.699999988079071,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Touch",
+          "japanese": "胸反応開始",
+          "label": "Initial Breast Touch",
+          "studio_number": 1,
+          "studio": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7059386541282094689",
+            "kma": "3624f0180f207a66fcd8af9d",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7059386541282094689",
+            "kma": "3624f0180f207a66fcd8af9d",
+            "status": "available",
+            "slot": "M_M_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "M_Idle",
+          "japanese": "胸触り待機",
+          "label": "About To Grope Breasts",
+          "studio_number": 2,
+          "studio": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8511111924843942693",
+            "kma": "e6f85a807b8d17096b41f3cc",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_M_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "8511111924843942693",
+            "kma": "e6f85a807b8d17096b41f3cc",
+            "status": "available",
+            "slot": "M_M_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_M_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-6510670673179425908",
+            "kma": "ed038f4a97668b398726badf",
+            "status": "available",
+            "slot": "M_M_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "A_Touch",
+          "japanese": "股間反応開始",
+          "label": "Initial Crotch Touch",
+          "studio_number": 3,
+          "studio": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7982981202702129732",
+            "kma": "9f0e515998e7486abb99aeb9",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "7982981202702129732",
+            "kma": "9f0e515998e7486abb99aeb9",
+            "status": "available",
+            "slot": "M_A_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "A_Idle",
+          "japanese": "股間触り待機",
+          "label": "About To Grope Crotch",
+          "studio_number": 4,
+          "studio": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2120824815777992427",
+            "kma": "7c38fad498db40cd27a68b88",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_A_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-2120824815777992427",
+            "kma": "7c38fad498db40cd27a68b88",
+            "status": "available",
+            "slot": "M_A_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_A_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "2284342767988642982",
+            "kma": "bab8656895b911a41d226017",
+            "status": "available",
+            "slot": "M_A_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "S_Touch",
+          "japanese": "尻反応開始",
+          "label": "Initial Butt Touch",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_S_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-916633056384837640",
+            "kma": "75d3ef36453a43a2cf3647a2",
+            "status": "available",
+            "slot": "M_S_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "S_Idle",
+          "japanese": "尻触り待機",
+          "label": "About To Grope Butt",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_S_Idle",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7146657296750685547",
+            "kma": "06caf60363087c689c22f6aa",
+            "status": "available",
+            "slot": "M_S_Idle",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": {
+            "clip": "M_S_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5911775965763606201",
+            "kma": "b6ea7e435aa7ec8e780dbe21",
+            "status": "available",
+            "slot": "M_S_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          }
+        },
+        {
+          "state": "K_Touch",
+          "japanese": "キス反応開始",
+          "label": "Initial Kiss Reaction",
+          "studio_number": 5,
+          "studio": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5858363304609383665",
+            "kma": "909f0b76cab31252af9691f1",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Touch",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5858363304609383665",
+            "kma": "909f0b76cab31252af9691f1",
+            "status": "available",
+            "slot": "M_K_Touch",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "K_Loop",
+          "japanese": "キス反応ループ",
+          "label": "Kissing Reaction Loop",
+          "studio_number": 6,
+          "studio": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5895946348465618535",
+            "kma": "95aef14da973e7653928850b",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_K_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "5895946348465618535",
+            "kma": "95aef14da973e7653928850b",
+            "status": "available",
+            "slot": "M_K_Loop",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Front_Dislikes",
+          "japanese": "前嫌がりループ",
+          "label": "Before Dislike Loop",
+          "studio_number": 7,
+          "studio": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1471885621118944521",
+            "kma": "3b67f2b2812d7738db8d5c99",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Front_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-1471885621118944521",
+            "kma": "3b67f2b2812d7738db8d5c99",
+            "status": "available",
+            "slot": "M_Front_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Back_Dislikes",
+          "japanese": "後嫌がりループ",
+          "label": "After Dislike Loop",
+          "studio_number": null,
+          "studio": null,
+          "game": {
+            "clip": "M_Back_Dislikes",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-7505983914351939411",
+            "kma": "ead12cb8019dbcb87101c56d",
+            "status": "available",
+            "slot": "M_Back_Dislikes",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Start",
+          "japanese": "絶頂開始",
+          "label": "About To Climax",
+          "studio_number": 8,
+          "studio": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3595119201420027519",
+            "kma": "7627d9f9321501219c157e30",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Start",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "3595119201420027519",
+            "kma": "7627d9f9321501219c157e30",
+            "status": "available",
+            "slot": "M_Orgasm_Start",
+            "speed": 1.0,
+            "loop": false,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_Loop",
+          "japanese": "絶頂ループ",
+          "label": "Climax Loop",
+          "studio_number": 9,
+          "studio": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5172791971036779283",
+            "kma": "e7cdabee7fee854385d25740",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_Loop",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-5172791971036779283",
+            "kma": "e7cdabee7fee854385d25740",
+            "status": "available",
+            "slot": "M_Orgasm_Loop",
+            "speed": 1.5,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        },
+        {
+          "state": "Orgasm_A",
+          "japanese": "事後",
+          "label": "Afterglow",
+          "studio_number": 10,
+          "studio": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3496427978901605521",
+            "kma": "dbc117e815aa0ba240415b8b",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "game": {
+            "clip": "M_Orgasm_A",
+            "bundle": "abdata/h/anim/female/00_01_00.unity3d",
+            "path_id": "-3496427978901605521",
+            "kma": "dbc117e815aa0ba240415b8b",
+            "status": "available",
+            "slot": "M_Orgasm_A",
+            "speed": 1.0,
+            "loop": true,
+            "offset": 0.0
+          },
+          "hold": null
+        }
+      ]
+    }
+  }
+}
