@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "Пример · движение правой ладони",
+  "asset": "p_handR",
+  "zone": 0,
+  "bone": "k_f_mune03L_02",
+  "duration": 1.6,
+  "loop": true,
+  "interpolation": "smooth",
+  "finger_layer": 1,
+  "finger_speed": 0.7,
+  "offset": {"time": 0, "position": [0, 0, 0.03], "rotation": [0, 0, 0]},
+  "positions": {},
+  "keys": [
+    {"time": 0, "position": [-0.06, -0.04, 0.05], "rotation": [0, 0, 0]},
+    {"time": 0.8, "position": [0.035, 0.055, 0.02], "rotation": [0, 0, 0]},
+    {"time": 1.6, "position": [-0.06, -0.04, 0.05], "rotation": [0, 0, 0]}
+  ]
+}

@@ -112,26 +112,34 @@ static func influences(part: MeshInstance3D, arrays: Array, vertex: int) -> Arra
 
 
 static func patch(actor: Node3D, point: Vector3, normal: Vector3, baked_meshes: Dictionary,
-		garments: Array = ["Top", "Bra"], torso_only := false, radius := PATCH_RADIUS) -> Array:
+		garments: Array = ["Top", "Bra"], torso_only := false, radius := PATCH_RADIUS,
+		excluded_roots: Array[String] = [], extra_mesh_prefixes: Array[String] = []) -> Array:
 	var parts := []
 	if DisplayServer.get_name() == "headless":
 		return parts
 	var arm_bones := PackedByteArray()
-	if torso_only:
+	var filter := torso_only or not excluded_roots.is_empty()
+	if filter:
 		var rig: Skeleton3D = actor.get_node("Skeleton")
-		var left := rig.find_bone("cf_j_arm00_L")
-		var right := rig.find_bone("cf_j_arm00_R")
+		var excluded := {}
+		if torso_only:
+			excluded[rig.find_bone("cf_j_arm00_L")] = true
+			excluded[rig.find_bone("cf_j_arm00_R")] = true
+		for name in excluded_roots:
+			excluded[rig.find_bone(name)] = true
 		arm_bones.resize(rig.get_bone_count())
 		for bone in range(rig.get_bone_count()):
 			var parent := rig.get_bone_parent(bone)
-			arm_bones[bone] = int(bone == left or bone == right or (parent >= 0 and arm_bones[parent] != 0))
+			arm_bones[bone] = int(excluded.has(bone) or (parent >= 0 and arm_bones[parent] != 0))
 	for node in actor.get_children():
 		var part := node as MeshInstance3D
 		if not part or not part.visible or not part.skin or not part.mesh:
 			continue
 		var slot: String = part.get_meta("wardrobe_slot", "")
-		if not String(part.name).to_lower().begins_with("o_body") and slot not in garments:
-			continue
+		var mesh_name := String(part.name).to_lower()
+		if not mesh_name.begins_with("o_body") and slot not in garments:
+			if not extra_mesh_prefixes.any(func(prefix: String): return mesh_name.begins_with(prefix)):
+				continue
 		var baked: ArrayMesh = baked_meshes.get(part)
 		if not baked_meshes.has(part):
 			baked = part.bake_mesh_from_current_skeleton_pose()
@@ -157,7 +165,7 @@ static func patch(actor: Node3D, point: Vector3, normal: Vector3, baked_meshes: 
 				var offset := (vertices[ids.x] + vertices[ids.y] + vertices[ids.z]) / 3.0 - center
 				if offset.length_squared() > radius * radius or offset.dot(front_axis) < -0.044:
 					continue
-				if torso_only:
+				if filter:
 					for id in [ids.x, ids.y, ids.z]:
 						if arm_vertices.has(id):
 							continue

@@ -29,6 +29,8 @@ var mode_hint: Label
 var mode := 0
 var contact: Contact
 var staging: Staging
+var green := preload("res://npc_green.gd").new()
+var green_button: Button
 var pending_contact: Array[InputEventMouseButton] = []
 var look_height := 0.0
 var player_view := Limbs.new()
@@ -58,6 +60,8 @@ func _ready() -> void:
 	animation_groups = animations["groups"]
 	var canvas := CanvasLayer.new()
 	add_child(canvas)
+	add_child(green)
+	green.setup(self, canvas)
 	prompt = Label.new()
 	canvas.add_child(prompt)
 	prompt.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
@@ -91,6 +95,10 @@ func _ready() -> void:
 	close.text = "Close [E]"
 	close.pressed.connect(close_dialogue)
 	content.add_child(close)
+	green_button = Button.new()
+	green_button.text = "Green animations"
+	green_button.pressed.connect(_open_green)
+	content.add_child(green_button)
 	var fade := CheckButton.new()
 	fade.text = "Fade Forearms"
 	fade.tooltip_text = "20% opacity on the forearms, opaque hands"
@@ -127,8 +135,17 @@ func _ready() -> void:
 		for theme in ["font_color", "font_hover_color", "font_pressed_color", "font_focus_color"]:
 			button.add_theme_color_override(theme, colors[index])
 		button.pressed.connect(func():
+			if green.active() and index != 0:
+				green.end()
 			mode = index
+			green_button.visible = mode == 0
 			contact.release()
+			if dialogue.visible:
+				if mode == 0:
+					_ensure_green()
+				elif not speaking.has("posture") and not speaking.get("conversation_ready", false):
+					set_posture(speaking, {"type": "standing"})
+					speaking.conversation_ready = true
 			if staging.active() and not staging.seated():
 				staging.cancel()
 			show_mode_hint())
@@ -272,6 +289,8 @@ func idle_pose(animator: AnimationPlayer, skeleton: Skeleton3D, base: Array[Tran
 
 
 func holds_player_pose() -> bool:
+	if green.active():
+		return true
 	if staging and staging.active():
 		return true
 	if contact and not contact.state.is_empty():
@@ -313,6 +332,12 @@ func current_interaction() -> Dictionary:
 	return closest
 
 
+func _input(event: InputEvent) -> void:
+	if mode == 0 and green.active() and event is InputEventMouseButton and not event.pressed:
+		if event.button_index in [MOUSE_BUTTON_LEFT, MOUSE_BUTTON_RIGHT]:
+			pending_contact.append(event)
+
+
 func handle_input(event: InputEvent) -> bool:
 	if dialogue.visible:
 		if event is InputEventKey and event.pressed and not event.echo and event.keycode in [KEY_ESCAPE, KEY_E]:
@@ -322,6 +347,15 @@ func handle_input(event: InputEvent) -> bool:
 			var options := {KEY_1: "hold", KEY_2: "embrace", KEY_3: "push"}
 			if options.has(event.keycode):
 				contact.choose_rear_action(options[event.keycode])
+				return true
+		if mode == 0:
+			if event is InputEventMouseMotion:
+				if green.active():
+					green.mouse_motion(event.relative)
+				return true
+			if event is InputEventMouseButton:
+				if event.pressed and event.button_index in [MOUSE_BUTTON_LEFT, MOUSE_BUTTON_RIGHT]:
+					pending_contact.append(event)
 				return true
 		if event is InputEventMouseButton and event.pressed and event.button_index in [MOUSE_BUTTON_WHEEL_UP, MOUSE_BUTTON_WHEEL_DOWN]:
 			look_height = clampf(look_height + (0.12 if event.button_index == MOUSE_BUTTON_WHEEL_UP else -0.12), -0.50, 0.39)
@@ -372,7 +406,7 @@ func open_dialogue(entry: Dictionary) -> void:
 	look_height = 0.0
 	player_view.show_limbs(room.player_model, {}, false)
 	dialogue_title.text = entry.definition.name
-	if not entry.has("posture") and not entry.get("conversation_ready", false):
+	if mode != 0 and not entry.has("posture") and not entry.get("conversation_ready", false):
 		set_posture(entry, {"type": "standing"})
 		entry.conversation_ready = true
 	if contact.state.is_empty():
@@ -387,10 +421,27 @@ func open_dialogue(entry: Dictionary) -> void:
 	dialogue.show()
 	mode_panel.show()
 	mode_hint.show()
+	green_button.visible = mode == 0
+	if mode == 0:
+		_ensure_green()
 	show_mode_hint()
 
 
+func _ensure_green() -> void:
+	if not green.active() and not speaking.is_empty() and not green.begin(speaking):
+		answer.text = "Green animation is unavailable for this card."
+
+
+func _open_green() -> void:
+	if mode == 0 and dialogue.visible and not speaking.is_empty():
+		_ensure_green()
+		if green.active():
+			green.toggle_camera_editor()
+
+
 func close_dialogue(immediate := false) -> void:
+	if green.active():
+		green.end()
 	if immediate:
 		staging.stop()
 	if not dialogue.visible:
@@ -415,6 +466,9 @@ func show_mode_hint(zone := "") -> void:
 		"Click lips to kiss · hold a highlighted zone",
 		"Click to strike · Hold hair or hand to grab",
 	]
+	if green.active():
+		mode_hint.text = "Green: hold left or right mouse over the NPC, or select an action."
+		return
 	var gesture: String = contact.action_hint()
 	var suffix := "  ·  " + gesture if not gesture.is_empty() else "  ·  Scroll to look up / down"
 	mode_hint.text = (zone + "  ·  " if not zone.is_empty() else "") + hints[mode] + suffix
@@ -491,6 +545,13 @@ func scene_command(label: String, kind: String) -> void:
 
 
 func set_posture(entry: Dictionary, command: Dictionary, from_contact := false) -> bool:
+	if green.active() and entry == speaking and not from_contact:
+		var positions_by_command := {"standing": 0, "turn": 11, "lie_back": 1, "fours": 2,
+			"lie_stomach": 2, "skirt": 12, "behind": 13, "kneel": 14}
+		if positions_by_command.has(command.type):
+			green.select_position(positions_by_command[command.type])
+			return true
+		return false
 	if staging.smooth_approach() or (not from_contact and not contact.state.is_empty()) or entry.is_empty():
 		return false
 	var actor := actor_for(entry)
@@ -910,6 +971,8 @@ func settle_floor_hands(rig: Skeleton3D, final: Array[Transform3D], weight: floa
 func interaction_view() -> Dictionary:
 	if not dialogue.visible or speaking.is_empty():
 		return {}
+	if green.active():
+		return green.camera_view()
 	var stage_camera := staging.camera_view()
 	if not stage_camera.is_empty():
 		return stage_camera
@@ -1931,6 +1994,8 @@ func skirt_bones(actor: Node3D) -> Array[int]:
 
 func tick(delta: float) -> void:
 	if room.editor.is_open() or room.menu.is_open():
+		if green.active():
+			green.end()
 		prompt.hide()
 		return
 	var target := current_interaction()
@@ -1952,6 +2017,8 @@ func tick(delta: float) -> void:
 			entry.erase("conversation_ready")
 			contact.select_mark_set(entry, actor)
 			contact.apply_marks(entry, actor)
+		if green.active() and entry == speaking:
+			continue
 		tick_posture(entry, actor, delta)
 		if entry.get("face_speaker", false) and speaking == entry:
 			var offset: Vector3 = room.player.global_position - body.global_position
@@ -1983,21 +2050,27 @@ func tick(delta: float) -> void:
 	contact.tick(delta)
 	rear_choices.visible = dialogue.visible and mode == 2 and contact.rear_options_ready()
 	if dialogue.visible:
+		if mode == 0 and not green.active():
+			_ensure_green()
 		if not pending_contact.is_empty():
 			var can_begin: bool = speaking.get("posture", {}).get("complete", true) and not speaking.has("turn")
 			for event in pending_contact:
-				if can_begin or not event.pressed:
+				if green.active():
+					green.pointer(event)
+				elif mode != 0 and (can_begin or not event.pressed):
 					contact.input(event, mode)
 			pending_contact.clear()
 		var show_legs: bool = contact.state.get("show_legs", false) or (
 			float(contact.state.get("camera_crouch", 0.0)) > 0.12 and not contact.state.get("planted_crouch", false))
-		if staging.active():
+		if green.active():
+			green.tick(delta)
+		elif staging.active():
 			player_view.restore()
 		else:
 			player_view.show_limbs(room.player_model, contact.state.get("hand_weights", {}), show_legs)
 		var mouse := get_viewport().get_mouse_position()
-		var over_ui := dialogue.get_global_rect().has_point(mouse) or mode_panel.get_global_rect().has_point(mouse) or (rear_choices.visible and rear_choices.get_global_rect().has_point(mouse))
-		var aimed := {} if over_ui else contact.pick(mouse)
+		var over_ui := dialogue.get_global_rect().has_point(mouse) or mode_panel.get_global_rect().has_point(mouse) or (rear_choices.visible and rear_choices.get_global_rect().has_point(mouse)) or (green.active() and green.shell.get_global_rect().has_point(mouse))
+		var aimed: Dictionary = {} if over_ui else (green.pick(mouse) if green.active() else contact.pick(mouse))
 		var zone_name: String = Contact.ZONES[aimed.id][0] if not aimed.is_empty() else ""
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND if not aimed.is_empty() else Input.CURSOR_ARROW)
 		show_mode_hint(zone_name)

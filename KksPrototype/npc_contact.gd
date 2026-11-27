@@ -148,7 +148,7 @@ func sphere_entry(origin: Vector3, ray: Vector3, center: Vector3, radius: float)
 	return depth - sqrt(discriminant)
 
 
-func pick(cursor: Vector2) -> Dictionary:
+func pick(cursor: Vector2, allowed := {}) -> Dictionary:
 	var actor: Node3D = game.actor_for(game.speaking)
 	var camera: Camera3D = game.room.camera
 	if not actor or not camera:
@@ -160,9 +160,12 @@ func pick(cursor: Vector2) -> Dictionary:
 	var best: Dictionary = {}
 	var score := INF
 	var embracing: bool = state.get("rear_action", "") == "embrace"
-	var posture: String = game.speaking.get("posture", {}).get("kind", "") if game.mode == 0 else ""
+	var posture: String = game.speaking.get("posture", {}).get("kind", "") if game.mode == 0 and allowed.is_empty() else ""
 	for id: String in ZONES:
-		if embracing:
+		if not allowed.is_empty():
+			if not allowed.has(id):
+				continue
+		elif embracing:
 			if id not in ["chest_l", "chest_r", "belly", "lap"]:
 				continue
 		elif not zone_allowed(game.speaking, id, game.mode):

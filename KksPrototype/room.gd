@@ -13,6 +13,7 @@ const NpcGameplay := preload("res://npc_gameplay.gd")
 const PairPreview := preload("res://pair_preview.gd")
 const StudioScenePreview := preload("res://studio_scene_preview.gd")
 const AnimationLab := preload("res://animation_lab.gd")
+const CharacterComparison := preload("res://character_comparison.gd")
 const IDLE_ID := "8f3364877591ae77d0df5a7e"
 const WALK_ID := "e717c63c91fc4031f3ce5866"
 const DANCE_ID := "c2504dfb989fb63949dc4223"
@@ -48,6 +49,7 @@ var npc_gameplay: Node3D
 var pair_preview: CanvasLayer
 var studio_preview: CanvasLayer
 var animation_lab: CanvasLayer
+var character_comparison: CanvasLayer
 var character_key: DirectionalLight3D
 var room_environment: Environment
 
@@ -92,6 +94,10 @@ func _ready() -> void:
 	add_child(pair_preview)
 	studio_preview = StudioScenePreview.new()
 	add_child(studio_preview)
+	for argument in OS.get_cmdline_user_args():
+		if argument.begins_with("--smoke-green="):
+			_check_green_gameplay.call_deferred(argument.trim_prefix("--smoke-green="))
+			return
 	if "--smoke-f7" in OS.get_cmdline_user_args():
 		_check_animation_lab.call_deferred()
 	if "--smoke-test" in OS.get_cmdline_user_args():
@@ -106,6 +112,11 @@ func _ready() -> void:
 				save_closeup.call_deferred(arg.trim_prefix("--smoke-closeup="))
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func _check_green_gameplay(output: String) -> void:
+	var verified := await preload("res://green_gameplay_smoke.gd").run(self, output)
+	get_tree().quit(0 if verified else 1)
 
 
 func _check_animation_lab() -> void:
@@ -129,7 +140,16 @@ func _check_animation_lab() -> void:
 		if DisplayServer.get_name() != "headless":
 			await RenderingServer.frame_post_draw
 		print("F7 Windows smoke: 150 entries, AnimationInfo_01/33 loaded two tracks at phase ", animation_lab.phase)
-		get_tree().quit(0 if _check_packaged_green_hands() else 1)
+		var valid := _check_packaged_green_hands()
+		if valid:
+			for argument in OS.get_cmdline_user_args():
+				if argument == "--smoke-contact-presets":
+					valid = _check_packaged_contact_presets()
+				elif argument.begins_with("--smoke-hand-editor="):
+					valid = _check_packaged_hand_editor(argument.trim_prefix("--smoke-hand-editor="))
+				elif argument.begins_with("--smoke-pov-pair="):
+					valid = await _check_packaged_pov_pair(argument.trim_prefix("--smoke-pov-pair=")) and valid
+		get_tree().quit(0 if valid else 1)
 		return
 	push_error("F7 could not play the packaged AnimationInfo_01/33 pair.")
 	get_tree().quit(1)
@@ -173,7 +193,174 @@ func _check_packaged_green_hands() -> bool:
 	return false
 
 
+func _check_packaged_contact_presets() -> bool:
+	for index in animation_lab.caress_positions.item_count:
+		if animation_lab.caress_positions.get_item_id(index) == 0:
+			animation_lab._choose_caress_position(index)
+			break
+	var hands: Node3D = animation_lab.stage.green_hands
+	var editor: VBoxContainer = animation_lab.hand_editor
+	for index in range(1, 4):
+		var kind: String = ["thigh", "belly", "hand"][index - 1]
+		var reference: Dictionary = editor.contact_action(kind)
+		if reference.is_empty():
+			push_error("Packaged preset missing " + kind)
+			return false
+		animation_lab.contact_action.select(index)
+		animation_lab._start_hand()
+		for tick in range(75):
+			animation_lab._process(1.0 / 60.0)
+		if not hands.running or hands.contact_result.is_empty() or hands.blend < 0.999:
+			push_error("Packaged contact playback failed " + kind)
+			return false
+		animation_lab._release_hand()
+		for tick in range(75):
+			animation_lab._process(1.0 / 60.0)
+		if hands.tool_id >= 0:
+			push_error("Packaged contact release failed " + kind)
+			return false
+		editor.open_editor()
+		editor._load(reference, "")
+		editor.scrub(0.9)
+		if not editor.visible or editor.contact_sample.is_empty():
+			push_error("Packaged contact editor failed " + kind)
+			return false
+		editor.close_editor()
+	print("F7 Windows smoke: stroke_thigh, stroke_belly and take_hand preview, contact and release")
+	return true
+
+
+func _check_packaged_hand_editor(command: String) -> bool:
+	for index in animation_lab.caress_positions.item_count:
+		if animation_lab.caress_positions.get_item_id(index) == 0:
+			animation_lab._choose_caress_position(index)
+			break
+	var editor: VBoxContainer = animation_lab.hand_editor
+	editor.open_editor()
+	if not editor.visible or editor.library.item_count < 3:
+		push_error("Hand editor or sample presets did not load.")
+		return false
+	if command == "save":
+		editor._choose_model(1)
+		editor._new()
+		for index in range(3):
+			editor.scrub(0.5 * index)
+			editor.fields[0].value = 0.02 + 0.04 * index
+			editor.fields[4].value = float(index * 20)
+			editor.add_key()
+		editor.title.text = "F7 Editor smoke"
+		if editor.preset.keys.size() == 3 and editor.save_preset(true):
+			print("HAND EDITOR SAVED ", String(editor.source).get_file())
+			return true
+	else:
+		for index in range(1, editor.library.item_count):
+			var path: String = editor.library.get_item_metadata(index)
+			if path.begins_with("user://POVHands/") and path.get_file() == command:
+				editor._open_selected(index)
+				editor.scrub(0.0)
+				var first: Transform3D = editor.draft
+				editor.play()
+				for i in range(30):
+					animation_lab._process(1.0 / 60.0)
+				if editor.preset.name == "F7 Editor smoke" and editor.preset.keys.size() == 3 and first.origin.distance_to(editor.draft.origin) > 0.015:
+					print("HAND EDITOR RELOADED AND PLAYED ", command)
+					return true
+				break
+	push_error("The packaged hand editor could not save or replay the smoke preset.")
+	return false
+
+
+func _check_packaged_pov_pair(path: String) -> bool:
+	if DisplayServer.get_name() == "headless":
+		return false
+	var user_preset := preload("res://hand_animation_preset.gd").read(path)
+	if int(user_preset.get("version", 0)) != 2:
+		return false
+	var lab := animation_lab
+	lab.set_process(false)
+	lab._choose_caress_position(lab.caress_positions.get_item_index(0))
+	lab.pause()
+	lab.pov_hands.set_pressed_no_signal(true)
+	lab._toggle_hands(true)
+	lab.independent_switch.button_pressed = true
+	var hands: Control = lab.independent_hands
+	hands.mode.select(2)
+	hands._mode_changed(2)
+	hands.controls[0].speed.value = 0.85
+	hands.controls[1].speed.value = 1.35
+	lab.stage.green_hands.offset = Vector3.ZERO
+	lab.stage.green_hands.angles = Vector3.ZERO
+	lab._seek(0.27)
+	await RenderingServer.frame_post_draw
+	await RenderingServer.frame_post_draw
+	for side in 2:
+		var issue: String = hands.start(side, user_preset.tracks["L" if side == 0 else "R"])
+		if not issue.is_empty():
+			push_error(issue)
+			return false
+	for step in 27:
+		lab._process(1.0 / 30.0)
+		if step % 5 == 0:
+			await RenderingServer.frame_post_draw
+	var left: Node3D = hands.runners[0]
+	var right: Node3D = hands.runners[1]
+	if not left.running or not right.running or left.custom_time >= right.custom_time or not is_equal_approx(lab.phase, 0.27):
+		push_error("The packaged independent hands did not retain their speeds and the base phase.")
+		return false
+	if left.contact_result.is_empty() or right.contact_result.is_empty():
+		push_error("A packaged contact did not reach its anchor.")
+		return false
+	for argument in OS.get_cmdline_user_args():
+		if argument.begins_with("--smoke-pov-frame="):
+			await RenderingServer.frame_post_draw
+			if lab.stage.get_viewport().get_texture().get_image().save_png(argument.trim_prefix("--smoke-pov-frame=")) != OK:
+				return false
+	hands.release(0)
+	for step in 26:
+		lab._process(1.0 / 30.0)
+	if left.tool_id >= 0 or not right.running:
+		return false
+	hands.release_all()
+	for step in 45:
+		lab._process(1.0 / 30.0)
+	if right.tool_id >= 0:
+		return false
+	print("F7 Windows: version 2 loaded after restart; two contacts, independent speeds and release verified.")
+	return true
+
+
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F8:
+		if character_comparison and character_comparison.visible:
+			character_comparison.close()
+		elif npc_gameplay and not npc_gameplay.staging.smooth_approach():
+			if animation_lab and animation_lab.is_open():
+				animation_lab.close()
+			if studio_preview.is_open():
+				studio_preview.toggle()
+			if pair_preview.is_open():
+				pair_preview.toggle()
+			if editor.is_open():
+				editor.toggle()
+			if menu.is_open():
+				menu.toggle()
+			npc_gameplay.close_dialogue()
+			npc_gameplay.contact.end()
+			if not character_comparison:
+				character_comparison = CharacterComparison.new()
+				add_child(character_comparison)
+			character_comparison.open()
+		get_viewport().set_input_as_handled()
+		return
+	if character_comparison and character_comparison.visible:
+		var exit_keys := [KEY_ESCAPE, KEY_F1, KEY_F2, KEY_F5, KEY_F6, KEY_F7]
+		if not (event is InputEventKey and event.pressed and not event.echo and event.keycode in exit_keys):
+			get_viewport().set_input_as_handled()
+			return
+		character_comparison.close()
+		if event.keycode == KEY_ESCAPE:
+			get_viewport().set_input_as_handled()
+			return
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F7:
 		if animation_lab and animation_lab.is_open():
 			animation_lab.close()
@@ -277,6 +464,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if character_comparison and character_comparison.visible:
+		return
 	if animation_lab and animation_lab.is_open():
 		return
 	if studio_preview and studio_preview.is_open():
@@ -349,6 +538,8 @@ func update_camera(weight: float) -> void:
 			if heading.length_squared() > 0.002:
 				var goal_rotation := Basis.looking_at(heading)
 				camera.basis = goal_rotation if entering else camera.basis.slerp(goal_rotation, weight * 0.68).orthonormalized()
+			if npc_gameplay.green.active():
+				npc_gameplay.green.panel.draw_hands(npc_gameplay.green.actors[1], camera.global_transform)
 			return
 	camera.near = 0.06
 	if character_key:
@@ -455,6 +646,8 @@ func check_smoke() -> void:
 
 func check_npc_gameplay() -> bool:
 	var game := npc_gameplay
+	# This probe exercises the direct legacy posture route independently of Green.
+	game.mode = 1
 	Edit.set_clothes(dancer_model, true)
 	var event := InputEventKey.new()
 	event.keycode = KEY_E
@@ -573,6 +766,8 @@ func save_closeup(path: String) -> void:
 
 
 func load_card(path: String, is_npc: bool) -> bool:
+	if npc_gameplay and npc_gameplay.green.active():
+		npc_gameplay.green.end()
 	var actor := CardModel.load_actor(path)
 	if not actor:
 		return false
@@ -715,6 +910,8 @@ func _init_rooms() -> void:
 
 
 func load_room(index: int) -> bool:
+	if npc_gameplay and npc_gameplay.green.active():
+		npc_gameplay.green.end()
 	if rooms.is_empty():
 		return false
 	var selected := posmod(index, rooms.size())
@@ -865,7 +1062,7 @@ func build_hud() -> void:
 	panel.add_child(hints)
 	var label := Label.new()
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	label.text = "WASD  Move     Mouse  Look     F1  Animations     F2  Character     F5  Pair Preview     F6  Studio Scenes     F7  Animation Lab"
+	label.text = "WASD  Move     Mouse  Look     F1  Animations     F2  Character     F5  Pair Preview     F6  Studio Scenes     F7  Animation Lab     F8  Materials"
 	label.add_theme_font_size_override("font_size", 17)
 	label.add_theme_color_override("font_color", Color("#fff3e1"))
 	hints.add_child(label)

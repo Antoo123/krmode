@@ -1,0 +1,403 @@
+{
+  "version": 1,
+  "positions": {},
+  "pointer_actions": {
+    "chest_l": "native_chest_l",
+    "chest_r": "native_chest_r",
+    "lap": "native_lap",
+    "seat_l": "native_seat_l",
+    "seat_r": "native_seat_r",
+    "crown": "pat_head",
+    "cheek_l": "touch_cheek",
+    "cheek_r": "touch_cheek",
+    "chin": "chin_lift",
+    "belly": "stroke_belly",
+    "flank_l": "stroke_left_side",
+    "flank_r": "stroke_right_side",
+    "foot_l": "stroke_left_foot",
+    "foot_r": "stroke_right_foot",
+    "leg_l": "stroke_ankle",
+    "leg_r": "stroke_ankle",
+    "hand_l": "take_hand",
+    "hand_r": "take_hand",
+    "hip_l": "stroke_thigh",
+    "hip_r": "stroke_thigh",
+    "inner_l": "stroke_thigh",
+    "inner_r": "stroke_thigh"
+  },
+  "actions": {
+    "stroke_thigh": {
+      "zone": "thigh",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "A",
+      "reaction": "thigh",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        100,
+        1
+      ]
+    },
+    "stroke_belly": {
+      "zone": "belly",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "belly",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        101,
+        2
+      ]
+    },
+    "take_hand": {
+      "zone": "hand",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "hand",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        100,
+        8
+      ]
+    },
+    "stroke_left_side": {
+      "zone": "side",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "side",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        101,
+        1
+      ]
+    },
+    "stroke_right_side": {
+      "zone": "side",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "side",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        101,
+        1
+      ]
+    },
+    "hold_left_side": {
+      "zone": "side",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "side",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        101,
+        1
+      ]
+    },
+    "hold_right_side": {
+      "zone": "side",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "side",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        101,
+        1
+      ]
+    },
+    "rub_side": {
+      "zone": "side",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "side",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        101,
+        1
+      ]
+    },
+    "stroke_left_foot": {
+      "zone": "foot",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "A",
+      "reaction": "foot",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        102,
+        9
+      ]
+    },
+    "stroke_right_foot": {
+      "zone": "foot",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "A",
+      "reaction": "foot",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        102,
+        9
+      ]
+    },
+    "hold_left_foot": {
+      "zone": "foot",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "A",
+      "reaction": "foot",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        102,
+        9
+      ]
+    },
+    "hold_right_foot": {
+      "zone": "foot",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "A",
+      "reaction": "foot",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        102,
+        9
+      ]
+    },
+    "stroke_ankle": {
+      "zone": "ankle",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "A",
+      "reaction": "ankle",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        102,
+        9
+      ]
+    },
+    "pat_head": {
+      "zone": "crown",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "crown",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        100,
+        8
+      ]
+    },
+    "stroke_hair": {
+      "zone": "crown",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "crown",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        100,
+        8
+      ]
+    },
+    "hold_head": {
+      "zone": "crown",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "crown",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        100,
+        8
+      ]
+    },
+    "gentle_head_touch": {
+      "zone": "crown",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "crown",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        100,
+        8
+      ]
+    },
+    "native_chest_l": {
+      "zone": "chest",
+      "idle": "Idle",
+      "contact": "M_Touch",
+      "loop": "M_Idle",
+      "release": "Idle",
+      "priority": 100,
+      "face": "M",
+      "reaction": "chest",
+      "source": "game"
+    },
+    "native_chest_r": {
+      "zone": "chest",
+      "idle": "Idle",
+      "contact": "M_Touch",
+      "loop": "M_Idle",
+      "release": "Idle",
+      "priority": 100,
+      "face": "M",
+      "reaction": "chest",
+      "source": "game"
+    },
+    "native_lap": {
+      "zone": "lap",
+      "idle": "Idle",
+      "contact": "A_Touch",
+      "loop": "A_Idle",
+      "release": "Idle",
+      "priority": 80,
+      "face": "A",
+      "reaction": "lap",
+      "source": "game"
+    },
+    "native_seat_l": {
+      "zone": "seat",
+      "idle": "Idle",
+      "contact": "S_Touch",
+      "loop": "S_Idle",
+      "release": "Idle",
+      "priority": 90,
+      "face": "S",
+      "reaction": "seat",
+      "source": "game"
+    },
+    "native_seat_r": {
+      "zone": "seat",
+      "idle": "Idle",
+      "contact": "S_Touch",
+      "loop": "S_Idle",
+      "release": "Idle",
+      "priority": 90,
+      "face": "S",
+      "reaction": "seat",
+      "source": "game"
+    },
+    "chin_lift": {
+      "zone": "chin",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "chin",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        101,
+        1
+      ]
+    },
+    "touch_cheek": {
+      "zone": "cheek",
+      "idle": "Idle",
+      "priority": 0,
+      "face": "M",
+      "reaction": "cheek",
+      "source": "idle_plus_additive",
+      "face_presets": [
+        102,
+        9
+      ]
+    }
+  },
+  "game_positions": {
+    "0": {
+      "label": "Standing",
+      "catalog": 0,
+      "camera": [
+        0.13,
+        1.22,
+        1.37,
+        0.0,
+        0.92,
+        0.0
+      ]
+    },
+    "11": {
+      "label": "Turn Around",
+      "catalog": 0,
+      "camera": [
+        -0.16,
+        1.21,
+        1.39,
+        0.0,
+        0.91,
+        0.0
+      ],
+      "yaw": 180
+    },
+    "1": {
+      "label": "Looking Upward",
+      "catalog": 1,
+      "camera": [
+        0.88,
+        0.95,
+        0.69,
+        0.0,
+        0.29,
+        -0.13
+      ]
+    },
+    "2": {
+      "label": "Hands & Knees",
+      "catalog": 2,
+      "camera": [
+        -0.89,
+        0.97,
+        0.78,
+        0.0,
+        0.46,
+        0.01
+      ]
+    },
+    "12": {
+      "label": "Lift Your Skirt",
+      "catalog": 0,
+      "camera": [
+        0.15,
+        1.13,
+        1.4,
+        0.0,
+        0.78,
+        0.0
+      ],
+      "layer": "skirt"
+    },
+    "13": {
+      "label": "Hand Behind Your Back",
+      "catalog": 0,
+      "camera": [
+        0.26,
+        1.24,
+        1.41,
+        0.0,
+        0.91,
+        0.0
+      ],
+      "layer": "behind"
+    },
+    "14": {
+      "label": "Kneel",
+      "catalog": 0,
+      "camera": [
+        0.16,
+        0.94,
+        1.31,
+        0.0,
+        0.63,
+        0.0
+      ],
+      "layer": "kneel"
+    }
+  }
+}

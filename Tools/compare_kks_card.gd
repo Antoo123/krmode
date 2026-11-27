@@ -1,7 +1,6 @@
 extends SceneTree
 
 const CardModel := preload("res://card_model.gd")
-const Edit := preload("res://character_edit.gd")
 
 
 func _initialize() -> void:
@@ -27,12 +26,12 @@ func capture() -> void:
 	var world := WorldEnvironment.new()
 	var environment := Environment.new()
 	environment.background_mode = Environment.BG_COLOR
-	environment.background_color = Color("#444954")
+	environment.background_color = Color("#00000d")
 	world.environment = environment
 	studio.add_child(world)
 	var key := DirectionalLight3D.new()
-	key.rotation_degrees = Vector3(-24, 159, 0)
-	key.light_energy = 0.93
+	key.rotation_degrees = Vector3(-40, 180, 0)
+	key.light_energy = 1.0
 	studio.add_child(key)
 	var camera := Camera3D.new()
 	camera.fov = 33
@@ -40,8 +39,6 @@ func capture() -> void:
 	camera.make_current()
 	for shot in [["body", 0.95, 3.3], ["face", 1.37, 1.0], ["legs", 0.34, 1.25], ["rear", 0.94, -1.55]]:
 		var height: float = shot[1]
-		if shot[0] == "rear":
-			Edit.set_clothes(actor, false)
 		camera.position = Vector3(0, height, -shot[2])
 		camera.look_at(Vector3(0, height, 0))
 		await RenderingServer.frame_post_draw

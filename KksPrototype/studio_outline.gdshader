@@ -1,16 +1,6 @@
-﻿shader_type spatial;
+shader_type spatial;
 render_mode unshaded, cull_front, shadows_disabled;
 
+#define STUDIO_VERTEX_CACHE
 #include "res://studio_vertex_cache.gdshaderinc"
-
-uniform float width = 0.00065;
-uniform vec4 ink : source_color = vec4(0.28, 0.20, 0.22, 1.0);
-
-void vertex() {
-	studio_vertex(VERTEX_ID, UV, VERTEX, NORMAL);
-	VERTEX += NORMAL * width;
-}
-
-void fragment() {
-	ALBEDO = ink.rgb;
-}
+#include "res://character_outline.gdshaderinc"

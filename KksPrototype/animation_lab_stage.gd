@@ -24,6 +24,7 @@ var green_fade: Array[Transform3D] = []
 var green_fade_left := 0.0
 var green_reaction := preload("res://animation_lab_reaction.gd").new()
 var green_hands := GreenHands.new()
+var independent_hands: Control
 var focus := Vector3(0.0, 0.9, 0.0)
 var distance := 3.4
 var yaw := 0.68
@@ -314,8 +315,12 @@ func update_view() -> void:
 	for role in range(3):
 		camera.set_cull_mask_value(role + 8, green_view or role != pov)
 	if green_view:
-		camera.global_transform = green_hands.camera_pose(actors[1])
-		green_hands.draw(actors[1], camera.global_transform)
+		if independent_hands and independent_hands.visible:
+			camera.global_transform = independent_hands.view_camera(actors[1], green_hands)
+			independent_hands.draw_hands(actors[1], camera.global_transform)
+		else:
+			camera.global_transform = green_hands.view_camera(actors[1])
+			green_hands.draw(actors[1], camera.global_transform)
 		return
 	if pov >= 0 and actors[pov] and actors[pov].visible:
 		var rig := actors[pov].get_node("Skeleton") as Skeleton3D

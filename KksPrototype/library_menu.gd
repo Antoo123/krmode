@@ -34,6 +34,7 @@ var job_path := ""
 var job_clip := ""
 var job_npc := true
 var job_card := ""
+var job_card_ready := Callable()
 var card_sources: Dictionary = {}
 var prepared_cards: Dictionary = {}
 
@@ -350,7 +351,7 @@ func open_outfit(path: String) -> void:
 		import_card(card_sources[npc], npc, path)
 
 
-func import_card(card: String, npc: bool, outfit: String = "") -> void:
+func import_card(card: String, npc: bool, outfit: String = "", on_ready := Callable()) -> void:
 	if game_root.is_empty():
 		var candidate := card.get_base_dir()
 		while not candidate.is_empty():
@@ -370,7 +371,7 @@ func import_card(card: String, npc: bool, outfit: String = "") -> void:
 	if not FileAccess.file_exists(script):
 		status.text = "Place the Tools folder next to the executable."
 		return
-	var destination := "user://ImportedCards/%s.kcs" % ("npc" if npc else "player")
+	var destination := "user://ImportedCards/%s.kcs" % ("comparison" if on_ready.is_valid() else ("npc" if npc else "player"))
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(destination.get_base_dir()))
 	var args := ["-NoProfile", "-ExecutionPolicy", "Bypass", "-WindowStyle", "Hidden",
 		"-File", script, "-GameRoot", game_root, "-Card", card, "-Output",
@@ -382,6 +383,8 @@ func import_card(card: String, npc: bool, outfit: String = "") -> void:
 	job_npc = npc
 	job_card = card
 	job_clip = ""
+	if job_pid >= 0:
+		job_card_ready = on_ready
 	start_wait("Loading the PNG and outfit. This may take a minute.")
 
 
@@ -431,6 +434,12 @@ func _process(_delta: float) -> void:
 	var successful := OS.get_process_exit_code(job_pid) == 0 and FileAccess.file_exists(job_path)
 	job_pid = -1
 	set_process(false)
+	if job_card_ready.is_valid():
+		var completed := job_card_ready
+		job_card_ready = Callable()
+		status.text = "Character prepared." if successful else "Import returned no data. Check the converter report."
+		completed.call(job_path if successful else "")
+		return
 	if not successful:
 		status.text = "Import returned no data. Check the converter report."
 	elif job_clip.is_empty():

@@ -33,6 +33,7 @@ __pycache__/
 *.kwp
 /KksPrototype/Content/**/*.glb
 /KksPrototype/Content/**/*.png
+!/KksPrototype/Content/CharaStudioColorLut.png
 /KksPrototype/Content/**/materials.tsv
 /KksPrototype/Content/catalog_full.json
 /KksPrototype/Content/catalog_indexed.json

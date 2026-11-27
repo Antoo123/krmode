@@ -2,6 +2,8 @@ extends Node3D
 
 const Card := preload("res://card_model.gd")
 const Surface := preload("res://npc_contact_surface.gd")
+const Preset := preload("res://hand_animation_preset.gd")
+const Contact := preload("res://hand_contact_motion.gd")
 const Folder := "res://Content/F7/Hands/"
 const ASSETS := ["p_handL", "p_handR", "p_fingerL", "p_fingerR"]
 const FALLBACK := ["cf_d_bust01_L", "cf_d_bust01_R", "cf_d_kokan", "cf_d_ana", "cf_d_siri01_L", "cf_d_siri01_R"]
@@ -76,6 +78,20 @@ var profile := ConfigFile.new()
 var reference: Skeleton3D
 var marker: MeshInstance3D
 var lines := ImmediateMesh.new()
+var editor_preview := {}
+var custom_animation := {}
+var custom_time := 0.0
+var contact_elapsed := 0.0
+var mouse_control := false
+var drag_input := 0.0
+var drag_speed := 0.0
+var contact_motion := Contact.new()
+var return_time := 0.0
+var return_weight := 0.0
+var contact_result := {}
+var managed_side := -1
+var contact_lane := 0.0
+var second_editor_preview := {}
 
 
 func _ready() -> void:
@@ -130,6 +146,7 @@ func load_items() -> bool:
 
 func choose_pose(id: int) -> void:
 	cancel()
+	contact_motion.cache_key = ""
 	pose_id = clampi(id, 0, PRESETS.size() - 1)
 	var key := "%02d" % pose_id
 	var saved_offset: Variant = profile.get_value(key, "offset", Vector3.ZERO)
@@ -180,14 +197,19 @@ func camera_pose(npc: Node3D) -> Transform3D:
 	return Transform3D(Basis.looking_at(direction, Vector3.UP) * Basis.from_euler(angles * PI / 180.0), eye)
 
 
-func start_action(npc: Node3D, id: int, layer: int, parent: String, zone: int) -> String:
+func start_action(npc: Node3D, id: int, layer: int, parent: String, zone: int, custom := {}) -> String:
 	if id < 0 or id >= items.size():
 		return "Для этого инструмента нет модели в стенде."
 	var rig := npc.get_node("Skeleton") as Skeleton3D
-	var backup: String = FALLBACK[zone]
+	var backup: String = FALLBACK[clampi(zone, 0, FALLBACK.size() - 1)]
+	if custom.has("contact"):
+		parent = Contact.bone_name(custom.contact)
+	elif not custom.is_empty():
+		parent = custom.bone
 	if rig.find_bone(parent) < 0 and not _can_rebase(rig, parent, backup):
 		return "Точка HandCtrl недоступна · " + parent
 	cancel()
+	custom_animation = custom
 	tool_id = id
 	item_layer = layer
 	anchor = parent
@@ -200,7 +222,8 @@ func start_action(npc: Node3D, id: int, layer: int, parent: String, zone: int) -
 	rig.force_update_all_bone_transforms()
 	target = _target(rig)
 	var slots: Array = ["Top", "Bra"] if area < 2 else ["Top", "Bottom", "Underwear", "Tights"]
-	patch_parts = Surface.patch(npc, target.origin, _outward(rig), {}, slots, area < 2, 0.24)
+	if custom.is_empty():
+		patch_parts = Surface.patch(npc, target.origin, _outward(rig), {}, slots, area < 2, 0.24)
 	if not patch_parts.is_empty() and not surface_query:
 		surface_query = Surface.SurfaceQuery.new()
 	surface_clock = 0.06
@@ -208,6 +231,8 @@ func start_action(npc: Node3D, id: int, layer: int, parent: String, zone: int) -
 
 
 func release() -> void:
+	if custom_animation.has("contact") and running:
+		return_weight = blend
 	running = false
 
 
@@ -220,13 +245,63 @@ func cancel() -> void:
 	resolved_bone = ""
 	patch_parts.clear()
 	clearance = 0.0
+	custom_animation = {}
+	custom_time = 0.0
+	contact_elapsed = 0.0
+	drag_input = 0.0
+	drag_speed = 0.0
+	return_time = 0.0
+	return_weight = 0.0
+	contact_result = {}
+
+
+func set_mouse_control(active: bool) -> void:
+	if active == mouse_control:
+		return
+	mouse_control = active
+	drag_input = 0.0
+	drag_speed = 0.0
+	if active and running and custom_animation.has("contact"):
+		custom_time = Contact.held_time(custom_animation, custom_time)
+
+
+func push_mouse_motion(motion: float) -> void:
+	if mouse_control and blend >= 0.94:
+		drag_input = clampf(drag_input + motion, -64.0, 64.0)
 
 
 func tick(delta: float) -> void:
+	if custom_animation.has("contact"):
+		var data: Dictionary = custom_animation.contact
+		var step := delta * motion_speed * float(data.speed)
+		if running:
+			contact_elapsed += delta
+			var approach := float(data.approach)
+			if mouse_control and blend >= 0.999:
+				var limit := 2.2 * motion_speed
+				var desired := clampf(drag_input * 0.006 * float(data.speed) / maxf(delta, 0.001), -limit, limit)
+				drag_speed = lerpf(drag_speed, desired, 1.0 - exp(-18.0 * delta))
+				var last := float(custom_animation.duration) - float(data.release)
+				custom_time = clampf(custom_time + drag_speed * delta, approach, last)
+			else:
+				custom_time += step
+				if mouse_control:
+					custom_time = minf(custom_time, approach)
+			drag_input = 0.0
+			action_phase = Contact.held_time(custom_animation, custom_time) / float(custom_animation.duration)
+			blend = smoothstep(0.0, approach, custom_time)
+		else:
+			return_time += step
+			blend = return_weight * (1.0 - smoothstep(0.0, data.release, return_time))
+			if return_time >= float(data.release):
+				cancel()
+		return
 	blend = move_toward(blend, 1.0 if running else 0.0, delta * motion_speed * 2.5)
 	body_weight = smoothstep(0.78, 1.0, blend)
 	if running and blend >= 0.999:
 		action_phase = fposmod(action_phase + delta * motion_speed / duration, 1.0)
+		if not custom_animation.is_empty():
+			custom_time += delta * motion_speed
 	surface_clock += delta
 	if not running and is_zero_approx(blend):
 		cancel()
@@ -244,26 +319,59 @@ func draw(npc: Node3D, eye: Transform3D) -> void:
 		target = _target(rig)
 		if resolved_bone.is_empty():
 			cancel()
-	var active_side := tool_id % 2 if tool_id >= 0 else -1
+	var edited := int(editor_preview.get("id", -1))
+	var active_side := (edited if edited >= 0 else tool_id) % 2 if edited >= 0 or tool_id >= 0 else -1
 	for id in range(items.size()):
+		if managed_side >= 0 and id % 2 != managed_side:
+			continue
 		var hand := items[id]
+		if id == int(second_editor_preview.get("id", -1)):
+			hand.node.visible = true
+			hand.node.global_transform = second_editor_preview.world
+			continue
 		var active := tool_id == id
 		var idle := id <= 1 and id != active_side
+		if id == edited:
+			hand.node.visible = true
+			if not editor_preview.get("sampled", false):
+				_sample_fingers(hand, id, editor_preview.layer, editor_preview.time, editor_preview.rate)
+			hand.node.global_transform = editor_preview.world
+			continue
 		hand.node.visible = show_hands and (idle or active)
 		if not idle and not active:
 			continue
+		if active and custom_animation.has("contact"):
+			var time := Contact.held_time(custom_animation, custom_time)
+			var local := Preset.adjustment(custom_animation, pose_id) * Preset.contact_key(
+				custom_animation, Preset.sample(custom_animation, time))
+			var lane := contact_lane * smoothstep(0.25, 0.8, blend)
+			if custom_animation.contact.kind in ["foot", "ankle"]:
+				local.origin.y += lane
+			else:
+				local.origin.x += lane
+				local.basis = Basis(Vector3.FORWARD, lane * 4.8) * local.basis
+			contact_result = evaluate_contact(npc, id, custom_animation, local, time, blend)
+			if not contact_result.is_empty():
+				hand.node.global_transform = contact_result.world
+				target = contact_result.anchor
+			continue
 		var layer := item_layer if active and authored else 0
-		_clip(hand, id, layer)
 		var phase := action_phase if active else 0.0
-		hand.sample(layer, phase)
+		if active and not custom_animation.is_empty():
+			_sample_fingers(hand, id, custom_animation.finger_layer, custom_time, custom_animation.finger_speed)
+		else:
+			_clip(hand, id, layer)
+			hand.sample(layer, phase)
 		hand.rig.force_update_all_bone_transforms()
-		var sign_x := -1.0 if id % 2 == 0 else 1.0
-		var hand_basis := eye.basis * Basis.looking_at(Vector3(-0.18 * sign_x, 0.62, -0.75), Vector3.UP) * hand.axis.inverse()
-		var hand_home := eye * Vector3(0.17 * sign_x, -0.158, -0.405) - hand_basis * hand.rig.get_bone_global_pose(hand.wrist).origin
-		var origin := Transform3D(hand_basis, hand_home)
+		var origin := _home(hand, id, eye)
 		if active:
 			var goal := target
-			if not authored:
+			if not custom_animation.is_empty():
+				var length := float(custom_animation.duration)
+				var time := fposmod(custom_time, length) if custom_animation.loop else minf(custom_time, length)
+				goal.basis = goal.basis.orthonormalized()
+				goal *= Preset.adjustment(custom_animation, pose_id) * Preset.sample(custom_animation, time)
+			elif not authored:
 				# An explicit fallback for missing item tracks. The socket stays fixed.
 				goal.basis *= Basis(Vector3.FORWARD, sin(phase * TAU) * 0.085)
 			if not patch_parts.is_empty():
@@ -280,18 +388,116 @@ func draw(npc: Node3D, eye: Transform3D) -> void:
 		_draw_target(items[tool_id])
 
 
+func _home(hand: Tool, id: int, eye: Transform3D) -> Transform3D:
+	var sign_x := -1.0 if id % 2 == 0 else 1.0
+	var basis := eye.basis * Basis.looking_at(Vector3(-0.18 * sign_x, 0.62, -0.75), Vector3.UP) * hand.axis.inverse()
+	var origin := eye * Vector3(0.17 * sign_x, -0.158, -0.405) - basis * hand.rig.get_bone_global_pose(hand.wrist).origin
+	return Transform3D(basis, origin)
+
+
+func evaluate_contact(npc: Node3D, id: int, preset: Dictionary, local: Transform3D, time: float, amount: float, solver: RefCounted = null) -> Dictionary:
+	var hand := items[id]
+	_sample_fingers(hand, id, preset.finger_layer, time, preset.finger_speed)
+	if preset.contact.kind in ["chin", "cheek"] and int(preset.finger_layer) < 0:
+		hand.rig.reset_bone_poses()
+		var late := float(preset.duration) - float(preset.contact.release)
+		var strength := clampf(inverse_lerp(float(preset.contact.approach), late, time), 0.0, 1.0)
+		Contact.shape_fingers(hand.rig, ASSETS[id].right(1), preset.contact.kind, strength)
+	hand.rig.force_update_all_bone_transforms()
+	var eye: Camera3D = get_parent().camera
+	var active_solver := solver if solver else contact_motion
+	return active_solver.solve(npc, hand.rig, ASSETS[id].right(1), preset, local,
+		_home(hand, id, eye.global_transform), amount, hand.skin_points, hand.node)
+
+
+func frame_contact_camera(npc: Node3D, original: Transform3D, data: Dictionary) -> Transform3D:
+	var rig := npc.get_node("Skeleton") as Skeleton3D
+	var anchored := Contact.anchor(rig, data)
+	if anchored.is_empty():
+		return original
+	var frame: Transform3D = anchored.frame
+	var focus := frame.origin + Vector3.UP * 0.04
+	var eye := original.origin
+	if data.kind != "hand":
+		var side := frame.basis.x
+		var outward := frame.basis.z
+		if outward.y < -0.5:
+			side = side.slide(Vector3.UP).normalized()
+			outward = (side + outward * 0.30).normalized()
+		if data.kind in ["foot", "ankle"]:
+			var horizontal := (original.origin - focus).slide(Vector3.UP).normalized()
+			if horizontal.is_zero_approx():
+				horizontal = original.basis.z.slide(Vector3.UP).normalized()
+			eye = focus + horizontal * clampf(0.83 + offset.z, 0.62, 1.65)
+			eye += Vector3.UP * clampf(0.32 + offset.y, 0.18, 0.85)
+			eye += Vector3.UP.cross(horizontal) * clampf(offset.x, -0.32, 0.32)
+		else:
+			eye = focus + outward * clampf(0.77 + offset.z, 0.28, 2.0)
+			eye += Vector3.UP * (0.24 + offset.y) + side * (0.06 + offset.x)
+			if data.kind == "crown":
+				eye += (original.origin - focus).slide(outward).normalized() * 0.34
+		eye.y = maxf(eye.y, 0.16)
+	var direction := (focus - eye).normalized()
+	var up := Vector3.UP if absf(direction.dot(Vector3.UP)) < 0.96 else frame.basis.x
+	if absf(up.dot(direction)) > 0.98:
+		up = Vector3.FORWARD
+	return Transform3D(Basis.looking_at(direction, up) * Basis.from_euler(angles * (PI / 180.0)), eye)
+
+
+func editor_contact_camera(npc: Node3D, contact: Dictionary) -> Transform3D:
+	var original := camera_pose(npc)
+	if not second_editor_preview.has("contact"):
+		return frame_contact_camera(npc, original, contact)
+	var rig: Skeleton3D = npc.get_node("Skeleton")
+	var first := Contact.anchor(rig, contact)
+	var second := Contact.anchor(rig, second_editor_preview.contact)
+	if first.is_empty() or second.is_empty():
+		return frame_contact_camera(npc, original, contact)
+	var point: Vector3 = first.frame.origin
+	var other: Vector3 = second.frame.origin
+	var focus := point.lerp(other, 0.5)
+	var eye := focus + focus.direction_to(original.origin) * maxf(1.12, point.distance_to(other) * 1.8)
+	if eye.distance_squared_to(focus) < 0.001:
+		return original
+	var direction := eye.direction_to(focus)
+	var up := Vector3.UP if absf(direction.dot(Vector3.UP)) < 0.96 else Vector3.FORWARD
+	return Transform3D(Basis.looking_at(direction, up), eye)
+
+
+func view_camera(npc: Node3D) -> Transform3D:
+	var original := camera_pose(npc)
+	if editor_preview.has("contact"):
+		return editor_contact_camera(npc, editor_preview.contact)
+	if custom_animation.has("contact"):
+		return original.interpolate_with(frame_contact_camera(npc, original, custom_animation.contact), blend)
+	return original
+
+
+func start_contact_preset(npc: Node3D, preset: Dictionary) -> String:
+	var id := ASSETS.find(preset.asset)
+	var rig := npc.get_node("Skeleton") as Skeleton3D
+	if id < 0 or Contact.anchor(rig, preset.contact).is_empty():
+		return "Для пресета недоступна модель кисти или точка контакта."
+	var bone := Contact.bone_name(preset.contact)
+	return start_action(npc, id, preset.finger_layer, bone, preset.zone, preset)
+
+
 func _target(rig: Skeleton3D) -> Transform3D:
-	var joint := rig.find_bone(anchor)
+	var result := contact_frame(rig, anchor, area)
+	resolved_bone = result[1] if not result.is_empty() else ""
+	return result[0] if not result.is_empty() else Transform3D.IDENTITY
+
+
+func contact_frame(rig: Skeleton3D, bone: String, zone: int) -> Array:
+	var joint := rig.find_bone(bone)
 	if joint >= 0:
-		resolved_bone = anchor
-		return _bone(rig, joint)
-	if _can_rebase(rig, anchor, fallback):
-		var native_rest := reference.get_bone_global_rest(reference.find_bone(anchor))
-		var backup_rest := reference.get_bone_global_rest(reference.find_bone(fallback))
-		resolved_bone = fallback
-		return _bone(rig, rig.find_bone(fallback)) * backup_rest.affine_inverse() * native_rest
-	resolved_bone = ""
-	return Transform3D.IDENTITY
+		return [_bone(rig, joint), bone]
+	var backup: String = FALLBACK[clampi(zone, 0, FALLBACK.size() - 1)]
+	if _can_rebase(rig, bone, backup):
+		var native_rest := reference.get_bone_global_rest(reference.find_bone(bone))
+		var backup_rest := reference.get_bone_global_rest(reference.find_bone(backup))
+		return [_bone(rig, rig.find_bone(backup)) * backup_rest.affine_inverse() * native_rest, backup]
+	return []
 
 
 func _can_rebase(rig: Skeleton3D, native: String, backup: String) -> bool:
@@ -348,6 +554,25 @@ func _clip(hand: Tool, id: int, layer: int) -> Animation:
 
 func item_label(id: int, layer: int) -> String:
 	return layer_names.get(ASSETS[id] + ":" + str(layer), str(layer))
+
+
+func finger_layers(id: int) -> Array[int]:
+	var result: Array[int] = []
+	for key: String in layer_names:
+		if key.begins_with(ASSETS[id] + ":"):
+			result.append(int(key.get_slice(":", 1)))
+	result.sort()
+	return result
+
+
+func finger_length(id: int, layer: int) -> float:
+	var clip := _clip(items[id], id, layer)
+	return clip.length if clip else 1.0
+
+
+func _sample_fingers(hand: Tool, id: int, layer: int, time: float, rate: float) -> void:
+	var clip := _clip(hand, id, layer)
+	hand.sample(layer, fposmod(time * rate, clip.length) / clip.length if clip else 0.0)
 
 
 static func _bone(rig: Skeleton3D, id: int) -> Transform3D:

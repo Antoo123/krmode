@@ -38,6 +38,7 @@ var fader := 0.0
 var neck_angles := Vector2.ZERO
 var eye_angles := Vector2.ZERO
 var blink_open := 1.0
+var contact_mix := preload("res://pov_contact_reaction.gd").new()
 
 
 func setup(npc: Node3D, id: int, state: String) -> void:
@@ -88,10 +89,15 @@ func begin(selected_zone: int, rule: Dictionary, clip: String) -> void:
 	elapsed = 0.0
 
 
-func advance(hands: Node3D, camera_position: Vector3, delta: float) -> void:
+func advance(hands: Node3D, camera_position: Vector3, delta: float,
+		contacts: Array[Dictionary] = [], contact_mode := 0) -> void:
 	if table.is_empty():
 		return
 	time += delta
+	for contact in contacts:
+		if contact.kind in ["foot", "ankle"]:
+			contact.foot_curve = _foot_curve(contact)
+	contact_mix.advance(rig, contacts, contact_mode, delta)
 	var active: bool = zone >= 0 and hands.tool_id >= 0
 	hold = float(hands.body_weight) if active else 0.0
 	if active and hold > 0.0:
@@ -119,11 +125,30 @@ func advance(hands: Node3D, camera_position: Vector3, delta: float) -> void:
 	var target := _idle_face()
 	if touching and not ending:
 		target = int(profile.short.get("6", target)) if elapsed < 0.25 else int(profile.breath.get(_contact_state(false), target))
+	if contact_mix.face_strength > 0.22 and not touching:
+		var group := contact_mix.face_group
+		if group.is_empty():
+			group = "A" if contact_mix.lead_kind in ["foot", "ankle", "thigh"] else "M"
+		target = int(profile.short.get("6", target)) if contact_mix.started else int(profile.breath.get(group + "_Idle", target))
+		if profile.faces.has(str(contact_mix.face_preset)):
+			target = contact_mix.face_preset
 	if target != face_id:
 		face_from = _face_weights()
 		face_id = target
 		face_mix = 0.0
 	face_mix = move_toward(face_mix, 1.0, delta / 0.15)
+
+
+func _foot_curve(contact: Dictionary) -> float:
+	var moving := String(contact.style).begins_with("stroke")
+	var id := (8 if contact.side == "L" else 10) + int(moving)
+	var side := "Left" if contact.side == "L" else "Right"
+	var group: Dictionary = profile.effectors.get(str(id), {})
+	for point: Dictionary in group.get("points", []):
+		if point.name == side + " Foot":
+			var elapsed := float(contact.time)
+			return clampf(_curve(point.force, elapsed) * smoothstep(0.0, maxf(0.01, point.fade), elapsed), -1.0, 1.0)
+	return 0.0
 
 
 func restore_pose() -> void:
@@ -136,6 +161,7 @@ func restore_pose() -> void:
 
 
 func reset() -> void:
+	contact_mix.reset()
 	restore_pose()
 	face.reset()
 	zone = -1
@@ -165,11 +191,44 @@ func apply() -> void:
 	if table.is_empty() or not is_instance_valid(rig):
 		return
 	_apply_hit()
-	_rotate("cf_j_neck", neck_angles * 0.4)
-	_rotate("cf_j_head", neck_angles * 0.6)
+	var neck := neck_angles + contact_mix.gaze * 0.28
+	_rotate("cf_j_neck", neck * 0.4)
+	_rotate("cf_j_head", neck * 0.6)
 	for side in ["L", "R"]:
-		_rotate("cf_J_hitomi_tx_" + side, eye_angles)
+		_rotate("cf_J_hitomi_tx_" + side, (eye_angles + contact_mix.gaze * 0.65).limit_length(14.0))
+	for bone: String in contact_mix.angles:
+		var id := rig.find_bone(bone)
+		if id >= 0:
+			_save(id)
+			var rotation := Quaternion.from_euler(Vector3(contact_mix.angles[bone]) * (PI / 180.0))
+			rig.set_bone_pose_rotation(id, (rig.get_bone_pose_rotation(id) * rotation).normalized())
+	_apply_cheeks()
 	face.apply(profile.faces, face_id, _face_weights(), blink_open)
+
+
+func _apply_cheeks() -> void:
+	var head := rig.find_bone("cf_j_head")
+	if head < 0:
+		return
+	var frame := rig.get_bone_global_pose(head).basis.orthonormalized() * rig.get_bone_global_rest(head).basis.orthonormalized().inverse()
+	for side in ["L", "R"]:
+		var strength := float(contact_mix.cheek_offsets.get(side, 0.0))
+		if strength < 0.001:
+			continue
+		var axis := -1.0 if side == "L" else 1.0
+		for prefix in ["cf_J_CheekLow_s_", "cf_J_CheekUp_s_", "cf_J_CheekUp2_"]:
+			var joint := rig.find_bone(prefix + side)
+			if joint < 0:
+				continue
+			var parent := rig.get_bone_parent(joint)
+			if parent < 0:
+				continue
+			var offset := frame * Vector3(axis * 0.0045, 0.0010, -0.0012) * strength
+			if prefix != "cf_J_CheekLow_s_":
+				offset *= 0.48
+			_save(joint)
+			rig.set_bone_pose_position(joint, rig.get_bone_pose_position(joint) +
+				rig.get_bone_global_pose(parent).basis.inverse() * offset)
 
 
 func _face_weights() -> Dictionary:

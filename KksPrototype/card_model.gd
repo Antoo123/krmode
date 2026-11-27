@@ -12,8 +12,10 @@ const MOTION_MAGIC := 0x31414D4B
 const SURFACE := preload("res://character_surface.gdshader")
 const DECAL := preload("res://character_decal.gdshader")
 const OUTLINE := preload("res://character_outline.gdshader")
+const STUDIO_GRADE := preload("res://Content/CharaStudioColorLut.png")
 const CHARACTER_LAYER := 2
 const PORTABLE_MARKER := "KKSROOM1"
+const MATERIAL_NAMES := 0x314D534B
 const CharacterEdit := preload("res://character_edit.gd")
 const PropMaterial := preload("res://studio_prop_material.gd")
 
@@ -36,6 +38,7 @@ static func load_actor(path: String, preserve_studio_visibility := false, worksp
 		skin.add_bind(i, skeleton.get_bone_global_rest(i).affine_inverse())
 
 	var textures: Dictionary = {}
+	var renderers: Array[MeshInstance3D] = []
 	var renderer_count := file.get_32()
 	if renderer_count == 0 or renderer_count > 256:
 		actor.free()
@@ -45,8 +48,10 @@ static func load_actor(path: String, preserve_studio_visibility := false, worksp
 		if renderer == null:
 			actor.free()
 			return null
+		renderers.append(renderer)
 		var renderer_name := String(renderer.name).to_lower()
 		if "shadowcaster" in renderer_name:
+			renderers[i] = null
 			renderer.free()
 			continue
 		if preserve_studio_visibility:
@@ -65,6 +70,8 @@ static func load_actor(path: String, preserve_studio_visibility := false, worksp
 				for section in range(CharacterEdit.HAIR_ROOTS.size()):
 					if root.begins_with(CharacterEdit.HAIR_ROOTS[section]):
 						renderer.set_meta("hair_section", section)
+	if file.get_length() - file.get_position() >= 4 and file.get_32() == MATERIAL_NAMES:
+		read_material_names(file, renderers)
 	var animator := AnimationPlayer.new()
 	animator.name = "AnimationPlayer"
 	actor.add_child(animator)
@@ -72,6 +79,19 @@ static func load_actor(path: String, preserve_studio_visibility := false, worksp
 	if not preserve_studio_visibility:
 		CharacterEdit.update_body_details(actor, CharacterEdit.slots(actor))
 	return actor
+
+
+static func read_material_names(file: FileAccess, renderers: Array[MeshInstance3D]) -> void:
+	for renderer in renderers:
+		if file.get_length() - file.get_position() < 4:
+			return
+		var count := file.get_32()
+		if count > 256:
+			return
+		for surface in count:
+			var material_name := read_text(file)
+			if renderer and surface < renderer.mesh.get_surface_count():
+				renderer.mesh.surface_get_material(surface).resource_name = material_name
 
 
 static func read_rig(file: FileAccess, path: String) -> Skeleton3D:
@@ -187,7 +207,7 @@ static func read_renderer(file: FileAccess, textures: Dictionary, format: int, s
 	var mesh := ArrayMesh.new()
 	for section in range(section_count):
 		var material := PropMaterial.read(file, textures, texture_payload.bind(workspace_textures)) if format == CARD_WORKSPACE else (
-			read_material(file, textures, format, mesh_name, native_layers))
+			read_material(file, textures, format, mesh_name, auxiliary))
 		var index_count := file.get_32()
 		if index_count > 3000000 or index_count % 3 != 0:
 			return null
@@ -294,7 +314,7 @@ static func orient_triangles(triangles: PackedInt32Array, vertices: PackedVector
 		triangles[i + 2] = next
 
 
-static func read_material(file: FileAccess, textures: Dictionary, format: int, mesh_name: String, native_layers: bool) -> ShaderMaterial:
+static func read_material(file: FileAccess, textures: Dictionary, format: int, mesh_name: String, auxiliary: int) -> ShaderMaterial:
 	var material := ShaderMaterial.new()
 	var lower := mesh_name.to_lower()
 	var body_surface := lower.begins_with("o_body")
@@ -310,6 +330,8 @@ static func read_material(file: FileAccess, textures: Dictionary, format: int, m
 		elif "hitomi" in lower or "eyeline" in lower or "noseline" in lower or "mayuge" in lower:
 			kind = 3
 		material.shader = DECAL if kind == 3 and cutout else SURFACE
+		material.set_shader_parameter("use_studio_grade", true)
+		material.set_shader_parameter("studio_grade_lut", STUDIO_GRADE)
 		material.set_shader_parameter("surface_kind", kind)
 		material.set_shader_parameter("body_surface", kind == 1 and body_surface)
 		material.set_shader_parameter("body_detail", kind == 1 and body_detail)
@@ -330,9 +352,15 @@ static func read_material(file: FileAccess, textures: Dictionary, format: int, m
 	var cutoff := file.get_float()
 	var extend := file.get_float()
 	var color := read_color(file)
-	if opacity == 0 and mesh_name.to_lower().begins_with("o_emblem_"):
+	var eye_layer := lower.begins_with("cf_ohitomi") or lower.begins_with("cf_o_eyeline") or lower.begins_with("cf_o_mayuge")
+	if eye_layer and queue >= 2700:
+		kind = 3
+		opacity = 2
+	elif opacity == 0 and lower.begins_with("o_emblem_"):
 		opacity = 2
 	material.shader = DECAL if opacity == 2 else SURFACE
+	material.set_shader_parameter("use_studio_grade", true)
+	material.set_shader_parameter("studio_grade_lut", STUDIO_GRADE)
 	material.set_shader_parameter("surface_kind", kind)
 	material.set_shader_parameter("body_surface", kind == 1 and body_surface)
 	material.set_shader_parameter("body_detail", kind == 1 and body_detail)
@@ -358,8 +386,9 @@ static func read_material(file: FileAccess, textures: Dictionary, format: int, m
 			material.set_shader_parameter(property, file.get_float())
 		for slot in ["normal", "detail_normal", "surface_detail", "line", "face_normal", "ramp", "wet_mask", "wet_detail"]:
 			read_map(material, file, textures, slot + "_map", slot + "_uv", "use_" + slot)
-	if native_layers:
-		material.set_shader_parameter("native_skin_layers", true)
+	if auxiliary != 0:
+		material.set_shader_parameter("gloss_secondary_uv", (auxiliary & 128) != 0 and kind == 2)
+		material.set_shader_parameter("native_skin_layers", kind == 1)
 		material.set_shader_parameter("skin_layer_parameters", Vector4(file.get_float(), file.get_float(), file.get_float(), file.get_float()))
 	if material.get_shader_parameter("use_body_mask") != true:
 		add_outline(material, kind, queue, color)
@@ -367,12 +396,29 @@ static func read_material(file: FileAccess, textures: Dictionary, format: int, m
 
 
 static func add_outline(material: ShaderMaterial, kind: int, queue: int, tint: Color) -> void:
-	if kind == 3 or queue >= 2700 or material.shader == DECAL:
+	if kind == 3 or (queue >= 2700 and kind != 2) or material.shader == DECAL:
 		return
 	var outline := ShaderMaterial.new()
 	outline.shader = OUTLINE
 	outline.set_shader_parameter("ink", Color("#a57b78") if kind == 1 else tint.darkened(0.63).lerp(Color("#59414b"), 0.62))
 	outline.set_shader_parameter("width", 0.00062 if kind == 1 else 0.00072)
+	var corrected := Color("#926a67") if kind == 1 else tint.darkened(0.79).lerp(Color("#221820"), 0.42)
+	if kind == 2:
+		var line: Variant = material.get_shader_parameter("overlay3_tint")
+		if line is Color:
+			corrected = corrected.lerp(line.darkened(0.78), line.a)
+	outline.set_shader_parameter("corrected_ink", corrected)
+	outline.set_shader_parameter("hair_outline", kind == 2)
+	if material.get_shader_parameter("opacity_mode") == 1:
+		outline.set_shader_parameter("clip_outline", true)
+		outline.set_shader_parameter("cutoff", material.get_shader_parameter("cutoff"))
+		outline.set_shader_parameter("tint_alpha", tint.a)
+		for slot in ["base", "mask"]:
+			var sampler := "base_map" if slot == "base" else "color_mask"
+			var texture := material.get_shader_parameter(sampler) as Texture2D
+			if texture and (slot == "base" or kind == 2):
+				outline.set_shader_parameter(sampler, texture)
+				outline.set_shader_parameter(slot + "_uv", material.get_shader_parameter(slot + "_uv"))
 	material.next_pass = outline
 
 
@@ -414,7 +460,9 @@ static func texture_payload(file: FileAccess, textures: Dictionary, texture_id: 
 			var image := Image.new()
 			if image.load_png_from_buffer(bytes) == OK:
 				image.generate_mipmaps()
-				textures[texture_id] = ImageTexture.create_from_image(image)
+				var texture := ImageTexture.create_from_image(image)
+				texture.resource_name = "KCS %d" % texture_id
+				textures[texture_id] = texture
 				if shared is Dictionary:
 					shared[digest] = textures[texture_id]
 	return textures.get(texture_id)

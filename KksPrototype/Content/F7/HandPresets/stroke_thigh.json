@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "name": "stroke_thigh",
+  "asset": "p_handR",
+  "zone": 0,
+  "bone": "cf_j_thigh00_L",
+  "duration": 3.1,
+  "loop": true,
+  "interpolation": "smooth",
+  "finger_layer": 0,
+  "finger_speed": 1,
+  "offset": {
+    "time": 0,
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ]
+  },
+  "positions": {},
+  "keys": [
+    {
+      "time": 0,
+      "position": [
+        0,
+        -0.062,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 0.55,
+      "position": [
+        0,
+        -0.062,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 1.05,
+      "position": [
+        0,
+        0.066,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 1.55,
+      "position": [
+        0,
+        -0.062,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 2.05,
+      "position": [
+        0,
+        0.066,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 2.55,
+      "position": [
+        0,
+        -0.062,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 3.1,
+      "position": [
+        0,
+        -0.062,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "contact": {
+    "kind": "thigh",
+    "side": "L",
+    "amplitude": 1,
+    "speed": 1,
+    "approach": 0.55,
+    "release": 0.55
+  }
+}

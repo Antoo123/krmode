@@ -2,6 +2,8 @@ extends CanvasLayer
 
 const Stage := preload("res://animation_lab_stage.gd")
 const Library := preload("res://card_library.gd")
+const HandAnimationEditor := preload("res://hand_animation_editor.gd")
+const HandContact := preload("res://hand_contact_motion.gd")
 const CATALOG := "res://Content/F7/catalog.json"
 const CARESS_CATALOG := "res://Content/F7/h_caressing.json"
 const ROLE_NAMES := ["Мужчина", "Женщина", "Женщина 2"]
@@ -15,6 +17,7 @@ const TOOL_NAMES := ["Левая ладонь", "Правая ладонь", "Л
 var panel: PanelContainer
 var sidebar: VBoxContainer
 var inspector: VBoxContainer
+var transport: HBoxContainer
 var inspector_scroll: ScrollContainer
 var viewport: SubViewport
 var stage: Node3D
@@ -52,7 +55,12 @@ var variation: OptionButton
 var layer_clip: OptionButton
 var layer_status: Label
 var pov_hands: CheckButton
+var independent_switch: CheckButton
+var independent_hands: Control
 var hand_controls: VBoxContainer
+var hand_editor: VBoxContainer
+var contact_action: OptionButton
+var contact_target_side: OptionButton
 var hand_tool: OptionButton
 var hand_status: Label
 var pov_boxes: Array[SpinBox] = []
@@ -139,7 +147,7 @@ func _ready() -> void:
 
 	inspector = VBoxContainer.new()
 	right.add_child(inspector)
-	var transport := HBoxContainer.new()
+	transport = HBoxContainer.new()
 	inspector.add_child(transport)
 	_button(transport, "Play", play)
 	_button(transport, "Pause", pause)
@@ -185,6 +193,9 @@ func _ready() -> void:
 	details.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	playback_status = _label(options, "")
 	playback_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	hand_editor = HandAnimationEditor.new()
+	options.add_child(hand_editor)
+	hand_editor.setup(self)
 	_build_green(options)
 	for role in range(3):
 		var cast := HBoxContainer.new()
@@ -254,6 +265,17 @@ func _build_hands() -> void:
 	_button(controls, "Контакт", _start_hand)
 	_button(controls, "Отпустить", _release_hand)
 	_button(controls, "Сброс рук", _cancel_hand)
+	_button(hand_controls, "Hand Animation Editor", hand_editor.open_editor)
+	var new_actions := HBoxContainer.new()
+	hand_controls.add_child(new_actions)
+	contact_action = _options(new_actions, ["HandCtrl KKS", "Stroke Thigh", "Stroke Belly", "Take Hand"])
+	contact_action.tooltip_text = "Действие для кнопки «Контакт»"
+	contact_target_side = _options(new_actions, ["Из пресета", "Цель слева", "Цель справа"])
+	contact_target_side.disabled = true
+	contact_action.item_selected.connect(func(index: int):
+		_cancel_hand()
+		contact_target_side.disabled = index == 0 or index == 2)
+	contact_target_side.item_selected.connect(func(_index: int): _cancel_hand())
 	var show := _check(controls, "Руки")
 	show.button_pressed = true
 	show.toggled.connect(func(on: bool):
@@ -266,6 +288,12 @@ func _build_hands() -> void:
 	var rate := _spin(controls, 0.25, 3.0, 0.05, 1.0, "Скорость руки")
 	rate.suffix = "×"
 	rate.value_changed.connect(func(value: float): stage.green_hands.motion_speed = value)
+	independent_switch = _check(hand_controls, "Independent Hands")
+	independent_hands = preload("res://pov_independent_hands.gd").new()
+	hand_controls.add_child(independent_hands)
+	independent_hands.setup(self, hand_editor.bindings)
+	stage.independent_hands = independent_hands
+	independent_switch.toggled.connect(_toggle_independent)
 	var camera_controls := HBoxContainer.new()
 	hand_controls.add_child(camera_controls)
 	for axis: String in ["X", "Y", "Дист.", "Наклон", "Поворот", "Крен"]:
@@ -285,10 +313,19 @@ func _build_hands() -> void:
 	hand_controls.hide()
 
 
+func _toggle_independent(on: bool) -> void:
+	_cancel_hand()
+	independent_hands.activate(on and stage.green_hands.enabled)
+	_seek(phase)
+
+
 func _toggle_hands(on: bool) -> void:
 	var hands: Node3D = stage.green_hands
 	_cancel_hand()
 	hands.enabled = on and green_panel.visible and hands.load_items()
+	independent_hands.activate(hands.enabled and independent_switch.button_pressed)
+	if not hands.enabled:
+		hand_editor.close_editor()
 	hand_controls.visible = on and green_panel.visible
 	if hands.enabled:
 		_read_pov_boxes()
@@ -296,6 +333,8 @@ func _toggle_hands(on: bool) -> void:
 	elif on:
 		hand_status.text = "Ресурсы рук KKS недоступны."
 	inspector_scroll.custom_minimum_size.y = (290 if on else 210) if green_panel.visible else 170
+	if hand_editor.visible:
+		inspector_scroll.custom_minimum_size.y = 345
 	_seek(phase)
 
 
@@ -361,8 +400,10 @@ func open() -> void:
 
 func close() -> void:
 	pause()
+	hand_editor.close_editor()
 	pov_hands.set_pressed_no_signal(false)
 	stage.green_hands.enabled = false
+	independent_hands.activate(false)
 	_cancel_hand()
 	stage.clear_cast()
 	stage.set_placement([[0, 0, 0], [0, 0, 0]])
@@ -564,6 +605,7 @@ func _select_entry(entry: Dictionary) -> void:
 		_select_state(best)
 	if green_panel.visible:
 		_fill_actions()
+	hand_editor.context_changed()
 
 
 func _select_state(index: int) -> void:
@@ -599,6 +641,7 @@ func _select_state(index: int) -> void:
 	_seek(0.0)
 	if green_panel.visible:
 		_choose_layer()
+	hand_editor.context_changed()
 
 
 func _arm_tracks() -> bool:
@@ -779,11 +822,17 @@ func _remove_layer() -> void:
 
 
 func _start_hand() -> void:
+	if independent_hands.visible:
+		independent_hands.start_selected()
+		return
 	var hands: Node3D = stage.green_hands
-	if not hands.enabled or hands.running:
+	if not hands.enabled or hands.running or hand_editor.visible:
 		return
 	if not contact_prefix.is_empty():
 		_cancel_hand()
+	if contact_action.selected > 0:
+		_start_custom_contact()
+		return
 	if stage.duration <= 0.0 or action.selected < 0 or not _layer_permission():
 		hand_status.text = "Контакт недоступен для выбранной зоны и состояния."
 		return
@@ -794,7 +843,13 @@ func _start_hand() -> void:
 	var tool: Array = hand_tool.get_item_metadata(hand_tool.selected)
 	var item_layer := int(raw.layerActions[variation.selected]["front" if side.selected == 0 else "back"].item)
 	var socket := String(raw.nameParents[tool[1]])
-	var issue: String = hands.start_action(stage.actors[1], tool[0], item_layer, socket, zone.selected)
+	var custom: Dictionary = hand_editor.assigned(tool[0], zone.selected, raw.id, side.selected, variation.selected)
+	var issue: String = hands.start_action(stage.actors[1], tool[0], item_layer, socket, zone.selected, custom)
+	var backup := ""
+	if not issue.is_empty() and not custom.is_empty():
+		backup = issue
+		custom = {}
+		issue = hands.start_action(stage.actors[1], tool[0], item_layer, socket, zone.selected)
 	if not issue.is_empty():
 		hand_status.text = issue
 		return
@@ -810,13 +865,40 @@ func _start_hand() -> void:
 		contact_prefix = CONTACT_PREFIXES[zone.selected]
 		contact_drag = false
 	var motion: String = hands.item_label(tool[0], item_layer) if hands.authored else "процедурная кисть"
+	if not custom.is_empty():
+		motion = String(custom.name)
 	hand_status.text = "%s · %s · %s" % [
-		motion, socket if not socket.is_empty() else hands.fallback,
+		motion, hands.resolved_bone if not hands.resolved_bone.is_empty() else hands.fallback,
 		"Слой тела KKS" if hand_overlay else "Доступна анимация руки"]
+	if not backup.is_empty():
+		hand_status.text += "\n" + backup
+	_seek(phase)
+
+
+func _start_custom_contact() -> void:
+	if stage.duration <= 0.0:
+		hand_status.text = "Сначала выберите анимацию NPC."
+		return
+	var kind: String = ["thigh", "belly", "hand"][contact_action.selected - 1]
+	var authored: Dictionary = hand_editor.contact_action(kind)
+	if authored.is_empty():
+		hand_status.text = "Пресет недоступен."
+		return
+	if kind != "belly" and contact_target_side.selected > 0:
+		authored.contact.side = "L" if contact_target_side.selected == 1 else "R"
+	stage.clear_overlay()
+	var issue: String = stage.green_hands.start_contact_preset(stage.actors[1], authored)
+	if not issue.is_empty():
+		hand_status.text = issue
+		return
+	hand_status.text = "%s · %s" % [authored.name, HandContact.bone_name(authored.contact)]
+	play()
 	_seek(phase)
 
 
 func _release_hand() -> void:
+	if independent_hands.visible:
+		independent_hands.release_all()
 	stage.green_hands.release()
 	hand_pointer = false
 
@@ -825,6 +907,8 @@ func _cancel_hand() -> void:
 	var restore := not contact_clip.is_empty()
 	_clear_caress_contact()
 	stage.green_hands.cancel()
+	if independent_hands:
+		independent_hands.cancel()
 	stage.green_reaction.reset()
 	hand_pointer = false
 	if hand_overlay:
@@ -932,6 +1016,8 @@ func _seek(value: float) -> void:
 	stage.green_reaction.setup(stage.actors[1] if reactions else null, int(row.id) if reactions else -1,
 		String(state[0]) if reactions and not state.is_empty() else "")
 	stage.seek(phase)
+	if hand_editor.visible:
+		hand_editor.redraw()
 	scrub.set_value_no_signal(phase)
 	clock.text = "%.2f / %.2f с" % [phase * stage.duration, stage.duration]
 	_update_caress_info()
@@ -979,6 +1065,8 @@ func _update_reaction_debug() -> void:
 
 
 func _process(delta: float) -> void:
+	if hand_editor.visible:
+		hand_editor.advance(delta)
 	var hands: Node3D = stage.green_hands
 	var moving: bool = hands.enabled and hands.tool_id >= 0
 	if moving:
@@ -993,7 +1081,9 @@ func _process(delta: float) -> void:
 	_step_caress_contact(hands, delta)
 	var reacting: bool = hands.enabled and stage.duration > 0.0
 	if reacting:
-		stage.green_reaction.advance(hands, stage.camera.global_position, delta)
+		independent_hands.advance(delta)
+		stage.green_reaction.advance(hands, stage.camera.global_position, delta, independent_hands.reaction_contacts(),
+			independent_hands.reaction_mode.selected)
 	if not contact_state.is_empty():
 		var runtime_phase := contact_time / maxf(stage.duration, 0.001)
 		_seek(fposmod(runtime_phase, 1.0) if bool(contact_clip.loop) else runtime_phase)
@@ -1017,8 +1107,12 @@ func _process(delta: float) -> void:
 
 
 func _camera_input(event: InputEvent) -> void:
+	if hand_editor.pointer(event):
+		return
 	if stage.green_hands.enabled:
 		_green_camera_input(event)
+		if hand_editor.visible:
+			hand_editor.redraw()
 		return
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT:
@@ -1060,7 +1154,7 @@ func _green_camera_input(event: InputEvent) -> void:
 		if orbit:
 			hands.angles.y = clampf(hands.angles.y - event.relative.x * 0.28, -80.0, 80.0)
 			hands.angles.x = clampf(hands.angles.x - event.relative.y * 0.28, -80.0, 80.0)
-		elif hand_pointer and hands.running and action.selected >= 0:
+		elif hand_pointer and hands.running and not hands.custom_animation.has("contact") and action.selected >= 0:
 			var raw: Dictionary = action.get_item_metadata(action.selected)
 			if int(raw.actionDrag) >= 0:
 				hands.action_phase = fposmod(hands.action_phase + event.relative.length() * 0.004, 1.0)
@@ -1077,7 +1171,10 @@ func _toggle_interface() -> void:
 func handle_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_ESCAPE:
-			close()
+			if hand_editor.visible:
+				hand_editor.close_editor()
+			else:
+				close()
 		elif event.keycode == KEY_H:
 			_toggle_interface()
 		elif event.keycode == KEY_R:

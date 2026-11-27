@@ -106,9 +106,20 @@ public sealed class KksCardCapture : BaseUnityPlugin
                     yield return null;
                 }
             }
+            var neutral = loaded.charInfo;
+            neutral.ChangeEyesBlinkFlag(false);
+            neutral.ChangeEyesPtn(0, true);
+            neutral.ChangeEyesOpenMax(1f);
+            neutral.ChangeEyebrowPtn(0, true);
+            neutral.ChangeMouthPtn(0, true);
+            neutral.ChangeMouthOpenMax(0f);
+            yield return null;
+            RestoreHairGloss(neutral);
             string comparison = Environment.GetEnvironmentVariable("MYPROJECT_KKS_COMPARE");
             if (!String.IsNullOrEmpty(comparison))
             {
+                if (batch)
+                    comparison = Path.Combine(comparison, Path.GetFileNameWithoutExtension(lines[i + 3]));
                 string top = Environment.GetEnvironmentVariable("MYPROJECT_KKS_COMPARE_TOP");
                 bool found = String.IsNullOrEmpty(top);
                 foreach (string candidate in found ? new string[0] : top.Split(','))
@@ -134,7 +145,6 @@ public sealed class KksCardCapture : BaseUnityPlugin
                     if (!found)
                         throw new InvalidDataException("The comparison garment has no visible mesh.");
                     SaveComparison(loaded.charInfo, comparison);
-                    Export(loaded.charInfo.transform, comparison + "-actor.kcs");
                 }
                 catch (Exception error) { Fail(error); yield break; }
             }
@@ -146,6 +156,8 @@ public sealed class KksCardCapture : BaseUnityPlugin
                 var actor = studio.dicObjectCtrl.Where(item => !before.Contains(item.Key))
                     .Select(item => item.Value).OfType<OCIChar>().Single();
                 Export(actor.charInfo.transform, lines[i + 3]);
+                if (!String.IsNullOrEmpty(comparison))
+                    File.Copy(lines[i + 3], comparison + "-actor.kcs", true);
                 Logger.LogInfo("Wrote " + lines[i + 3]);
                 if (i + 5 < lines.Length)
                     studio.InitScene(false);
@@ -289,12 +301,58 @@ public sealed class KksCardCapture : BaseUnityPlugin
         }
     }
 
+    private static void RestoreHairGloss(ChaControl character)
+    {
+        var materials = character.GetComponentsInChildren<Renderer>(false)
+            .SelectMany(renderer => renderer.sharedMaterials)
+            .Where(material => material != null && material.HasProperty("_HairGloss")).Distinct()
+            .ToDictionary(material => material, material => material.GetTexture("_HairGloss"));
+        if (materials.Count == 0 || materials.Values.All(texture => texture != null))
+            return;
+        character.LoadHairGlossMask();
+        character.ChangeSettingHairGlossMaskAll();
+        var nativeGloss = (Texture)typeof(ChaControl).GetProperty("texHairGloss", InstanceProperties).GetValue(character, null);
+        // MaterialEditor can supply custom per-piece maps.
+        foreach (var entry in materials)
+        {
+            if (entry.Value != null)
+                entry.Key.SetTexture("_HairGloss", entry.Value);
+            else if (nativeGloss != null && entry.Key.shader.name.IndexOf("hair", StringComparison.OrdinalIgnoreCase) >= 0
+                && entry.Key.GetTexture("_HairGloss") == null)
+                entry.Key.SetTexture("_HairGloss", nativeGloss);
+        }
+    }
+
     private static void SaveComparison(ChaControl character, string prefix)
     {
         var actor = character.transform;
         var view = new GameObject("Comparison camera");
         var capture = view.AddComponent<Camera>();
         capture.enabled = false;
+        var mainCamera = Camera.main;
+        if (mainCamera != null)
+        {
+            capture.allowHDR = mainCamera.allowHDR;
+            var color = mainCamera.GetComponents<Behaviour>().FirstOrDefault(
+                component => component != null && component.enabled && component.GetType().Name == "AmplifyColorEffect");
+            if (color != null)
+            {
+                var grading = view.AddComponent(color.GetType());
+                var settings = new List<string>();
+                foreach (string name in new[] { "LutTexture", "LutBlendTexture", "BlendAmount",
+                    "Tonemapper", "Exposure", "LinearWhitePoint", "QualityLevel" })
+                {
+                    var field = color.GetType().GetField(name);
+                    if (field == null) continue;
+                    object value = field.GetValue(color);
+                    field.SetValue(grading, value);
+                    settings.Add(name + ": " + (value ?? "-"));
+                    if (value is Texture)
+                        SaveComparisonTexture((Texture)value, prefix + "-" + name + ".png");
+                }
+                File.WriteAllLines(prefix + "-grading.txt", settings);
+            }
+        }
         capture.clearFlags = CameraClearFlags.SolidColor;
         capture.backgroundColor = new Color32(68, 73, 84, 255);
         capture.fieldOfView = 33;
@@ -311,26 +369,7 @@ public sealed class KksCardCapture : BaseUnityPlugin
             })
                 WriteComparisonShot(actor, capture, image, prefix + "-" + shot.Item1 + ".png", shot.Item2, shot.Item3);
             WriteComparisonMaterials(actor, prefix + "-materials.txt");
-            var clothes = character.objClothes.Where(piece => piece != null)
-                .SelectMany(piece => piece.GetComponentsInChildren<Renderer>(false)).Where(r => r.enabled).Distinct().ToArray();
-            var masks = actor.GetComponentsInChildren<Renderer>(false).Where(IsBodyRenderer)
-                .SelectMany(renderer => renderer.sharedMaterials).Where(m => m != null && m.HasProperty("_AlphaMask"))
-                .Distinct().ToDictionary(m => m, m => m.GetTexture("_AlphaMask"));
-            try
-            {
-                foreach (var renderer in clothes)
-                    renderer.enabled = false;
-                foreach (var material in masks.Keys)
-                    material.SetTexture("_AlphaMask", Texture2D.whiteTexture);
-                WriteComparisonShot(actor, capture, image, prefix + "-rear.png", 0.94f, -1.55f);
-            }
-            finally
-            {
-                foreach (var renderer in clothes)
-                    renderer.enabled = true;
-                foreach (var pair in masks)
-                    pair.Key.SetTexture("_AlphaMask", pair.Value);
-            }
+            WriteComparisonShot(actor, capture, image, prefix + "-rear.png", 0.94f, -1.55f);
         }
         finally
         {
@@ -339,6 +378,26 @@ public sealed class KksCardCapture : BaseUnityPlugin
             RenderTexture.ReleaseTemporary(target);
             Destroy(image);
             Destroy(view);
+        }
+    }
+
+    private static void SaveComparisonTexture(Texture texture, string path)
+    {
+        var target = RenderTexture.GetTemporary(texture.width, texture.height, 0, RenderTextureFormat.ARGB32);
+        var previous = RenderTexture.active;
+        var image = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false);
+        try
+        {
+            Graphics.Blit(texture, target);
+            RenderTexture.active = target;
+            image.ReadPixels(new Rect(0, 0, image.width, image.height), 0, 0);
+            File.WriteAllBytes(path, image.EncodeToPNG());
+        }
+        finally
+        {
+            RenderTexture.active = previous;
+            RenderTexture.ReleaseTemporary(target);
+            Destroy(image);
         }
     }
 
@@ -354,10 +413,18 @@ public sealed class KksCardCapture : BaseUnityPlugin
 
     private static void WriteComparisonMaterials(Transform actor, string path)
     {
-        var report = new List<string>();
-        foreach (var renderer in actor.GetComponentsInChildren<Renderer>(false)
-            .Where(r => IsBodyRenderer(r) || r.name.IndexOf("face", StringComparison.OrdinalIgnoreCase) >= 0
-                || r.name.IndexOf("hair", StringComparison.OrdinalIgnoreCase) >= 0))
+        var report = new List<string> {
+            "Color space: " + QualitySettings.activeColorSpace,
+            "Ambient: " + RenderSettings.ambientMode + " " + RenderSettings.ambientLight + " " + RenderSettings.ambientIntensity
+        };
+        if (Camera.main != null)
+            report.Add("Main camera: " + String.Join(", ", Camera.main.GetComponents<MonoBehaviour>()
+                .Where(component => component != null && component.isActiveAndEnabled)
+                .Select(component => component.GetType().FullName).ToArray()));
+        foreach (var light in FindObjectsOfType<Light>().Where(light => light.isActiveAndEnabled))
+            report.Add("Light: " + light.name + " " + light.type + " " + light.transform.eulerAngles
+                + " " + light.color + " intensity " + light.intensity);
+        foreach (var renderer in actor.GetComponentsInChildren<Renderer>(false).Where(IsRenderable))
         {
             var mesh = SourceMesh(renderer);
             if (mesh != null)
@@ -367,7 +434,8 @@ public sealed class KksCardCapture : BaseUnityPlugin
             {
                 if (material == null || material.shader == null)
                     continue;
-                report.Add(renderer.name + " | " + material.name + " | " + material.shader.name);
+                report.Add(renderer.name + " | " + material.name + " | " + material.shader.name
+                    + " | queue " + material.renderQueue + " | " + material.GetTag("RenderType", false));
                 for (int i = 0; i < material.shader.GetPropertyCount(); i++)
                 {
                     var name = material.shader.GetPropertyName(i);
@@ -375,7 +443,8 @@ public sealed class KksCardCapture : BaseUnityPlugin
                     {
                         case UnityEngine.Rendering.ShaderPropertyType.Texture:
                             var map = material.GetTexture(name);
-                            report.Add(name + " = " + (map == null ? "-" : map.name + " (" + map.width + "x" + map.height + ")"));
+                            report.Add(name + " = " + (map == null ? "-" : map.name + " (" + map.width + "x" + map.height + ", " + map.graphicsFormat
+                                + ", " + map.mipmapCount + " mips, " + map.GetType().Name + ")"));
                             break;
                         case UnityEngine.Rendering.ShaderPropertyType.Color:
                             report.Add(name + " = " + material.GetColor(name));
@@ -391,32 +460,20 @@ public sealed class KksCardCapture : BaseUnityPlugin
         File.WriteAllLines(path, report);
     }
 
-    private void Export(Transform root, string output, Func<Renderer, bool> filter = null)
+    internal void Export(Transform root, string output, Func<Renderer, bool> filter = null, bool nativeSkin = false,
+        List<Renderer> workspaceRenderers = null,
+        Action<BinaryWriter, Renderer, int, Material, Dictionary<int, int>> workspaceMaterial = null)
     {
         var bones = root.GetComponentsInChildren<Transform>(true);
         var indices = new Dictionary<Transform, int>();
         for (int i = 0; i < bones.Length; i++)
             indices.Add(bones[i], i);
-        var renderers = root.GetComponentsInChildren<Renderer>(false)
-            .Where(renderer => IsRenderable(renderer) && (filter == null || filter(renderer))).ToList();
-        if (!renderers.Any(IsBodyRenderer))
-        {
-            var body = root.GetComponentsInChildren<Renderer>(true)
-                .Where(renderer => IsBodyRenderer(renderer) && (filter == null || filter(renderer)))
-                .OrderByDescending(renderer => renderer.gameObject.activeInHierarchy)
-                .ThenByDescending(renderer => renderer.name.Equals("o_body_a", StringComparison.OrdinalIgnoreCase))
-                .FirstOrDefault();
-            if (body != null)
-                renderers.Add(body);
-        }
-        if (renderers.Count == 0)
-            throw new InvalidDataException("The loaded card did not produce any visible meshes.");
-
+        var renderers = workspaceRenderers ?? ExportRenderers(root, filter);
         string partial = output + ".partial";
         var textures = new Dictionary<int, int>();
         using (var writer = new BinaryWriter(File.Create(partial)))
         {
-            writer.Write(0x3753434B); // KCS7 adds the auxiliary coordinates and masks for native skin layers.
+            writer.Write(workspaceMaterial != null ? 0x3953434B : nativeSkin ? 0x3853434B : 0x3753434B);
             writer.Write(bones.Length);
             foreach (var bone in bones)
             {
@@ -431,7 +488,19 @@ public sealed class KksCardCapture : BaseUnityPlugin
             }
             writer.Write(renderers.Count);
             foreach (var renderer in renderers)
-                WriteRenderer(writer, root, renderer, indices, textures, filter != null && IsBodyRenderer(renderer));
+                WriteRenderer(writer, root, renderer, indices, textures, filter != null && IsBodyRenderer(renderer), nativeSkin,
+                    workspaceMaterial);
+            if (workspaceMaterial == null)
+            {
+                writer.Write(0x314D534B); // KSM1: optional material names
+                foreach (var renderer in renderers)
+                {
+                    var materials = renderer.sharedMaterials;
+                    writer.Write(materials.Length);
+                    foreach (var material in materials)
+                        WriteText(writer, material == null || material.shader == null ? "" : material.name + " | " + material.shader.name);
+                }
+            }
         }
         if (File.Exists(output))
             File.Replace(partial, output, null);
@@ -440,10 +509,36 @@ public sealed class KksCardCapture : BaseUnityPlugin
         Logger.LogInfo("Exported " + renderers.Count + " renderers, " + textures.Count + " material textures.");
     }
 
+    internal static List<Renderer> ExportRenderers(Transform root, Func<Renderer, bool> filter = null)
+    {
+        var renderers = root.GetComponentsInChildren<Renderer>(false)
+            .Where(renderer => IsRenderable(renderer) && (filter == null || filter(renderer))).ToList();
+        if (!renderers.Any(IsBodyRenderer))
+        {
+            var body = root.GetComponentsInChildren<Renderer>(true)
+                .Where(renderer => IsBodyRenderer(renderer) && (filter == null || filter(renderer)))
+                .OrderByDescending(renderer => renderer.gameObject.activeInHierarchy)
+                .ThenByDescending(renderer => renderer.name.Equals("o_body_a", StringComparison.OrdinalIgnoreCase))
+                .FirstOrDefault();
+            if (body != null)
+                renderers.Add(body);
+        }
+        if (renderers.Count == 0)
+            throw new InvalidDataException("The loaded card did not produce any visible meshes.");
+        return renderers;
+    }
+
     private static bool IsRenderable(Renderer renderer)
     {
         return renderer.enabled && !renderer.forceRenderingOff &&
             renderer.shadowCastingMode != UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly &&
+            renderer.name.IndexOf("shadowcaster", StringComparison.OrdinalIgnoreCase) < 0 &&
+            SourceMesh(renderer) != null;
+    }
+
+    internal static bool IsWorkspaceMesh(Renderer renderer)
+    {
+        return renderer.shadowCastingMode != UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly &&
             renderer.name.IndexOf("shadowcaster", StringComparison.OrdinalIgnoreCase) < 0 &&
             SourceMesh(renderer) != null;
     }
@@ -464,25 +559,32 @@ public sealed class KksCardCapture : BaseUnityPlugin
     }
 
     private void WriteRenderer(BinaryWriter writer, Transform root, Renderer renderer,
-        Dictionary<Transform, int> indices, Dictionary<int, int> textures, bool maskOnly)
+        Dictionary<Transform, int> indices, Dictionary<int, int> textures, bool maskOnly, bool nativeSkin,
+        Action<BinaryWriter, Renderer, int, Material, Dictionary<int, int>> workspaceMaterial)
     {
         Mesh source = SourceMesh(renderer);
         var skinned = renderer as SkinnedMeshRenderer;
+        var joints = skinned != null ? skinned.bones : new Transform[0];
+        var bindPoses = nativeSkin && skinned != null ? source.bindposes : new Matrix4x4[0];
+        bool useNative = bindPoses.Length > 0 && joints.Length == bindPoses.Length &&
+            joints.All(joint => joint != null && indices.ContainsKey(joint)) &&
+            source.boneWeights.Length == source.vertexCount;
         var baked = source;
-        if (skinned != null)
+        if (skinned != null && !useNative)
         {
             baked = new Mesh();
             skinned.BakeMesh(baked);
         }
         var vertices = baked.vertices;
         var normals = baked.normals;
+        if (useNative)
+            ApplyBlendShapes(skinned, vertices, normals);
         var uv = baked.uv;
         var weights = skinned != null ? source.boneWeights : new BoneWeight[0];
-        var joints = skinned != null ? skinned.bones : new Transform[0];
         // This Unity version includes the renderer scale in BakeMesh. The remaining transform is rigid.
         var geometryToWorld = skinned == null ? renderer.transform.localToWorldMatrix
             : Matrix4x4.TRS(renderer.transform.position, renderer.transform.rotation, Vector3.one);
-        var geometryToRoot = root.worldToLocalMatrix * geometryToWorld;
+        var geometryToRoot = useNative ? Matrix4x4.identity : root.worldToLocalMatrix * geometryToWorld;
         var normalToRoot = geometryToRoot.inverse.transpose;
         WriteText(writer, renderer.name);
         int count = maskOnly ? 3 : vertices.Length;
@@ -498,10 +600,10 @@ public sealed class KksCardCapture : BaseUnityPlugin
             if (weights.Length == vertices.Length && joints.Length > 0)
             {
                 var w = weights[i];
-                writer.Write(BoneId(w.boneIndex0, joints, indices, fallback));
-                writer.Write(BoneId(w.boneIndex1, joints, indices, fallback));
-                writer.Write(BoneId(w.boneIndex2, joints, indices, fallback));
-                writer.Write(BoneId(w.boneIndex3, joints, indices, fallback));
+                writer.Write(useNative ? w.boneIndex0 : BoneId(w.boneIndex0, joints, indices, fallback));
+                writer.Write(useNative ? w.boneIndex1 : BoneId(w.boneIndex1, joints, indices, fallback));
+                writer.Write(useNative ? w.boneIndex2 : BoneId(w.boneIndex2, joints, indices, fallback));
+                writer.Write(useNative ? w.boneIndex3 : BoneId(w.boneIndex3, joints, indices, fallback));
                 writer.Write(w.weight0); writer.Write(w.weight1); writer.Write(w.weight2); writer.Write(w.weight3);
             }
             else
@@ -511,33 +613,61 @@ public sealed class KksCardCapture : BaseUnityPlugin
             }
         }
         bool body = IsBodyRenderer(renderer);
-        var uv2 = body && !maskOnly ? source.uv2 : new Vector2[0];
-        var uv3 = body && !maskOnly ? source.uv3 : new Vector2[0];
-        var uv4 = body && !maskOnly ? source.uv4 : new Vector2[0];
-        var colors = body && !maskOnly ? source.colors32 : new Color32[0];
-        byte auxiliary = (byte)((uv2.Length == count ? 1 : 0) | (uv3.Length == count ? 2 : 0) | (uv4.Length == count ? 4 : 0));
-        writer.Write(auxiliary);
-        if (auxiliary != 0)
+        bool workspace = workspaceMaterial != null;
+        var materials = renderer.sharedMaterials;
+        bool hairGlossUv = !workspace && !body && materials.Any(material => material != null &&
+            material.shader.name.IndexOf("hair", StringComparison.OrdinalIgnoreCase) >= 0 &&
+            MaterialTexture(material, "_HairGloss") != null);
+        var uv2 = (body || workspace || hairGlossUv) && !maskOnly ? source.uv2 : new Vector2[0];
+        var uv3 = (body || workspace) && !maskOnly ? source.uv3 : new Vector2[0];
+        var uv4 = (body || workspace) && !maskOnly ? source.uv4 : new Vector2[0];
+        var colors = (body || workspace) && !maskOnly ? source.colors32 : new Color32[0];
+        byte auxiliary = (byte)((uv2.Length == count ? 1 : 0) | (uv3.Length == count ? 2 : 0) | (uv4.Length == count ? 4 : 0)
+            | (hairGlossUv && uv2.Length == count ? 128 : 0));
+        if (workspace)
         {
-            var layers = new[] { uv2, uv3, uv4 };
-            for (int i = 0; i < count; i++)
-            {
-                foreach (var layer in layers)
+            writer.Write((byte)(auxiliary | (colors.Length == count ? 8 : 0)));
+            foreach (var layer in new[] { uv2, uv3, uv4 })
+                if (layer.Length == count)
+                    foreach (var coords in layer)
+                    {
+                        writer.Write(coords.x);
+                        writer.Write(1 - coords.y);
+                    }
+            if (colors.Length == count)
+                foreach (var color in colors)
                 {
-                    var coords = layer.Length == count ? layer[i] : Vector2.zero;
-                    writer.Write(coords.x);
-                    writer.Write(1 - coords.y);
+                    writer.Write(color.r); writer.Write(color.g); writer.Write(color.b); writer.Write(color.a);
                 }
-                writer.Write(colors.Length == count ? colors[i].r : (byte)255);
-                writer.Write(colors.Length == count ? colors[i].b : (byte)255);
+        }
+        else
+        {
+            writer.Write(auxiliary);
+            if (auxiliary != 0)
+            {
+                var layers = new[] { uv2, uv3, uv4 };
+                for (int i = 0; i < count; i++)
+                {
+                    foreach (var layer in layers)
+                    {
+                        var coords = layer.Length == count ? layer[i] : Vector2.zero;
+                        writer.Write(coords.x);
+                        writer.Write(1 - coords.y);
+                    }
+                    writer.Write(colors.Length == count ? colors[i].r : (byte)255);
+                    writer.Write(colors.Length == count ? colors[i].b : (byte)255);
+                }
             }
         }
-        var materials = renderer.sharedMaterials;
         int surfaces = maskOnly ? 1 : baked.subMeshCount;
         writer.Write(surfaces);
         for (int i = 0; i < surfaces; i++)
         {
-            WriteMaterial(writer, i < materials.Length ? materials[i] : null, textures, maskOnly, body, auxiliary);
+            var material = materials.Length == 0 ? null : materials[Math.Min(i, materials.Length - 1)];
+            if (workspace)
+                workspaceMaterial(writer, renderer, i, material, textures);
+            else
+                WriteMaterial(writer, i < materials.Length ? material : null, textures, maskOnly, body, auxiliary);
             int[] triangles = maskOnly ? new[] { 0, 1, 2 } : baked.GetTriangles(i);
             writer.Write(triangles.Length);
             for (int j = 0; j < triangles.Length; j += 3)
@@ -547,6 +677,61 @@ public sealed class KksCardCapture : BaseUnityPlugin
         }
         if (baked != source)
             Destroy(baked);
+        if (nativeSkin)
+        {
+            writer.Write(useNative ? bindPoses.Length : 0);
+            if (useNative)
+            {
+                for (int j = 0; j < bindPoses.Length; j++)
+                {
+                    writer.Write(indices[joints[j]]);
+                    var bind = bindPoses[j];
+                    WriteVector(writer, bind.GetColumn(0));
+                    WriteVector(writer, bind.GetColumn(1));
+                    WriteVector(writer, -bind.GetColumn(2));
+                    WriteVector(writer, bind.GetColumn(3));
+                }
+            }
+        }
+    }
+
+    private static void ApplyBlendShapes(SkinnedMeshRenderer renderer, Vector3[] vertices, Vector3[] normals)
+    {
+        var mesh = renderer.sharedMesh;
+        if (mesh.blendShapeCount == 0)
+            return;
+        var positions = new Vector3[vertices.Length];
+        var directions = new Vector3[vertices.Length];
+        var tangents = new Vector3[vertices.Length];
+        for (int shape = 0; shape < mesh.blendShapeCount; shape++)
+        {
+            float weight = renderer.GetBlendShapeWeight(shape);
+            int frames = mesh.GetBlendShapeFrameCount(shape);
+            if (Mathf.Abs(weight) < 0.0001f || frames == 0)
+                continue;
+            int upper = 0;
+            while (upper + 1 < frames && weight > mesh.GetBlendShapeFrameWeight(shape, upper))
+                upper++;
+            float upperWeight = mesh.GetBlendShapeFrameWeight(shape, upper);
+            float lowerWeight = upper > 0 ? mesh.GetBlendShapeFrameWeight(shape, upper - 1) : 0f;
+            float blend = Mathf.Approximately(upperWeight, lowerWeight) ? 1f : (weight - lowerWeight) / (upperWeight - lowerWeight);
+            mesh.GetBlendShapeFrameVertices(shape, upper, positions, directions, tangents);
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                vertices[i] += positions[i] * blend;
+                if (normals.Length == vertices.Length)
+                    normals[i] += directions[i] * blend;
+            }
+            if (upper == 0 || Mathf.Approximately(blend, 1f))
+                continue;
+            mesh.GetBlendShapeFrameVertices(shape, upper - 1, positions, directions, tangents);
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                vertices[i] += positions[i] * (1f - blend);
+                if (normals.Length == vertices.Length)
+                    normals[i] += directions[i] * (1f - blend);
+            }
+        }
     }
 
     private static int BoneId(int index, Transform[] bones, Dictionary<Transform, int> indices, int fallback)
@@ -562,6 +747,7 @@ public sealed class KksCardCapture : BaseUnityPlugin
         bool skin = body || shader.Contains("main_skin");
         bool hair = shader.Contains("hair");
         bool eye = shader.Contains("main_eye") || shader.Contains("main_nose");
+        string renderType = source != null ? source.GetTag("RenderType", false) : "";
         string baseSlot = "_MainTex";
         Texture main = MaterialTexture(source, baseSlot);
         if (skin && main == null)
@@ -570,13 +756,17 @@ public sealed class KksCardCapture : BaseUnityPlugin
             main = MaterialTexture(source, baseSlot);
         }
         Texture mask = MaterialTexture(source, "_ColorMask");
-        Texture clothingMask = skin ? MaterialTexture(source, "_AlphaMask") : null;
+        Texture clothingMask = MaterialTexture(source, "_AlphaMask");
         float maskUse = MaterialFloat(source, "_ColorMaskUse", 1);
-        bool hasBakedClothes = main != null && shader.Contains("clothes") &&
-            (maskUse < 0.5f || main is RenderTexture);
+        bool hasBakedClothes = main != null && ((shader.Contains("clothes") && maskUse < 0.5f)
+            || (main is RenderTexture && (shader.Contains("clothes") || shader.Contains("main_opaque"))));
         Color color = skin || hasBakedClothes ? Color.white : MaterialColor(source, "_Color", Color.white);
         byte opacity = (byte)(eye || color.a < 0.99f || (!hair && queue >= 3000) ? 2 :
             hair || clothingMask != null || shader.Contains("alpha") || shader.Contains("cutout") ? 1 : 0);
+        if (renderType == "TransparentCutout")
+            opacity = 1;
+        else if (renderType == "Transparent" && !hair)
+            opacity = 2;
         writer.Write((byte)(skin ? 1 : hair ? 2 : eye ? 3 : 0));
         writer.Write(opacity);
         writer.Write(queue);
@@ -591,11 +781,12 @@ public sealed class KksCardCapture : BaseUnityPlugin
             MaterialColor(source, "_shadowcolor", new Color(0.84f, 0.85f, 0.91f))));
         WriteColor(writer, MaterialColor(source, "_GlossColor", Color.white));
         for (int i = 1; i <= 3; i++)
-            WriteColor(writer, MaterialColor(source, "_overcolor" + i, Color.clear));
+            WriteColor(writer, hair && i == 3 ? MaterialColor(source, "_LineColor", Color.clear)
+                : MaterialColor(source, "_overcolor" + i, Color.clear));
 
         WriteMaterialTexture(writer, textures, source, baseSlot, maskOnly ? null : main, false, skin ? 4096 : 2048);
         WriteMaterialTexture(writer, textures, source, "_ColorMask",
-            !maskOnly && (hair || (!hasBakedClothes && maskUse >= 0.5f)) ? mask : null, true, 1024);
+            !maskOnly && (hair || (!hasBakedClothes && maskUse >= 0.5f)) ? mask : null, true, 2048);
         WriteMaterialTexture(writer, textures, source, "_HairGloss", hair ? MaterialTexture(source, "_HairGloss") : null, true, 1024);
         for (int i = 1; i <= 3; i++)
         {
@@ -605,8 +796,10 @@ public sealed class KksCardCapture : BaseUnityPlugin
             string uvSlot = "_texcoord" + (i + 1);
             if (!body || !skinLayer || source == null || !source.HasProperty(uvSlot))
                 uvSlot = name;
+            bool eyeLayer = eye && MaterialFloat(source, "_isHighLight", 1) > 0.5f;
             WriteMaterialTexture(writer, textures, source, uvSlot,
-                !maskOnly && (skinLayer || eye || hairDetail) ? MaterialTexture(source, name) : null, hairDetail, 1024);
+                !maskOnly && (skinLayer || eyeLayer || hairDetail) ? MaterialTexture(source, name) : null, hairDetail,
+                hairDetail ? 2048 : 1024);
         }
         writer.Write(MaterialFloat(source, "_alpha_a", 1));
         writer.Write(MaterialFloat(source, "_alpha_b", 1));
@@ -614,7 +807,7 @@ public sealed class KksCardCapture : BaseUnityPlugin
         writer.Write(MaterialFloat(source, "_NormalMapScale", MaterialFloat(source, "_BumpScale", 1)));
         writer.Write(MaterialFloat(source, "_DetailNormalMapScale", 0.4f));
         writer.Write(MaterialFloat(source, "_FaceNormalG", 0));
-        writer.Write(MaterialFloat(source, "_SpecularPower", 0));
+        writer.Write(MaterialFloat(source, hair ? "_SpeclarHeight" : "_SpecularPower", 0));
         writer.Write(MaterialFloat(source, "_DetailRLineR", 0));
         writer.Write(MaterialFloat(source, "_DetailBLineG", 0));
         writer.Write(new[] { "_liquidftop", "_liquidfbot", "_liquidbtop", "_liquidbbot", "_liquidface" }
@@ -652,12 +845,12 @@ public sealed class KksCardCapture : BaseUnityPlugin
         return source != null && source.HasProperty(name) ? source.GetColor(name) : fallback;
     }
 
-    private static void WriteColor(BinaryWriter writer, Color color)
+    internal static void WriteColor(BinaryWriter writer, Color color)
     {
         writer.Write(color.r); writer.Write(color.g); writer.Write(color.b); writer.Write(color.a);
     }
 
-    private static void WriteMaterialTexture(BinaryWriter writer, Dictionary<int, int> textures,
+    internal static void WriteMaterialTexture(BinaryWriter writer, Dictionary<int, int> textures,
         Material material, string slot, Texture texture, bool linear, int maxSize)
     {
         if (texture == null)
@@ -678,8 +871,9 @@ public sealed class KksCardCapture : BaseUnityPlugin
         }
         int index = textures.Count;
         textures.Add(key, index);
-        int width = Mathf.Min(maxSize, texture.width);
-        int height = Mathf.Min(maxSize, texture.height);
+        float fit = Mathf.Min(1f, (float)maxSize / Mathf.Max(texture.width, texture.height));
+        int width = Mathf.Max(1, Mathf.RoundToInt(texture.width * fit));
+        int height = Mathf.Max(1, Mathf.RoundToInt(texture.height * fit));
         var buffer = RenderTexture.GetTemporary(width, height, 0, RenderTextureFormat.ARGB32,
             linear ? RenderTextureReadWrite.Linear : RenderTextureReadWrite.Default);
         var old = RenderTexture.active;
@@ -709,7 +903,7 @@ public sealed class KksCardCapture : BaseUnityPlugin
         writer.Write(offset.x); writer.Write(1 - scale.y - offset.y);
     }
 
-    private static void WriteText(BinaryWriter writer, string text)
+    internal static void WriteText(BinaryWriter writer, string text)
     {
         byte[] data = Encoding.UTF8.GetBytes(text);
         writer.Write(data.Length);

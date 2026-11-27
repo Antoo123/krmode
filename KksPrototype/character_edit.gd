@@ -93,7 +93,15 @@ static func update_skin_masks(actor: Node3D, garments: Dictionary) -> void:
 			continue
 		for surface in range(child.mesh.get_surface_count()):
 			var material := child.get_active_material(surface) as ShaderMaterial
-			if not material or (material.get_shader_parameter("use_body_mask") != true and material.get_shader_parameter("use_bottom_mask") != true):
+			if not material:
+				continue
+			if material.get_shader_parameter("use_body_mask") != true and material.get_shader_parameter("use_bottom_mask") != true:
+				continue
+			if material.get_shader_parameter("surface_kind") != 1:
+				if child.get_meta("wardrobe_slot", "") == "Bra":
+					var coverage := mask_weights(material)
+					material.set_meta("outfit_mask", coverage)
+					material.set_shader_parameter("body_mask_weights", coverage if group_visible(garments, ["Top"]) else Vector2.ZERO)
 				continue
 			var weights := mask_weights(material)
 			material.set_meta("outfit_mask", weights)

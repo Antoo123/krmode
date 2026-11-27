@@ -1,4 +1,7 @@
 uniform int surface_kind = 0;
+uniform bool previous_render = false;
+uniform bool use_studio_grade = false;
+uniform sampler2D studio_grade_lut : filter_linear, repeat_disable;
 uniform int impact_mark_count = 0;
 uniform float interaction_blush = 0.0;
 uniform vec4 impact_marks[16];
@@ -39,6 +42,7 @@ uniform sampler2D wet_detail_map : hint_default_black, filter_linear_mipmap, rep
 
 uniform bool use_mask = false;
 uniform bool use_gloss = false;
+uniform bool gloss_secondary_uv = false;
 uniform bool use_overlay1 = false;
 uniform bool use_overlay2 = false;
 uniform bool use_overlay3 = false;
@@ -78,6 +82,10 @@ uniform vec4 wet_mask_uv = vec4(1.0, 1.0, 0.0, 0.0);
 uniform vec4 wet_detail_uv = vec4(1.0, 1.0, 0.0, 0.0);
 varying float face_fill;
 varying float material_sheen;
+varying vec3 hair_highlight;
+varying vec3 ungraded_albedo;
+varying vec3 ungraded_fill;
+varying vec3 graded_fill_linear;
 varying vec4 skin_extra_uv;
 varying vec2 skin_layer_gate;
 #ifdef VIEW_ARM
@@ -109,6 +117,28 @@ void vertex() {
 #endif
 	skin_extra_uv = CUSTOM0;
 	skin_layer_gate = COLOR.rb;
+}
+
+vec3 display_to_linear(vec3 color) {
+	return mix(color / 12.92, pow((color + 0.055) / 1.055, vec3(2.4)), step(vec3(0.04045), color));
+}
+
+// The source camera grades display RGB with a 32-cube stored as horizontal slices.
+vec3 studio_grade(vec3 color) {
+	vec3 input_color = clamp(color, vec3(0.0), vec3(1.0));
+	if (!OUTPUT_IS_SRGB) {
+		input_color = mix(input_color * 12.92, 1.055 * pow(input_color, vec3(1.0 / 2.4)) - 0.055,
+			step(vec3(0.0031308), input_color));
+	}
+	vec3 coord = input_color * 31.0;
+	float slice = floor(coord.b);
+	vec2 uv = (coord.rg + vec2(32.0 * slice, 0.0) + vec2(0.5)) / vec2(1024.0, 32.0);
+	vec2 adjacent = uv + vec2(slice < 31.0 ? 0.03125 : 0.0, 0.0);
+	vec3 graded = mix(texture(studio_grade_lut, uv).rgb, texture(studio_grade_lut, adjacent).rgb, fract(coord.b));
+	if (!OUTPUT_IS_SRGB) {
+		graded = display_to_linear(graded);
+	}
+	return graded;
 }
 
 vec2 mapped_uv(vec2 uv, vec4 transform) {
@@ -151,7 +181,9 @@ void fragment() {
 			// The stock hair shaders use a dye map instead of a base color map.
 			pigment = mix(pigment, second_tint.rgb, mask.g);
 			pigment = mix(pigment, third_tint.rgb, mask.b);
-			pigment *= mix(0.91, 1.02, mask.r);
+			if (previous_render) {
+				pigment *= mix(0.91, 1.02, mask.r);
+			}
 			texel.a *= mask.a;
 		} else {
 			float weight = max(1.0, mask.r + mask.g + mask.b);
@@ -161,7 +193,7 @@ void fragment() {
 		}
 	}
 	vec3 color = texel.rgb * pigment;
-	if (surface_kind == 1 && !body_surface && !body_detail) {
+	if (previous_render && surface_kind == 1 && !body_surface && !body_detail) {
 		color = pow(max(color, vec3(0.0)), vec3(0.74)) * 1.04;
 	}
 	vec3 detail = use_surface_detail ? texture(surface_detail_map, mapped_uv(UV, surface_detail_uv)).rgb : vec3(0.5);
@@ -170,6 +202,7 @@ void fragment() {
 		face_fill = texture(face_normal_map, mapped_uv(UV, face_normal_uv)).g * face_normal_weight;
 	}
 	material_sheen = specular_weight * (use_surface_detail ? mix(0.25, 1.0, detail.r) : 1.0);
+	hair_highlight = vec3(0.0);
 	if (use_normal || use_detail_normal) {
 		vec2 normal_delta = vec2(0.0);
 		if (use_normal) {
@@ -181,14 +214,24 @@ void fragment() {
 		NORMAL = apply_surface_normal(normalize(NORMAL), VERTEX, UV, normal_delta);
 	}
 	if (surface_kind == 2) {
-		if (use_overlay1 || use_surface_detail) {
-			vec3 strands = use_surface_detail ? detail : texture(overlay1_map, mapped_uv(UV, overlay1_uv)).rgb;
-			color *= mix(0.9, 1.05, dot(strands, vec3(0.65, 0.2, 0.15)));
+		vec3 strands = use_surface_detail ? detail : vec3(0.0);
+		if (!use_surface_detail && use_overlay1) {
+			strands = texture(overlay1_map, mapped_uv(UV, overlay1_uv)).rgb;
 		}
-		vec3 gloss = use_gloss ? texture(gloss_map, mapped_uv(UV, gloss_uv)).rgb : vec3(0.0);
-		float strand_gloss = smoothstep(0.02, 0.40, max(gloss.r, max(gloss.g, gloss.b)));
-		float shine = smoothstep(0.73, 0.95, dot(normalize(NORMAL), normalize(vec3(-0.38, 0.27, 0.88))));
-		color = mix(color, max(color, gloss_tint.rgb), strand_gloss * 0.72 + shine * 0.055);
+		vec2 gloss_coords = !previous_render && gloss_secondary_uv ? UV2 : UV;
+		vec3 gloss = use_gloss ? texture(gloss_map, mapped_uv(gloss_coords, gloss_uv)).rgb : vec3(0.0);
+		float strand_gloss = max(gloss.r, max(gloss.g, gloss.b));
+		if (previous_render) {
+			color *= mix(0.9, 1.05, dot(strands, vec3(0.65, 0.2, 0.15)));
+			float shine = smoothstep(0.73, 0.95, dot(normalize(NORMAL), normalize(vec3(-0.38, 0.27, 0.88))));
+			color = mix(color, max(color, gloss_tint.rgb), smoothstep(0.02, 0.40, strand_gloss) * 0.72 + shine * 0.055);
+		} else {
+			float grain = max(strands.g, strands.b);
+			color *= mix(0.97, 1.0, grain);
+			float painted_gloss = pow(strand_gloss, 0.60) * 0.65;
+			color += max(gloss_tint.rgb - color, vec3(0.0)) * painted_gloss;
+			hair_highlight = gloss_tint.rgb * ((0.015 + grain * 0.025) * (use_gloss ? strand_gloss : 1.0));
+		}
 	} else if (use_overlay1 && !body_surface) {
 		color = with_overlay(color, texture(overlay1_map, mapped_uv(UV, overlay1_uv)), overlay1_tint);
 	}
@@ -252,8 +295,7 @@ void fragment() {
 		discard;
 	}
 #endif
-	if (body_surface || body_detail) {
-		// The body base map needs a separate transfer curve from the layered face map.
+	if ((previous_render || first_person_limb) && (body_surface || body_detail)) {
 		color = pow(max(color, vec3(0.0)), vec3(0.86));
 	}
 	if (skin_exposure < 0.999) {
@@ -284,7 +326,26 @@ void fragment() {
 		fill = body_surface || body_detail ? 0.77 : 0.84;
 	}
 	vec3 bounce = surface_kind == 1 ? vec3(1.0, 0.98, 0.97) : vec3(0.96, 0.97, 1.0);
-	EMISSION = color * mix(shadow_tint.rgb, bounce, surface_kind == 0 ? 0.90 : 0.76) * fill * (first_person_limb ? 0.87 : 1.0);
+	ungraded_albedo = color;
+	ungraded_fill = vec3(0.0);
+	graded_fill_linear = vec3(0.0);
+	if (!previous_render && use_studio_grade && !first_person_limb) {
+		if (surface_kind == 3) {
+			ungraded_fill = color;
+		} else if (surface_kind == 2) {
+			ungraded_fill = color * mix(shadow_tint.rgb, vec3(1.0), 0.77) * 0.93;
+		} else if (surface_kind == 1) {
+			ungraded_fill = color * mix(shadow_tint.rgb, bounce, 0.74) * (body_surface || body_detail ? 0.96 : 1.00);
+		} else {
+			ungraded_fill = color * mix(shadow_tint.rgb, vec3(1.0), 0.83) * 0.95;
+		}
+		vec3 graded_fill = studio_grade(ungraded_fill);
+		graded_fill_linear = OUTPUT_IS_SRGB ? display_to_linear(graded_fill) : graded_fill;
+		ALBEDO = vec3(1.0);
+		EMISSION = graded_fill;
+	} else {
+		EMISSION = color * mix(shadow_tint.rgb, bounce, surface_kind == 0 ? 0.90 : 0.76) * fill * (first_person_limb ? 0.87 : 1.0);
+	}
 }
 
 void light() {
@@ -300,7 +361,30 @@ void light() {
 	vec3 tint = mix(shadow_tint.rgb, vec3(1.0), band);
 	float sheen = pow(max(dot(normalize(NORMAL), normalize(VIEW + LIGHT)), 0.0), 22.0) * material_sheen;
 	float shape = first_person_limb ? 1.32 : 1.0;
-	if (surface_kind == 1) {
+	if (!previous_render && use_studio_grade && !first_person_limb) {
+		vec3 incident = LIGHT_COLOR / PI;
+		vec3 direct = vec3(0.0);
+		if (surface_kind == 2) {
+			float alignment = max(dot(normalize(NORMAL), normalize(VIEW + LIGHT)), 0.0);
+			float height = specular_weight > 0.0 ? clamp(specular_weight, 0.0, 1.0) : 0.94;
+			float reflection = smoothstep(height - 0.065, height, alignment) * band;
+			direct = ungraded_albedo * (0.025 + band * 0.075) + hair_highlight * reflection;
+		} else if (surface_kind == 1) {
+			float soft_band = mix(smoothstep(-0.48, 0.88, wrap), band, 0.28);
+			float strength_skin = body_surface || body_detail ? 0.135 : 0.077;
+			direct = ungraded_albedo * mix(vec3(1.0, 0.83, 0.81), vec3(1.0), soft_band)
+				* soft_band * strength_skin + sheen * 0.08;
+		} else if (surface_kind == 0) {
+			direct = ungraded_albedo * (0.020 + band * 0.057) + sheen * 0.14;
+		}
+		if (surface_kind != 3) {
+			// Add only this light's contribution in the graded color space.
+			vec3 lit = studio_grade(ungraded_fill + direct * incident * ATTENUATION);
+			// Compatibility stores EMISSION in display RGB, then adds custom lights in linear RGB.
+			vec3 lit_linear = OUTPUT_IS_SRGB ? display_to_linear(lit) : lit;
+			DIFFUSE_LIGHT += max(lit_linear - graded_fill_linear, vec3(0.0));
+		}
+	} else if (surface_kind == 1) {
 		float wrapped = smoothstep(-0.48, 0.88, wrap);
 		float soft_band = mix(wrapped, band, 0.29);
 		vec3 skin_tint = mix(vec3(0.94, 0.75, 0.72), vec3(1.0, 0.97, 0.94), soft_band);
